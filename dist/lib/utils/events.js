@@ -52,4 +52,3 @@ class EventDispatcher {
     }
 }
 exports.EventDispatcher = EventDispatcher;
-//# sourceMappingURL=events.js.map

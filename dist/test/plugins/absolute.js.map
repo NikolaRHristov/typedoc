@@ -1,1 +1,10 @@
-{"version":3,"file":"absolute.js","sourceRoot":"","sources":["../../../src/test/plugins/absolute.ts"],"names":[],"mappings":";;AAAA,oBAEC;AAFD,SAAgB,IAAI;IAChB,MAAM;AACV,CAAC"}
+{
+	"version": 3,
+	"file": "absolute.js",
+	"sourceRoot": "",
+	"sources": [
+		"../../../src/test/plugins/absolute.ts"
+	],
+	"names": [],
+	"mappings": ";;AAAA,oBAEC;AAFD,SAAgB,IAAI;IAChB,MAAM;AACV,CAAC"
+}

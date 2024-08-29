@@ -2,26 +2,26 @@
  * A decorated class.
  */
 @decoratorWithOptions({
-    name: "Name of class",
+	name: "Name of class",
 })
 export class DecoratedClass {
-    /**
-     * A decorated method.
-     */
-    @decoratorAtom
-    @decoratorWithParam(false)
-    decoratedMethod() {}
+	/**
+	 * A decorated method.
+	 */
+	@decoratorAtom
+	@decoratorWithParam(false)
+	decoratedMethod() {}
 }
 
 /**
  * A decorator with no options.
  */
 export function decoratorAtom(
-    target: Object,
-    propertyKey: string | symbol,
-    descriptor: TypedPropertyDescriptor<any>,
+	target: Object,
+	propertyKey: string | symbol,
+	descriptor: TypedPropertyDescriptor<any>,
 ) {
-    target[propertyKey].writable = true;
+	target[propertyKey].writable = true;
 }
 
 /**
@@ -30,13 +30,13 @@ export function decoratorAtom(
  * @param value  The parameter of this decorator.
  */
 export function decoratorWithParam(value: boolean): MethodDecorator {
-    return function (
-        target: Object,
-        propertyKey: string | symbol,
-        descriptor: TypedPropertyDescriptor<any>,
-    ) {
-        target[propertyKey].enumerable = value;
-    };
+	return function (
+		target: Object,
+		propertyKey: string | symbol,
+		descriptor: TypedPropertyDescriptor<any>,
+	) {
+		target[propertyKey].enumerable = value;
+	};
 }
 
 /**
@@ -46,9 +46,9 @@ export function decoratorWithParam(value: boolean): MethodDecorator {
  * @param options.name  A property on the options object of this decorator.
  */
 export function decoratorWithOptions(options: {
-    name: string;
+	name: string;
 }): ClassDecorator {
-    return function (target) {
-        (target as any).options = options;
-    };
+	return function (target) {
+		(target as any).options = options;
+	};
 }

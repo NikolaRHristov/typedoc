@@ -49,4 +49,3 @@ export declare function getDocumentEntryPoints(logger: Logger, options: Options)
 export declare function getWatchEntryPoints(logger: Logger, options: Options, program: ts.Program): DocumentationEntryPoint[] | undefined;
 export declare function getPackageDirectories(logger: Logger, options: Options, packageGlobPaths: string[]): string[];
 export declare function getExpandedEntryPointsForPaths(logger: Logger, inputFiles: string[], options: Options, programs?: ts.Program[]): DocumentationEntryPoint[];
-//# sourceMappingURL=entry-point.d.ts.map

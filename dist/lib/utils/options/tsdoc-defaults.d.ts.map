@@ -1,1 +1,10 @@
-{"version":3,"file":"tsdoc-defaults.d.ts","sourceRoot":"","sources":["../../../../src/lib/utils/options/tsdoc-defaults.ts"],"names":[],"mappings":"AAEA,eAAO,MAAM,cAAc,6IAWjB,CAAC;AAEX,eAAO,MAAM,SAAS,0bA0BZ,CAAC;AAEX,eAAO,MAAM,eAAe,6CAA8C,CAAC;AAC3E,eAAO,MAAM,UAAU,wEAIb,CAAC;AAEX,eAAO,MAAM,iBAAiB,mKAYpB,CAAC;AAEX,eAAO,MAAM,YAAY,iXAiBf,CAAC"}
+{
+	"version": 3,
+	"file": "tsdoc-defaults.d.ts",
+	"sourceRoot": "",
+	"sources": [
+		"../../../../src/lib/utils/options/tsdoc-defaults.ts"
+	],
+	"names": [],
+	"mappings": "AAEA,eAAO,MAAM,cAAc,6IAWjB,CAAC;AAEX,eAAO,MAAM,SAAS,0bA0BZ,CAAC;AAEX,eAAO,MAAM,eAAe,6CAA8C,CAAC;AAC3E,eAAO,MAAM,UAAU,wEAIb,CAAC;AAEX,eAAO,MAAM,iBAAiB,mKAYpB,CAAC;AAEX,eAAO,MAAM,YAAY,iXAiBf,CAAC"
+}

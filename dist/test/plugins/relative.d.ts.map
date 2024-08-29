@@ -1,1 +1,10 @@
-{"version":3,"file":"relative.d.ts","sourceRoot":"","sources":["../../../src/test/plugins/relative.ts"],"names":[],"mappings":"AAAA,wBAAgB,IAAI,SAEnB"}
+{
+	"version": 3,
+	"file": "relative.d.ts",
+	"sourceRoot": "",
+	"sources": [
+		"../../../src/test/plugins/relative.ts"
+	],
+	"names": [],
+	"mappings": "AAAA,wBAAgB,IAAI,SAEnB"
+}

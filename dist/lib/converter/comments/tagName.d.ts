@@ -3,7 +3,6 @@
  * when processing `@param x`
  */
 export declare function extractTagName(text: string): {
-    name: string;
-    newText: string;
+	name: string;
+	newText: string;
 };
-//# sourceMappingURL=tagName.d.ts.map

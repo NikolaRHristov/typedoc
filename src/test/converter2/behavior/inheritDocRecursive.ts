@@ -1,14 +1,14 @@
 /** @inheritDoc B */
 export interface A {
-    a: string;
+	a: string;
 }
 
 /** @inheritDoc C */
 export interface B {
-    b: string;
+	b: string;
 }
 
 /** @inheritDoc A */
 export interface C {
-    c: string;
+	c: string;
 }

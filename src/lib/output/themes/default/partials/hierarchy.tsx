@@ -1,56 +1,75 @@
-import type { DefaultThemeRenderContext } from "../DefaultThemeRenderContext";
-import { JSX } from "../../../../utils";
 import type { DeclarationHierarchy, Type } from "../../../../models";
+import { JSX } from "../../../../utils";
+import type { DefaultThemeRenderContext } from "../DefaultThemeRenderContext";
 
 const isLinkedReferenceType = (type: Type) =>
-    type.visit({
-        reference: (ref) => ref.reflection !== undefined,
-    }) ?? false;
+	type.visit({
+		reference: (ref) => ref.reflection !== undefined,
+	}) ?? false;
 
-function hasAnyLinkedReferenceType(h: DeclarationHierarchy | undefined): boolean {
-    if (!h) return false;
+function hasAnyLinkedReferenceType(
+	h: DeclarationHierarchy | undefined,
+): boolean {
+	if (!h) return false;
 
-    if (!h.isTarget && h.types.some(isLinkedReferenceType)) return true;
+	if (!h.isTarget && h.types.some(isLinkedReferenceType)) return true;
 
-    return hasAnyLinkedReferenceType(h.next);
+	return hasAnyLinkedReferenceType(h.next);
 }
 
-export function hierarchy(context: DefaultThemeRenderContext, props: DeclarationHierarchy | undefined) {
-    if (!props) return;
+export function hierarchy(
+	context: DefaultThemeRenderContext,
+	props: DeclarationHierarchy | undefined,
+) {
+	if (!props) return;
 
-    const fullLink = hasAnyLinkedReferenceType(props) ? (
-        <>
-            {" "}
-            (
-            <a href={context.relativeURL("hierarchy.html") + "#" + context.page.model.getFullName()}>
-                {context.i18n.theme_hierarchy_view_full()}
-            </a>
-            )
-        </>
-    ) : (
-        <></>
-    );
+	const fullLink = hasAnyLinkedReferenceType(props) ? (
+		<>
+			{" "}
+			(
+			<a
+				href={
+					context.relativeURL("hierarchy.html") +
+					"#" +
+					context.page.model.getFullName()
+				}>
+				{context.i18n.theme_hierarchy_view_full()}
+			</a>
+			)
+		</>
+	) : (
+		<></>
+	);
 
-    return (
-        <section class="tsd-panel tsd-hierarchy">
-            <h4>
-                {context.i18n.theme_hierarchy()}
-                {fullLink}
-            </h4>
-            {hierarchyList(context, props)}
-        </section>
-    );
+	return (
+		<section class="tsd-panel tsd-hierarchy">
+			<h4>
+				{context.i18n.theme_hierarchy()}
+				{fullLink}
+			</h4>
+			{hierarchyList(context, props)}
+		</section>
+	);
 }
 
-function hierarchyList(context: DefaultThemeRenderContext, props: DeclarationHierarchy) {
-    return (
-        <ul class="tsd-hierarchy">
-            {props.types.map((item, i, l) => (
-                <li>
-                    {props.isTarget ? <span class="target">{item.toString()}</span> : context.type(item)}
-                    {i === l.length - 1 && !!props.next && hierarchyList(context, props.next)}
-                </li>
-            ))}
-        </ul>
-    );
+function hierarchyList(
+	context: DefaultThemeRenderContext,
+	props: DeclarationHierarchy,
+) {
+	return (
+		<ul class="tsd-hierarchy">
+			{props.types.map((item, i, l) => (
+				<li>
+					{props.isTarget ? (
+						<span class="target">{item.toString()}</span>
+					) : (
+						context.type(item)
+					)}
+					{i === l.length - 1 &&
+						!!props.next &&
+						hierarchyList(context, props.next)}
+				</li>
+			))}
+		</ul>
+	);
 }

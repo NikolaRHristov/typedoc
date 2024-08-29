@@ -1,4 +1,4 @@
 export interface ObjectWithIndexSignature {
-    /** Index comment. */
-    [x: string]: any;
+	/** Index comment. */
+	[x: string]: any;
 }

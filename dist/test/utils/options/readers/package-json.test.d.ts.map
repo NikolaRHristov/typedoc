@@ -1,1 +1,10 @@
-{"version":3,"file":"package-json.test.d.ts","sourceRoot":"","sources":["../../../../../src/test/utils/options/readers/package-json.test.ts"],"names":[],"mappings":""}
+{
+	"version": 3,
+	"file": "package-json.test.d.ts",
+	"sourceRoot": "",
+	"sources": [
+		"../../../../../src/test/utils/options/readers/package-json.test.ts"
+	],
+	"names": [],
+	"mappings": ""
+}

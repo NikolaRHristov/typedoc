@@ -1,1 +1,10 @@
-{"version":3,"file":"index.d.ts","sourceRoot":"","sources":["../../../../../src/lib/utils/options/sources/index.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,iBAAiB,EAAE,MAAM,WAAW,CAAC"}
+{
+	"version": 3,
+	"file": "index.d.ts",
+	"sourceRoot": "",
+	"sources": [
+		"../../../../../src/lib/utils/options/sources/index.ts"
+	],
+	"names": [],
+	"mappings": "AAAA,OAAO,EAAE,iBAAiB,EAAE,MAAM,WAAW,CAAC"
+}

@@ -1,3 +1,3 @@
 declare class Foo {
-    set bar(bar: string);
+	set bar(bar: string);
 }

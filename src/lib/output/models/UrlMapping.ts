@@ -2,21 +2,21 @@ import type { JSX } from "../../utils";
 import type { PageEvent } from "../events";
 
 export class UrlMapping<Model = any> {
-    url: string;
+	url: string;
 
-    model: Model;
+	model: Model;
 
-    template: RenderTemplate<PageEvent<Model>>;
+	template: RenderTemplate<PageEvent<Model>>;
 
-    constructor(
-        url: string,
-        model: Model,
-        template: RenderTemplate<PageEvent<Model>>,
-    ) {
-        this.url = url;
-        this.model = model;
-        this.template = template;
-    }
+	constructor(
+		url: string,
+		model: Model,
+		template: RenderTemplate<PageEvent<Model>>,
+	) {
+		this.url = url;
+		this.model = model;
+		this.template = template;
+	}
 }
 
 /**

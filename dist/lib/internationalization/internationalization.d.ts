@@ -1,7 +1,11 @@
 import type { Application } from "../application";
-import { translatable, type BuiltinTranslatableStringArgs } from "./translatable";
-import { ReflectionKind } from "../models/reflections/kind";
 import { ReflectionFlag } from "../models";
+import { ReflectionKind } from "../models/reflections/kind";
+import {
+	translatable,
+	type BuiltinTranslatableStringArgs,
+} from "./translatable";
+
 /**
  * ### What is translatable?
  * TypeDoc includes a lot of literal strings. By convention, messages which are displayed
@@ -37,17 +41,18 @@ import { ReflectionFlag } from "../models";
  * }
  * ```
  */
-export interface TranslatableStrings extends BuiltinTranslatableStringArgs {
-}
+export interface TranslatableStrings extends BuiltinTranslatableStringArgs {}
 declare const TranslatedString: unique symbol;
 export type TranslatedString = string & {
-    [TranslatedString]: true;
+	[TranslatedString]: true;
 };
 /**
  * Dynamic proxy type built from {@link TranslatableStrings}
  */
 export type TranslationProxy = {
-    [K in keyof TranslatableStrings]: (...args: TranslatableStrings[K]) => TranslatedString;
+	[K in keyof TranslatableStrings]: (
+		...args: TranslatableStrings[K]
+	) => TranslatedString;
 };
 /**
  * Simple internationalization module which supports placeholders.
@@ -55,42 +60,48 @@ export type TranslationProxy = {
  * plugins should add translations.
  */
 export declare class Internationalization {
-    private application;
-    private allTranslations;
-    /**
-     * Proxy object which supports dynamically translating
-     * all supported keys. This is generally used rather than the translate
-     * method so that renaming a key on the `translatable` object that contains
-     * all of the default translations will automatically update usage locations.
-     */
-    proxy: TranslationProxy;
-    /**
-     * If constructed without an application, will use the default language.
-     * Intended for use in unit tests only.
-     * @internal
-     */
-    constructor(application: Application | null);
-    /**
-     * Get the translation of the specified key, replacing placeholders
-     * with the arguments specified.
-     */
-    translate<T extends keyof typeof translatable>(key: T, ...args: TranslatableStrings[T]): TranslatedString;
-    kindSingularString(kind: ReflectionKind): TranslatedString;
-    kindPluralString(kind: ReflectionKind): TranslatedString;
-    flagString(flag: ReflectionFlag): TranslatedString;
-    translateTagName(tag: `@${string}`): TranslatedString;
-    /**
-     * Add translations for a string which will be displayed to the user.
-     */
-    addTranslations(lang: string, translations: Partial<Record<keyof TranslatableStrings, string>>, override?: boolean): void;
-    /**
-     * Checks if we have any translations in the specified language.
-     */
-    hasTranslations(lang: string): boolean;
-    /**
-     * Gets a list of all languages with at least one translation.
-     */
-    getSupportedLanguages(): string[];
+	private application;
+	private allTranslations;
+	/**
+	 * Proxy object which supports dynamically translating
+	 * all supported keys. This is generally used rather than the translate
+	 * method so that renaming a key on the `translatable` object that contains
+	 * all of the default translations will automatically update usage locations.
+	 */
+	proxy: TranslationProxy;
+	/**
+	 * If constructed without an application, will use the default language.
+	 * Intended for use in unit tests only.
+	 * @internal
+	 */
+	constructor(application: Application | null);
+	/**
+	 * Get the translation of the specified key, replacing placeholders
+	 * with the arguments specified.
+	 */
+	translate<T extends keyof typeof translatable>(
+		key: T,
+		...args: TranslatableStrings[T]
+	): TranslatedString;
+	kindSingularString(kind: ReflectionKind): TranslatedString;
+	kindPluralString(kind: ReflectionKind): TranslatedString;
+	flagString(flag: ReflectionFlag): TranslatedString;
+	translateTagName(tag: `@${string}`): TranslatedString;
+	/**
+	 * Add translations for a string which will be displayed to the user.
+	 */
+	addTranslations(
+		lang: string,
+		translations: Partial<Record<keyof TranslatableStrings, string>>,
+		override?: boolean,
+	): void;
+	/**
+	 * Checks if we have any translations in the specified language.
+	 */
+	hasTranslations(lang: string): boolean;
+	/**
+	 * Gets a list of all languages with at least one translation.
+	 */
+	getSupportedLanguages(): string[];
 }
 export {};
-//# sourceMappingURL=internationalization.d.ts.map

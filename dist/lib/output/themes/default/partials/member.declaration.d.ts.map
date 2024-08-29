@@ -1,1 +1,10 @@
-{"version":3,"file":"member.declaration.d.ts","sourceRoot":"","sources":["../../../../../../src/lib/output/themes/default/partials/member.declaration.tsx"],"names":[],"mappings":"AAAA,OAAO,KAAK,EAAE,qBAAqB,EAAkB,MAAM,oBAAoB,CAAC;AAChF,OAAO,EAAE,GAAG,EAAO,MAAM,mBAAmB,CAAC;AAE7C,OAAO,KAAK,EAAE,yBAAyB,EAAE,MAAM,8BAA8B,CAAC;AAc9E,wBAAgB,iBAAiB,CAAC,OAAO,EAAE,yBAAyB,EAAE,KAAK,EAAE,qBAAqB,eAoEjG"}
+{
+	"version": 3,
+	"file": "member.declaration.d.ts",
+	"sourceRoot": "",
+	"sources": [
+		"../../../../../../src/lib/output/themes/default/partials/member.declaration.tsx"
+	],
+	"names": [],
+	"mappings": "AAAA,OAAO,KAAK,EAAE,qBAAqB,EAAkB,MAAM,oBAAoB,CAAC;AAChF,OAAO,EAAE,GAAG,EAAO,MAAM,mBAAmB,CAAC;AAE7C,OAAO,KAAK,EAAE,yBAAyB,EAAE,MAAM,8BAA8B,CAAC;AAc9E,wBAAgB,iBAAiB,CAAC,OAAO,EAAE,yBAAyB,EAAE,KAAK,EAAE,qBAAqB,eAoEjG"
+}

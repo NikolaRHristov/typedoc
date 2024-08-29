@@ -17,15 +17,15 @@
  * @returns This is the return value of the function.
  */
 export function functionWithADestructuredParameter({
-    paramZ,
-    paramG,
-    paramA,
+	paramZ,
+	paramG,
+	paramA,
 }: {
-    paramZ: string;
-    paramG: any;
-    paramA: Object;
+	paramZ: string;
+	paramG: any;
+	paramA: Object;
 }): number {
-    return 0;
+	return 0;
 }
 
 /**
@@ -48,18 +48,18 @@ export function functionWithADestructuredParameter({
  * @returns This is the return value of the function.
  */
 export function functionWithADestructuredParameterAndExtraParameters(
-    {
-        paramZ,
-        paramG,
-        paramA,
-    }: {
-        paramZ: string;
-        paramG: any;
-        paramA: Object;
-    },
-    extraParameter: string,
+	{
+		paramZ,
+		paramG,
+		paramA,
+	}: {
+		paramZ: string;
+		paramG: any;
+		paramA: Object;
+	},
+	extraParameter: string,
 ): number {
-    return 0;
+	return 0;
 }
 
 /**
@@ -83,13 +83,13 @@ export function functionWithADestructuredParameterAndExtraParameters(
  * @returns This is the return value of the function.
  */
 export function functionWithADestructuredParameterAndAnExtraParamDirective({
-    paramZ,
-    paramG,
-    paramA,
+	paramZ,
+	paramG,
+	paramA,
 }: {
-    paramZ: string;
-    paramG: any;
-    paramA: Object;
+	paramZ: string;
+	paramG: any;
+	paramA: Object;
 }): number {
-    return 0;
+	return 0;
 }

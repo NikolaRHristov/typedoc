@@ -5,38 +5,82 @@
  *
  * @module
  */
-export declare const MeaningKeywords: readonly ["class", "interface", "type", "enum", "namespace", "function", "var", "constructor", "member", "event", "call", "new", "index", "complex", "getter", "setter"];
+export declare const MeaningKeywords: readonly [
+	"class",
+	"interface",
+	"type",
+	"enum",
+	"namespace",
+	"function",
+	"var",
+	"constructor",
+	"member",
+	"event",
+	"call",
+	"new",
+	"index",
+	"complex",
+	"getter",
+	"setter",
+];
 export type MeaningKeyword = (typeof MeaningKeywords)[number];
 export interface DeclarationReference {
-    resolutionStart: "global" | "local";
-    moduleSource?: string;
-    symbolReference?: SymbolReference;
+	resolutionStart: "global" | "local";
+	moduleSource?: string;
+	symbolReference?: SymbolReference;
 }
 export interface Meaning {
-    keyword?: MeaningKeyword;
-    label?: string;
-    index?: number;
+	keyword?: MeaningKeyword;
+	label?: string;
+	index?: number;
 }
 export declare function meaningToString(meaning: Meaning): string;
 export interface SymbolReference {
-    path?: ComponentPath[];
-    meaning?: Meaning;
+	path?: ComponentPath[];
+	meaning?: Meaning;
 }
 export interface ComponentPath {
-    /**
-     * How to resolve the `path`
-     * - `.` - Navigate via `exports` of symbol
-     * - `#` - Navigate via `members` of symbol
-     * - `~` - Navigate via `locals` of symbol
-     */
-    navigation: "." | "#" | "~";
-    path: string;
+	/**
+	 * How to resolve the `path`
+	 * - `.` - Navigate via `exports` of symbol
+	 * - `#` - Navigate via `members` of symbol
+	 * - `~` - Navigate via `locals` of symbol
+	 */
+	navigation: "." | "#" | "~";
+	path: string;
 }
-export declare function parseString(source: string, pos: number, end: number): [string, number] | undefined;
-export declare function parseModuleSource(source: string, pos: number, end: number): [string, number] | undefined;
-export declare function parseSymbolReference(source: string, pos: number, end: number): [SymbolReference, number] | undefined;
-export declare function parseComponent(source: string, pos: number, end: number): [string, number] | undefined;
-export declare function parseComponentPath(source: string, pos: number, end: number): readonly [ComponentPath[], number] | undefined;
-export declare function parseMeaning(source: string, pos: number, end: number): [Meaning, number] | undefined;
-export declare function parseDeclarationReference(source: string, pos: number, end: number): [DeclarationReference, number] | undefined;
-//# sourceMappingURL=declarationReference.d.ts.map
+export declare function parseString(
+	source: string,
+	pos: number,
+	end: number,
+): [string, number] | undefined;
+export declare function parseModuleSource(
+	source: string,
+	pos: number,
+	end: number,
+): [string, number] | undefined;
+export declare function parseSymbolReference(
+	source: string,
+	pos: number,
+	end: number,
+): [SymbolReference, number] | undefined;
+export declare function parseComponent(
+	source: string,
+	pos: number,
+	end: number,
+): [string, number] | undefined;
+export declare function parseComponentPath(
+	source: string,
+	pos: number,
+	end: number,
+): readonly [ComponentPath[], number] | undefined;
+export declare function parseMeaning(
+	source: string,
+	pos: number,
+	end: number,
+): [Meaning, number] | undefined;
+export declare function parseDeclarationReference(
+	source: string,
+	pos: number,
+	end: number,
+): [DeclarationReference, number] | undefined;

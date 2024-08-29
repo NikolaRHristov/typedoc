@@ -1,1 +1,10 @@
-{"version":3,"file":"LinkResolverPlugin.d.ts","sourceRoot":"","sources":["../../../../src/lib/converter/plugins/LinkResolverPlugin.ts"],"names":[],"mappings":"AAAA,OAAO,EAAa,kBAAkB,EAAE,MAAM,eAAe,CAAC;AAC9D,OAAO,KAAK,EAAE,OAAO,EAAE,MAAM,iBAAiB,CAAC;AAE/C,OAAO,EAAU,KAAK,iBAAiB,EAAE,MAAM,aAAa,CAAC;AAC7D,OAAO,EAGH,KAAK,iBAAiB,EAGzB,MAAM,cAAc,CAAC;AAItB;;GAEG;AACH,qBACa,kBAAmB,SAAQ,kBAAkB;IAEtD,QAAQ,CAAC,UAAU,EAAG,iBAAiB,CAAC;IAE/B,UAAU;IAcnB,SAAS,CAAC,OAAO,EAAE,OAAO;IAI1B,YAAY,CAAC,OAAO,EAAE,iBAAiB;IAuFvC,OAAO,CAAC,oBAAoB;CAW/B"}
+{
+	"version": 3,
+	"file": "LinkResolverPlugin.d.ts",
+	"sourceRoot": "",
+	"sources": [
+		"../../../../src/lib/converter/plugins/LinkResolverPlugin.ts"
+	],
+	"names": [],
+	"mappings": "AAAA,OAAO,EAAa,kBAAkB,EAAE,MAAM,eAAe,CAAC;AAC9D,OAAO,KAAK,EAAE,OAAO,EAAE,MAAM,iBAAiB,CAAC;AAE/C,OAAO,EAAU,KAAK,iBAAiB,EAAE,MAAM,aAAa,CAAC;AAC7D,OAAO,EAGH,KAAK,iBAAiB,EAGzB,MAAM,cAAc,CAAC;AAItB;;GAEG;AACH,qBACa,kBAAmB,SAAQ,kBAAkB;IAEtD,QAAQ,CAAC,UAAU,EAAG,iBAAiB,CAAC;IAE/B,UAAU;IAcnB,SAAS,CAAC,OAAO,EAAE,OAAO;IAI1B,YAAY,CAAC,OAAO,EAAE,iBAAiB;IAuFvC,OAAO,CAAC,oBAAoB;CAW/B"
+}

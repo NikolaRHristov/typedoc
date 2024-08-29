@@ -1,16 +1,16 @@
 {
-    "compilerOptions": {
-        "strict": true,
-        "module": "Node16",
-        "checkJs": true,
-        "outDir": "dist",
-        "target": "ESNext",
+	"compilerOptions": {
+		"strict": true,
+		"module": "Node16",
+		"checkJs": true,
+		"outDir": "dist",
+		"target": "ESNext",
 
-        "noImplicitAny": false,
+		"noImplicitAny": false,
 
-        "skipLibCheck": true
-    },
-    "typedocOptions": {
-        "exclude": ["**/ignored.ts"]
-    }
+		"skipLibCheck": true
+	},
+	"typedocOptions": {
+		"exclude": ["**/ignored.ts"]
+	}
 }

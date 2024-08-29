@@ -6,7 +6,7 @@
  * @returns A generic return value.
  */
 export function testFunction<T>(value: T): T {
-    return value;
+	return value;
 }
 
 /**
@@ -15,12 +15,12 @@ export function testFunction<T>(value: T): T {
  * @param T  The generic type parameter.
  */
 export interface A<T> {
-    /**
-     * A generic member function.
-     *
-     * @return  A generic return value.
-     */
-    getT(): T;
+	/**
+	 * A generic member function.
+	 *
+	 * @return  A generic return value.
+	 */
+	getT(): T;
 }
 
 /**
@@ -30,19 +30,19 @@ export interface A<T> {
  * @param <C>  The second generic type parameter.
  */
 export interface B<T, C> {
-    /**
-     * A generic member function.
-     *
-     * @param value  A generic parameter.
-     */
-    setT(value: T): void;
+	/**
+	 * A generic member function.
+	 *
+	 * @param value  A generic parameter.
+	 */
+	setT(value: T): void;
 
-    /**
-     * A generic member function.
-     *
-     * @return  A generic return value.
-     */
-    getC(): C;
+	/**
+	 * A generic member function.
+	 *
+	 * @return  A generic return value.
+	 */
+	getC(): C;
 }
 
 /**
@@ -69,38 +69,38 @@ export interface ABNumber extends AB<number> {}
  * @return The return value with type arguments.
  */
 export function getGenericArray(): Array<string> {
-    return [""];
+	return [""];
 }
 
 /**
  * Conditional type with infer
  */
 export type PopFront<T extends any[]> = ((...args: T) => any) extends (
-    a: any,
-    ...r: infer R
+	a: any,
+	...r: infer R
 ) => any
-    ? R
-    : never;
+	? R
+	: never;
 
 /**
  * See GH#1150. Calling typeChecker.typeToString on this type will send TS into an infinite
  * loop, which is undesirable.
  */
 export type HorribleRecursiveTypeThatShouldNotBeUsedByAnyone<
-    T extends any[],
-    R = {}
+	T extends any[],
+	R = {},
 > = {
-    0: R;
-    1: HorribleRecursiveTypeThatShouldNotBeUsedByAnyone<
-        PopFront<T>,
-        {
-            [K in keyof R | keyof T[0]]: K extends keyof R ? R[K] : T[0][K];
-        }
-    >;
+	0: R;
+	1: HorribleRecursiveTypeThatShouldNotBeUsedByAnyone<
+		PopFront<T>,
+		{
+			[K in keyof R | keyof T[0]]: K extends keyof R ? R[K] : T[0][K];
+		}
+	>;
 }[T["length"] extends 0 ? 0 : 1];
 
 export type DoubleKey<T> = { [K in keyof T & string as `${K}${K}`]: T[K] };
 
 export function doubleKey<T>(arg: T) {
-    return {} as { [K in keyof T & string as `${K}${K}`]: T[K] };
+	return {} as { [K in keyof T & string as `${K}${K}`]: T[K] };
 }

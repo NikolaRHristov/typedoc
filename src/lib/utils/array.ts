@@ -7,12 +7,12 @@ export const emptyArray: readonly [] = [];
  * @param item
  */
 export function insertPrioritySorted<T extends { priority: number }>(
-    arr: T[],
-    item: T,
+	arr: T[],
+	item: T,
 ): T[] {
-    const index = binaryFindPartition(arr, (v) => v.priority < item.priority);
-    arr.splice(index === -1 ? arr.length : index, 0, item);
-    return arr;
+	const index = binaryFindPartition(arr, (v) => v.priority < item.priority);
+	arr.splice(index === -1 ? arr.length : index, 0, item);
+	return arr;
 }
 
 /**
@@ -23,12 +23,12 @@ export function insertPrioritySorted<T extends { priority: number }>(
  * @param item
  */
 export function insertOrderSorted<T extends { order: number }>(
-    arr: T[],
-    item: T,
+	arr: T[],
+	item: T,
 ): T[] {
-    const index = binaryFindPartition(arr, (v) => v.order > item.order);
-    arr.splice(index === -1 ? arr.length : index, 0, item);
-    return arr;
+	const index = binaryFindPartition(arr, (v) => v.order > item.order);
+	arr.splice(index === -1 ? arr.length : index, 0, item);
+	return arr;
 }
 
 /**
@@ -39,26 +39,26 @@ export function insertOrderSorted<T extends { order: number }>(
  * @param partition should return true while less than the partition point.
  */
 export function binaryFindPartition<T>(
-    arr: readonly T[],
-    partition: (item: T) => boolean,
+	arr: readonly T[],
+	partition: (item: T) => boolean,
 ): number {
-    if (arr.length === 0) {
-        return -1;
-    }
+	if (arr.length === 0) {
+		return -1;
+	}
 
-    let low = 0,
-        high = arr.length - 1;
+	let low = 0,
+		high = arr.length - 1;
 
-    while (high > low) {
-        const mid = low + Math.floor((high - low) / 2);
-        if (partition(arr[mid])) {
-            high = mid;
-        } else {
-            low = mid + 1;
-        }
-    }
+	while (high > low) {
+		const mid = low + Math.floor((high - low) / 2);
+		if (partition(arr[mid])) {
+			high = mid;
+		} else {
+			low = mid + 1;
+		}
+	}
 
-    return partition(arr[low]) ? low : -1;
+	return partition(arr[low]) ? low : -1;
 }
 
 /**
@@ -68,13 +68,13 @@ export function binaryFindPartition<T>(
  * @param item
  */
 export function removeIfPresent<T>(arr: T[] | undefined, item: T) {
-    if (!arr) {
-        return;
-    }
-    const index = arr.indexOf(item);
-    if (index !== -1) {
-        arr.splice(index, 1);
-    }
+	if (!arr) {
+		return;
+	}
+	const index = arr.indexOf(item);
+	if (index !== -1) {
+		arr.splice(index, 1);
+	}
 }
 
 /**
@@ -83,12 +83,12 @@ export function removeIfPresent<T>(arr: T[] | undefined, item: T) {
  * @param predicate
  */
 export function removeIf<T>(arr: T[], predicate: (item: T) => boolean) {
-    for (let i = 0; i < arr.length; i++) {
-        if (predicate(arr[i])) {
-            arr.splice(i, 1);
-            i--;
-        }
-    }
+	for (let i = 0; i < arr.length; i++) {
+		if (predicate(arr[i])) {
+			arr.splice(i, 1);
+			i--;
+		}
+	}
 }
 
 /**
@@ -96,77 +96,77 @@ export function removeIf<T>(arr: T[], predicate: (item: T) => boolean) {
  * @param arr
  */
 export function unique<T>(arr: Iterable<T> | undefined): T[] {
-    return Array.from(new Set(arr));
+	return Array.from(new Set(arr));
 }
 
 export function partition<T>(
-    iter: Iterable<T>,
-    predicate: (item: T) => boolean,
+	iter: Iterable<T>,
+	predicate: (item: T) => boolean,
 ): [T[], T[]] {
-    const left: T[] = [];
-    const right: T[] = [];
+	const left: T[] = [];
+	const right: T[] = [];
 
-    for (const item of iter) {
-        if (predicate(item)) {
-            left.push(item);
-        } else {
-            right.push(item);
-        }
-    }
+	for (const item of iter) {
+		if (predicate(item)) {
+			left.push(item);
+		} else {
+			right.push(item);
+		}
+	}
 
-    return [left, right];
+	return [left, right];
 }
 
 export function* zip<T extends Iterable<any>[]>(
-    ...args: T
+	...args: T
 ): Iterable<{ [K in keyof T]: T[K] extends Iterable<infer U> ? U : T[K] }> {
-    const iterators = args.map((x) => x[Symbol.iterator]());
+	const iterators = args.map((x) => x[Symbol.iterator]());
 
-    for (;;) {
-        const next = iterators.map((i) => i.next());
-        if (next.some((v) => v.done)) {
-            break;
-        }
-        yield next.map((v) => v.value) as any;
-    }
+	for (;;) {
+		const next = iterators.map((i) => i.next());
+		if (next.some((v) => v.done)) {
+			break;
+		}
+		yield next.map((v) => v.value) as any;
+	}
 }
 
 export function filterMap<T, U>(
-    iter: Iterable<T> | undefined,
-    fn: (item: T) => U | undefined,
+	iter: Iterable<T> | undefined,
+	fn: (item: T) => U | undefined,
 ): U[] {
-    const result: U[] = [];
+	const result: U[] = [];
 
-    for (const item of iter || []) {
-        const newItem = fn(item);
-        if (newItem !== void 0) {
-            result.push(newItem);
-        }
-    }
+	for (const item of iter || []) {
+		const newItem = fn(item);
+		if (newItem !== void 0) {
+			result.push(newItem);
+		}
+	}
 
-    return result;
+	return result;
 }
 
 export function firstDefined<T, U>(
-    array: readonly T[] | undefined,
-    callback: (element: T, index: number) => U | undefined,
+	array: readonly T[] | undefined,
+	callback: (element: T, index: number) => U | undefined,
 ): U | undefined {
-    if (array === undefined) {
-        return undefined;
-    }
+	if (array === undefined) {
+		return undefined;
+	}
 
-    for (let i = 0; i < array.length; i++) {
-        const result = callback(array[i], i);
-        if (result !== undefined) {
-            return result;
-        }
-    }
-    return undefined;
+	for (let i = 0; i < array.length; i++) {
+		const result = callback(array[i], i);
+		if (result !== undefined) {
+			return result;
+		}
+	}
+	return undefined;
 }
 
 export function filter<T>(
-    array: readonly T[] | undefined,
-    predicate: (value: T, index: number, array: readonly T[]) => boolean,
+	array: readonly T[] | undefined,
+	predicate: (value: T, index: number, array: readonly T[]) => boolean,
 ): readonly T[] {
-    return array ? array.filter(predicate) : emptyArray;
+	return array ? array.filter(predicate) : emptyArray;
 }

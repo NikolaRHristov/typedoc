@@ -1,6 +1,7 @@
 import { existsSync } from "fs";
 import { isAbsolute, join, relative, resolve } from "path";
 import ts from "typescript";
+
 import type { JSONOutput, Serializer } from "../../serialization/index";
 import { getCommonDirectory, readFile } from "../../utils/fs";
 import { normalizePath } from "../../utils/paths";
@@ -11,7 +12,7 @@ import { optional, validate } from "../../utils/validation";
  * See {@link ReflectionSymbolId}
  */
 export type ReflectionSymbolIdString = string & {
-    readonly __reflectionSymbolId: unique symbol;
+	readonly __reflectionSymbolId: unique symbol;
 };
 
 let transientCount = 0;
@@ -23,138 +24,138 @@ const transientIds = new WeakMap<ts.Symbol, number>();
  * runs so long as the symbol is exported from the same file.
  */
 export class ReflectionSymbolId {
-    readonly fileName: string;
-    readonly qualifiedName: string;
-    /**
-     * Note: This is **not** serialized. It exists for sorting by declaration order, but
-     * should not be needed when deserializing from JSON.
-     * Will be set to `Infinity` if the ID was deserialized from JSON.
-     */
-    pos: number;
-    /**
-     * Note: This is **not** serialized. It exists to support detection of the differences between
-     * symbols which share declarations, but are instantiated with different type parameters.
-     * This will be `NaN` if the symbol reference is not transient.
-     * Note: This can only be non-NaN if {@link pos} is finite.
-     */
-    transientId: number;
+	readonly fileName: string;
+	readonly qualifiedName: string;
+	/**
+	 * Note: This is **not** serialized. It exists for sorting by declaration order, but
+	 * should not be needed when deserializing from JSON.
+	 * Will be set to `Infinity` if the ID was deserialized from JSON.
+	 */
+	pos: number;
+	/**
+	 * Note: This is **not** serialized. It exists to support detection of the differences between
+	 * symbols which share declarations, but are instantiated with different type parameters.
+	 * This will be `NaN` if the symbol reference is not transient.
+	 * Note: This can only be non-NaN if {@link pos} is finite.
+	 */
+	transientId: number;
 
-    constructor(symbol: ts.Symbol, declaration?: ts.Declaration);
-    constructor(json: JSONOutput.ReflectionSymbolId);
-    constructor(
-        symbol: ts.Symbol | JSONOutput.ReflectionSymbolId,
-        declaration?: ts.Declaration,
-    ) {
-        if ("name" in symbol) {
-            declaration ??= symbol.declarations?.[0];
-            this.fileName = normalizePath(
-                declaration?.getSourceFile().fileName ?? "",
-            );
-            if (symbol.declarations?.some(ts.isSourceFile)) {
-                this.qualifiedName = "";
-            } else {
-                this.qualifiedName = getQualifiedName(symbol, symbol.name);
-            }
-            this.pos = declaration?.pos ?? Infinity;
-            if (symbol.flags & ts.SymbolFlags.Transient) {
-                this.transientId = transientIds.get(symbol) ?? ++transientCount;
-                transientIds.set(symbol, this.transientId);
-            } else {
-                this.transientId = NaN;
-            }
-        } else {
-            this.fileName = symbol.sourceFileName;
-            this.qualifiedName = symbol.qualifiedName;
-            this.pos = Infinity;
-            this.transientId = NaN;
-        }
-    }
+	constructor(symbol: ts.Symbol, declaration?: ts.Declaration);
+	constructor(json: JSONOutput.ReflectionSymbolId);
+	constructor(
+		symbol: ts.Symbol | JSONOutput.ReflectionSymbolId,
+		declaration?: ts.Declaration,
+	) {
+		if ("name" in symbol) {
+			declaration ??= symbol.declarations?.[0];
+			this.fileName = normalizePath(
+				declaration?.getSourceFile().fileName ?? "",
+			);
+			if (symbol.declarations?.some(ts.isSourceFile)) {
+				this.qualifiedName = "";
+			} else {
+				this.qualifiedName = getQualifiedName(symbol, symbol.name);
+			}
+			this.pos = declaration?.pos ?? Infinity;
+			if (symbol.flags & ts.SymbolFlags.Transient) {
+				this.transientId = transientIds.get(symbol) ?? ++transientCount;
+				transientIds.set(symbol, this.transientId);
+			} else {
+				this.transientId = NaN;
+			}
+		} else {
+			this.fileName = symbol.sourceFileName;
+			this.qualifiedName = symbol.qualifiedName;
+			this.pos = Infinity;
+			this.transientId = NaN;
+		}
+	}
 
-    getStableKey(): ReflectionSymbolIdString {
-        if (Number.isFinite(this.pos)) {
-            return `${this.fileName}\0${this.qualifiedName}\0${this.pos}\0${this.transientId}` as ReflectionSymbolIdString;
-        } else {
-            return `${this.fileName}\0${this.qualifiedName}` as ReflectionSymbolIdString;
-        }
-    }
+	getStableKey(): ReflectionSymbolIdString {
+		if (Number.isFinite(this.pos)) {
+			return `${this.fileName}\0${this.qualifiedName}\0${this.pos}\0${this.transientId}` as ReflectionSymbolIdString;
+		} else {
+			return `${this.fileName}\0${this.qualifiedName}` as ReflectionSymbolIdString;
+		}
+	}
 
-    toObject(serializer: Serializer) {
-        const sourceFileName = isAbsolute(this.fileName)
-            ? normalizePath(
-                  relative(
-                      serializer.projectRoot,
-                      resolveDeclarationMaps(this.fileName),
-                  ),
-              )
-            : this.fileName;
+	toObject(serializer: Serializer) {
+		const sourceFileName = isAbsolute(this.fileName)
+			? normalizePath(
+					relative(
+						serializer.projectRoot,
+						resolveDeclarationMaps(this.fileName),
+					),
+				)
+			: this.fileName;
 
-        return {
-            sourceFileName,
-            qualifiedName: this.qualifiedName,
-        };
-    }
+		return {
+			sourceFileName,
+			qualifiedName: this.qualifiedName,
+		};
+	}
 }
 
 const declarationMapCache = new Map<string, string>();
 
 function resolveDeclarationMaps(file: string): string {
-    if (!/\.d\.[cm]?ts$/.test(file)) return file;
-    if (declarationMapCache.has(file)) return declarationMapCache.get(file)!;
+	if (!/\.d\.[cm]?ts$/.test(file)) return file;
+	if (declarationMapCache.has(file)) return declarationMapCache.get(file)!;
 
-    const mapFile = file + ".map";
-    if (!existsSync(mapFile)) return file;
+	const mapFile = file + ".map";
+	if (!existsSync(mapFile)) return file;
 
-    let sourceMap: unknown;
-    try {
-        sourceMap = JSON.parse(readFile(mapFile)) as unknown;
-    } catch {
-        return file;
-    }
+	let sourceMap: unknown;
+	try {
+		sourceMap = JSON.parse(readFile(mapFile)) as unknown;
+	} catch {
+		return file;
+	}
 
-    if (
-        validate(
-            {
-                file: String,
-                sourceRoot: optional(String),
-                sources: [Array, String],
-            },
-            sourceMap,
-        )
-    ) {
-        // There's a pretty large assumption in here that we only have
-        // 1 source file per js file. This is a pretty standard typescript approach,
-        // but people might do interesting things with transpilation that could break this.
-        let source = sourceMap.sources[0];
+	if (
+		validate(
+			{
+				file: String,
+				sourceRoot: optional(String),
+				sources: [Array, String],
+			},
+			sourceMap,
+		)
+	) {
+		// There's a pretty large assumption in here that we only have
+		// 1 source file per js file. This is a pretty standard typescript approach,
+		// but people might do interesting things with transpilation that could break this.
+		let source = sourceMap.sources[0];
 
-        // If we have a sourceRoot, trim any leading slash from the source, and join them
-        // Similar to how it's done at https://github.com/mozilla/source-map/blob/58819f09018d56ef84dc41ba9c93f554e0645169/lib/util.js#L412
-        if (sourceMap.sourceRoot !== undefined) {
-            source = source.replace(/^\//, "");
-            source = join(sourceMap.sourceRoot, source);
-        }
+		// If we have a sourceRoot, trim any leading slash from the source, and join them
+		// Similar to how it's done at https://github.com/mozilla/source-map/blob/58819f09018d56ef84dc41ba9c93f554e0645169/lib/util.js#L412
+		if (sourceMap.sourceRoot !== undefined) {
+			source = source.replace(/^\//, "");
+			source = join(sourceMap.sourceRoot, source);
+		}
 
-        const result = resolve(mapFile, "..", source);
-        declarationMapCache.set(file, result);
-        return result;
-    }
+		const result = resolve(mapFile, "..", source);
+		declarationMapCache.set(file, result);
+		return result;
+	}
 
-    return file;
+	return file;
 }
 
 export function addInferredDeclarationMapPaths(
-    opts: ts.CompilerOptions,
-    files: readonly string[],
+	opts: ts.CompilerOptions,
+	files: readonly string[],
 ) {
-    const rootDir = opts.rootDir || getCommonDirectory(files);
-    const declDir = opts.declarationDir || opts.outDir || rootDir;
+	const rootDir = opts.rootDir || getCommonDirectory(files);
+	const declDir = opts.declarationDir || opts.outDir || rootDir;
 
-    for (const file of files) {
-        const mapFile = normalizePath(
-            resolve(declDir, relative(rootDir, file)).replace(
-                /\.([cm]?[tj]s)x?$/,
-                ".d.$1",
-            ),
-        );
-        declarationMapCache.set(mapFile, file);
-    }
+	for (const file of files) {
+		const mapFile = normalizePath(
+			resolve(declDir, relative(rootDir, file)).replace(
+				/\.([cm]?[tj]s)x?$/,
+				".d.$1",
+			),
+		);
+		declarationMapCache.set(mapFile, file);
+	}
 }

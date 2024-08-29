@@ -1,5 +1,5 @@
 export const x: {
-    foo?: Foo;
+	foo?: Foo;
 } = {};
 
 class Foo {}

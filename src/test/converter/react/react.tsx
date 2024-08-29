@@ -1,28 +1,28 @@
 /** @jsx React.createElement */
 declare namespace React {
-    namespace JSX {
-        interface IntrinsicElements {
-            [x: string]: any;
-        }
-    }
+	namespace JSX {
+		interface IntrinsicElements {
+			[x: string]: any;
+		}
+	}
 
-    function createElement(): any;
+	function createElement(): any;
 }
 
 export interface DemoProps {
-    name: string;
-    age: number;
+	name: string;
+	age: number;
 }
 
 export class Demo {
-    private foo: number;
+	private foo: number;
 
-    constructor(props: DemoProps) {
-        this.foo = props.age;
-        this.foo;
-    }
+	constructor(props: DemoProps) {
+		this.foo = props.age;
+		this.foo;
+	}
 
-    render() {
-        return <div>Hello world!</div>;
-    }
+	render() {
+		return <div>Hello world!</div>;
+	}
 }

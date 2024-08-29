@@ -1,14 +1,14 @@
 export enum Color {
-    BLUE = "Blue",
-    RED = "Red",
+	BLUE = "Blue",
+	RED = "Red",
 }
 
 type TypeOf<T> = {
-    [K in keyof T]: T[K][keyof T[K]];
+	[K in keyof T]: T[K][keyof T[K]];
 };
 
 type Foo = {
-    color: typeof Color;
+	color: typeof Color;
 };
 
 /** @interface */

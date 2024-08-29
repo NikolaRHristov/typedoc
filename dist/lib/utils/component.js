@@ -131,4 +131,3 @@ class ChildableComponent extends AbstractComponent {
     }
 }
 exports.ChildableComponent = ChildableComponent;
-//# sourceMappingURL=component.js.map

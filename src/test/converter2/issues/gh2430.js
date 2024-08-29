@@ -5,7 +5,7 @@
  * @param {any} props.falseValue False default
  */
 export const Checkbox = ({
-    value,
-    trueValue = true,
-    falseValue: renamed = false,
+	value,
+	trueValue = true,
+	falseValue: renamed = false,
 }) => {};

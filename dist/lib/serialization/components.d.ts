@@ -23,4 +23,3 @@ export interface SerializerComponent<T extends object> {
     supports(item: unknown): boolean;
     toObject(item: T, obj: Partial<ModelToObject<T>>, serializer: Serializer): Partial<ModelToObject<T>>;
 }
-//# sourceMappingURL=components.d.ts.map

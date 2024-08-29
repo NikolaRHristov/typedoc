@@ -1,1 +1,10 @@
-{"version":3,"file":"index.d.ts","sourceRoot":"","sources":["../../../../src/lib/models/sources/index.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,eAAe,EAAE,MAAM,QAAQ,CAAC"}
+{
+	"version": 3,
+	"file": "index.d.ts",
+	"sourceRoot": "",
+	"sources": [
+		"../../../../src/lib/models/sources/index.ts"
+	],
+	"names": [],
+	"mappings": "AAAA,OAAO,EAAE,eAAe,EAAE,MAAM,QAAQ,CAAC"
+}

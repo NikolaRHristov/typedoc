@@ -1,1 +1,10 @@
-{"version":3,"file":"typeAndParent.d.ts","sourceRoot":"","sources":["../../../../../../src/lib/output/themes/default/partials/typeAndParent.tsx"],"names":[],"mappings":"AAAA,OAAO,KAAK,EAAE,yBAAyB,EAAE,MAAM,8BAA8B,CAAC;AAC9E,OAAO,EAAiD,KAAK,IAAI,EAAE,MAAM,oBAAoB,CAAC;AAC9F,OAAO,EAAE,GAAG,EAAE,MAAM,mBAAmB,CAAC;AAExC,eAAO,MAAM,aAAa,YAAa,yBAAyB,SAAS,IAAI,KAAG,GAAG,CAAC,OAuBnF,CAAC"}
+{
+	"version": 3,
+	"file": "typeAndParent.d.ts",
+	"sourceRoot": "",
+	"sources": [
+		"../../../../../../src/lib/output/themes/default/partials/typeAndParent.tsx"
+	],
+	"names": [],
+	"mappings": "AAAA,OAAO,KAAK,EAAE,yBAAyB,EAAE,MAAM,8BAA8B,CAAC;AAC9E,OAAO,EAAiD,KAAK,IAAI,EAAE,MAAM,oBAAoB,CAAC;AAC9F,OAAO,EAAE,GAAG,EAAE,MAAM,mBAAmB,CAAC;AAExC,eAAO,MAAM,aAAa,YAAa,yBAAyB,SAAS,IAAI,KAAG,GAAG,CAAC,OAuBnF,CAAC"
+}

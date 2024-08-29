@@ -1,5 +1,5 @@
-import type { Serializer } from "./serializer";
 import type { ModelToObject } from "./schema";
+import type { Serializer } from "./serializer";
 
 /**
  * Represents Serializer plugin component.
@@ -11,22 +11,22 @@ import type { ModelToObject } from "./schema";
  * it belongs to.
  */
 export interface SerializerComponent<T extends object> {
-    /**
-     * The priority this serializer should be executed with.
-     * A higher priority means the {@link Serializer} will be applied earlier.
-     */
-    readonly priority: number;
+	/**
+	 * The priority this serializer should be executed with.
+	 * A higher priority means the {@link Serializer} will be applied earlier.
+	 */
+	readonly priority: number;
 
-    /**
-     * Technically this should return `item is T`, but that doesn't play nicely
-     * with inference, so allow the looser `boolean` return type.
-     * @param item
-     */
-    supports(item: unknown): boolean;
+	/**
+	 * Technically this should return `item is T`, but that doesn't play nicely
+	 * with inference, so allow the looser `boolean` return type.
+	 * @param item
+	 */
+	supports(item: unknown): boolean;
 
-    toObject(
-        item: T,
-        obj: Partial<ModelToObject<T>>,
-        serializer: Serializer,
-    ): Partial<ModelToObject<T>>;
+	toObject(
+		item: T,
+		obj: Partial<ModelToObject<T>>,
+		serializer: Serializer,
+	): Partial<ModelToObject<T>>;
 }

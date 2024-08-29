@@ -1,9 +1,12 @@
-import type { Options } from "./options";
 import type { TranslationProxy } from "../../internationalization/internationalization";
+import type { Options } from "./options";
+
 export interface ParameterHelp {
-    names: string[];
-    helps: string[];
-    margin: number;
+	names: string[];
+	helps: string[];
+	margin: number;
 }
-export declare function getOptionsHelp(options: Options, i18n: TranslationProxy): string;
-//# sourceMappingURL=help.d.ts.map
+export declare function getOptionsHelp(
+	options: Options,
+	i18n: TranslationProxy,
+): string;

@@ -220,4 +220,3 @@ class Deserializer {
     }
 }
 exports.Deserializer = Deserializer;
-//# sourceMappingURL=deserializer.js.map

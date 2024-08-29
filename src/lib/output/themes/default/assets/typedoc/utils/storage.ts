@@ -3,21 +3,21 @@
 // so we're stuck with a try..catch.
 
 export interface MinimalStorage {
-    getItem(key: string): string | null;
-    setItem(key: string, value: string): void;
+	getItem(key: string): string | null;
+	setItem(key: string, value: string): void;
 }
 
 let _storage: MinimalStorage;
 
 try {
-    _storage = localStorage;
+	_storage = localStorage;
 } catch {
-    _storage = {
-        getItem() {
-            return null;
-        },
-        setItem() {},
-    };
+	_storage = {
+		getItem() {
+			return null;
+		},
+		setItem() {},
+	};
 }
 
 export const storage = _storage;

@@ -6,13 +6,13 @@ export const a = 1;
 export default function () {}
 
 export const gh1475 = {
-    get getIt(): number {
-        return 1;
-    },
-    set setIt(n: number) {},
+	get getIt(): number {
+		return 1;
+	},
+	set setIt(n: number) {},
 
-    get both(): string {
-        return "";
-    },
-    set both(x: string) {},
+	get both(): string {
+		return "";
+	},
+	set both(x: string) {},
 };

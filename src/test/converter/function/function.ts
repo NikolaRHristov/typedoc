@@ -21,11 +21,11 @@ export function exportedFunction(): void {}
  * @returns This is the return value of the function.
  */
 export function functionWithParameters(
-    paramZ: string,
-    paramG: any,
-    paramA: Object,
+	paramZ: string,
+	paramG: any,
+	paramA: Object,
 ): number {
-    return 0;
+	return 0;
 }
 
 /**
@@ -35,7 +35,7 @@ export function functionWithParameters(
  * @return This is the return value of the function.
  */
 export const variableFunction = function (someParam: number): number {
-    return 0;
+	return 0;
 };
 
 /**
@@ -45,8 +45,8 @@ export const variableFunction = function (someParam: number): number {
  * @param optionalParam  An optional parameter.
  */
 export function functionWithOptionalValue(
-    requiredParam: string,
-    optionalParam?: string,
+	requiredParam: string,
+	optionalParam?: string,
 ) {}
 
 /**
@@ -60,13 +60,13 @@ export function functionWithOptionalValue(
  * @return This is the return value of the function.
  */
 export function functionWithDefaults(
-    valueA: string = "defaultValue",
-    valueB: number = 100,
-    valueC: number = Number.NaN,
-    valueD: boolean = true,
-    valueE: boolean = null!,
+	valueA: string = "defaultValue",
+	valueB: number = 100,
+	valueC: number = Number.NaN,
+	valueD: boolean = true,
+	valueE: boolean = null!,
 ): string {
-    return valueA;
+	return valueA;
 }
 
 /**
@@ -76,7 +76,7 @@ export function functionWithDefaults(
  * @return This is the return value of the function.
  */
 export function functionWithRest(...rest: string[]): string {
-    return rest.join(", ");
+	return rest.join(", ");
 }
 
 /**
@@ -103,15 +103,15 @@ export function multipleSignatures(value: { name: string }): string;
  * to signatures.
  */
 export function multipleSignatures(): string {
-    if (arguments.length > 0) {
-        if (typeof arguments[0] === "object") {
-            return arguments[0].name;
-        } else {
-            return arguments[0];
-        }
-    }
+	if (arguments.length > 0) {
+		if (typeof arguments[0] === "object") {
+			return arguments[0].name;
+		} else {
+			return arguments[0];
+		}
+	}
 
-    return "";
+	return "";
 }
 
 /**
@@ -120,7 +120,7 @@ export function multipleSignatures(): string {
  * @param arg An argument.
  */
 export function moduleFunction(arg: string): string {
-    return "";
+	return "";
 }
 
 /**
@@ -135,7 +135,7 @@ export function assertionFunction(condition: boolean): asserts condition {}
  * @param anything
  */
 export function checkerFunction(anything: any): anything is string {
-    return typeof anything === "string";
+	return typeof anything === "string";
 }
 
 /**
@@ -143,11 +143,11 @@ export function checkerFunction(anything: any): anything is string {
  * @param arg
  */
 export function assertIsNonNull<T>(
-    arg: T | null | undefined,
+	arg: T | null | undefined,
 ): asserts arg is T {
-    if (arg == null) {
-        throw new Error("Was nullable");
-    }
+	if (arg == null) {
+		throw new Error("Was nullable");
+	}
 }
 
 /**
@@ -155,38 +155,38 @@ export function assertIsNonNull<T>(
  * @param arg
  */
 export function isNonNull<T>(arg: T | null | undefined): arg is T {
-    return arg != null;
+	return arg != null;
 }
 
 /**
  * This is the module extending the function moduleFunction().
  */
 export module moduleFunction {
-    /**
-     * This variable is appended to a function.
-     */
-    export let functionVariable: string;
+	/**
+	 * This variable is appended to a function.
+	 */
+	export let functionVariable: string;
 
-    /**
-     * This function is appended to another function.
-     */
-    export function append() {}
+	/**
+	 * This function is appended to another function.
+	 */
+	export function append() {}
 
-    /**
-     * This function is appended to another function.
-     */
-    export function prepend() {}
+	/**
+	 * This function is appended to another function.
+	 */
+	export function prepend() {}
 }
 
 export class Predicates {
-    static isString(x: unknown): x is string {
-        return false;
-    }
-    isString(): this is string {
-        return false;
-    }
-    static assert(x: unknown): asserts x {}
-    assertString(): asserts this is string {}
+	static isString(x: unknown): x is string {
+		return false;
+	}
+	isString(): this is string {
+		return false;
+	}
+	static assert(x: unknown): asserts x {}
+	assertString(): asserts this is string {}
 }
 
 /**
@@ -195,14 +195,14 @@ export class Predicates {
  * Returns true if the iterator is empty
  */
 export const all: {
-    <T>(fn: (item: T) => boolean, iterator: Iterable<T>): boolean;
-    <T>(fn: (item: T) => boolean): (iterator: Iterable<T>) => boolean;
+	<T>(fn: (item: T) => boolean, iterator: Iterable<T>): boolean;
+	<T>(fn: (item: T) => boolean): (iterator: Iterable<T>) => boolean;
 } = () => false as any;
 
 export function boolOrUndef(x: number) {
-    if (x < 5) return true;
-    if (x > 20) return false;
-    return undefined;
+	if (x < 5) return true;
+	if (x > 20) return false;
+	return undefined;
 }
 
 export function merged() {}

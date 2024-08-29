@@ -1,5 +1,5 @@
 export namespace Foo {
-    export interface Bar {}
+	export interface Bar {}
 }
 
 /** {@link Bar} */

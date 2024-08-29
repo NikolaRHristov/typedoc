@@ -9,66 +9,66 @@
 import type { Chars } from "../../utils";
 
 export const MeaningKeywords = [
-    "class", // SymbolFlags.Class
-    "interface", // SymbolFlags.Interface
-    "type", // SymbolFlags.TypeAlias
-    "enum", // SymbolFlags.Enum
-    "namespace", // SymbolFlags.Module
-    "function", // SymbolFlags.Function
-    "var", // SymbolFlags.Variable
-    "constructor", // SymbolFlags.Constructor
-    "member", // SymbolFlags.ClassMember | SymbolFlags.EnumMember
-    "event", //
-    "call", // SymbolFlags.Signature (for __call)
-    "new", // SymbolFlags.Signature (for __new)
-    "index", // SymbolFlags.Signature (for __index)
-    "complex", // Any complex type
+	"class", // SymbolFlags.Class
+	"interface", // SymbolFlags.Interface
+	"type", // SymbolFlags.TypeAlias
+	"enum", // SymbolFlags.Enum
+	"namespace", // SymbolFlags.Module
+	"function", // SymbolFlags.Function
+	"var", // SymbolFlags.Variable
+	"constructor", // SymbolFlags.Constructor
+	"member", // SymbolFlags.ClassMember | SymbolFlags.EnumMember
+	"event", //
+	"call", // SymbolFlags.Signature (for __call)
+	"new", // SymbolFlags.Signature (for __new)
+	"index", // SymbolFlags.Signature (for __index)
+	"complex", // Any complex type
 
-    // TypeDoc specific
-    "getter",
-    "setter",
+	// TypeDoc specific
+	"getter",
+	"setter",
 ] as const;
 export type MeaningKeyword = (typeof MeaningKeywords)[number];
 
 export interface DeclarationReference {
-    resolutionStart: "global" | "local";
-    moduleSource?: string;
-    symbolReference?: SymbolReference;
+	resolutionStart: "global" | "local";
+	moduleSource?: string;
+	symbolReference?: SymbolReference;
 }
 
 export interface Meaning {
-    keyword?: MeaningKeyword;
-    label?: string;
-    index?: number;
+	keyword?: MeaningKeyword;
+	label?: string;
+	index?: number;
 }
 
 export function meaningToString(meaning: Meaning): string {
-    let result = "";
-    if (meaning.keyword) {
-        result += meaning.keyword;
-    } else if (meaning.label) {
-        result += meaning.label;
-    }
-    if (typeof meaning.index === "number") {
-        result += `(${meaning.index})`;
-    }
-    return result;
+	let result = "";
+	if (meaning.keyword) {
+		result += meaning.keyword;
+	} else if (meaning.label) {
+		result += meaning.label;
+	}
+	if (typeof meaning.index === "number") {
+		result += `(${meaning.index})`;
+	}
+	return result;
 }
 
 export interface SymbolReference {
-    path?: ComponentPath[];
-    meaning?: Meaning;
+	path?: ComponentPath[];
+	meaning?: Meaning;
 }
 
 export interface ComponentPath {
-    /**
-     * How to resolve the `path`
-     * - `.` - Navigate via `exports` of symbol
-     * - `#` - Navigate via `members` of symbol
-     * - `~` - Navigate via `locals` of symbol
-     */
-    navigation: "." | "#" | "~";
-    path: string;
+	/**
+	 * How to resolve the `path`
+	 * - `.` - Navigate via `exports` of symbol
+	 * - `#` - Navigate via `members` of symbol
+	 * - `~` - Navigate via `locals` of symbol
+	 */
+	navigation: "." | "#" | "~";
+	path: string;
 }
 
 // <TAB> <VT> <FF> <SP> <NBSP> <ZWNBSP> <USP>
@@ -85,15 +85,15 @@ const UserLabelStart = "ABCDEFGHIJKLMNOPQRSTUVWXYZ_";
 const UserLabelCharacter = UserLabelStart + DecimalDigit;
 
 const SingleEscapeChars: Record<Chars<typeof SingleEscapeCharacter>, string> = {
-    "'": "'",
-    '"': '"',
-    "\\": "\\",
-    b: "\b",
-    f: "\f",
-    n: "\n",
-    r: "\r",
-    t: "\t",
-    v: "\v",
+	"'": "'",
+	'"': '"',
+	"\\": "\\",
+	b: "\b",
+	f: "\f",
+	n: "\n",
+	r: "\r",
+	t: "\t",
+	v: "\v",
 };
 
 // EscapeSequence::
@@ -103,45 +103,45 @@ const SingleEscapeChars: Record<Chars<typeof SingleEscapeCharacter>, string> = {
 //     HexEscapeSequence
 //     UnicodeEscapeSequence
 function parseEscapeSequence(
-    source: string,
-    pos: number,
-    end: number,
+	source: string,
+	pos: number,
+	end: number,
 ): [string, number] | undefined {
-    // SingleEscapeCharacter
-    if (SingleEscapeCharacter.includes(source[pos])) {
-        return [SingleEscapeChars[source[pos] as "b"], pos + 1];
-    }
+	// SingleEscapeCharacter
+	if (SingleEscapeCharacter.includes(source[pos])) {
+		return [SingleEscapeChars[source[pos] as "b"], pos + 1];
+	}
 
-    // NonEscapeCharacter:: SourceCharacter but not one of EscapeCharacter or LineTerminator
-    if (!(EscapeCharacter + LineTerminator).includes(source[pos])) {
-        return [source[pos], pos + 1];
-    }
+	// NonEscapeCharacter:: SourceCharacter but not one of EscapeCharacter or LineTerminator
+	if (!(EscapeCharacter + LineTerminator).includes(source[pos])) {
+		return [source[pos], pos + 1];
+	}
 
-    // `0` [lookahead != DecimalDigit]
-    if (
-        source[pos] === "0" &&
-        pos + 1 < end &&
-        !DecimalDigit.includes(source[pos + 1])
-    ) {
-        return ["\x00", pos + 1];
-    }
+	// `0` [lookahead != DecimalDigit]
+	if (
+		source[pos] === "0" &&
+		pos + 1 < end &&
+		!DecimalDigit.includes(source[pos + 1])
+	) {
+		return ["\x00", pos + 1];
+	}
 
-    // HexEscapeSequence:: x HexDigit HexDigit
-    if (
-        source[pos] === "x" &&
-        pos + 2 < end &&
-        HexDigit.includes(source[pos + 1]) &&
-        HexDigit.includes(source[pos + 2])
-    ) {
-        return [
-            String.fromCharCode(
-                parseInt(source.substring(pos + 1, pos + 3), 16),
-            ),
-            pos + 3,
-        ];
-    }
+	// HexEscapeSequence:: x HexDigit HexDigit
+	if (
+		source[pos] === "x" &&
+		pos + 2 < end &&
+		HexDigit.includes(source[pos + 1]) &&
+		HexDigit.includes(source[pos + 2])
+	) {
+		return [
+			String.fromCharCode(
+				parseInt(source.substring(pos + 1, pos + 3), 16),
+			),
+			pos + 3,
+		];
+	}
 
-    return parseUnicodeEscapeSequence(source, pos, end);
+	return parseUnicodeEscapeSequence(source, pos, end);
 }
 
 // UnicodeEscapeSequence::
@@ -149,50 +149,50 @@ function parseEscapeSequence(
 //     `u` `{` CodePoint `}`
 // CodePoint:: > |HexDigits| but only if MV of |HexDigits| ≤ 0x10FFFF
 function parseUnicodeEscapeSequence(
-    source: string,
-    pos: number,
-    end: number,
+	source: string,
+	pos: number,
+	end: number,
 ): [string, number] | undefined {
-    if (source[pos] !== "u" || pos + 1 >= end) {
-        return;
-    }
+	if (source[pos] !== "u" || pos + 1 >= end) {
+		return;
+	}
 
-    if (HexDigit.includes(source[pos + 1])) {
-        if (
-            pos + 4 >= end ||
-            !HexDigit.includes(source[pos + 2]) ||
-            !HexDigit.includes(source[pos + 3]) ||
-            !HexDigit.includes(source[pos + 4])
-        ) {
-            return;
-        }
+	if (HexDigit.includes(source[pos + 1])) {
+		if (
+			pos + 4 >= end ||
+			!HexDigit.includes(source[pos + 2]) ||
+			!HexDigit.includes(source[pos + 3]) ||
+			!HexDigit.includes(source[pos + 4])
+		) {
+			return;
+		}
 
-        return [
-            String.fromCharCode(
-                parseInt(source.substring(pos + 1, pos + 5), 16),
-            ),
-            pos + 5,
-        ];
-    }
+		return [
+			String.fromCharCode(
+				parseInt(source.substring(pos + 1, pos + 5), 16),
+			),
+			pos + 5,
+		];
+	}
 
-    if (
-        source[pos + 1] === "{" &&
-        pos + 2 < end &&
-        HexDigit.includes(source[pos + 2])
-    ) {
-        let lookahead = pos + 3;
+	if (
+		source[pos + 1] === "{" &&
+		pos + 2 < end &&
+		HexDigit.includes(source[pos + 2])
+	) {
+		let lookahead = pos + 3;
 
-        while (lookahead < end && HexDigit.includes(source[lookahead])) {
-            lookahead++;
-        }
+		while (lookahead < end && HexDigit.includes(source[lookahead])) {
+			lookahead++;
+		}
 
-        if (lookahead >= end || source[lookahead] !== "}") return;
+		if (lookahead >= end || source[lookahead] !== "}") return;
 
-        const codePoint = parseInt(source.substring(pos + 2, lookahead), 16);
-        if (codePoint <= 0x10ffff) {
-            return [String.fromCodePoint(codePoint), lookahead + 1];
-        }
-    }
+		const codePoint = parseInt(source.substring(pos + 2, lookahead), 16);
+		if (codePoint <= 0x10ffff) {
+			return [String.fromCodePoint(codePoint), lookahead + 1];
+		}
+	}
 }
 
 // String:: `"` StringCharacters? `"`
@@ -201,76 +201,76 @@ function parseUnicodeEscapeSequence(
 //   SourceCharacter but not one of `"` or `\` or LineTerminator
 //   `\` EscapeSequence
 export function parseString(
-    source: string,
-    pos: number,
-    end: number,
+	source: string,
+	pos: number,
+	end: number,
 ): [string, number] | undefined {
-    let result = "";
+	let result = "";
 
-    if (source[pos++] !== '"') return;
+	if (source[pos++] !== '"') return;
 
-    while (pos < end) {
-        if (source[pos] === '"') {
-            return [result, pos + 1];
-        }
+	while (pos < end) {
+		if (source[pos] === '"') {
+			return [result, pos + 1];
+		}
 
-        if (LineTerminator.includes(source[pos])) return;
+		if (LineTerminator.includes(source[pos])) return;
 
-        if (source[pos] === "\\") {
-            const esc = parseEscapeSequence(source, pos + 1, end);
-            if (!esc) return;
+		if (source[pos] === "\\") {
+			const esc = parseEscapeSequence(source, pos + 1, end);
+			if (!esc) return;
 
-            result += esc[0];
-            pos = esc[1];
-            continue;
-        }
+			result += esc[0];
+			pos = esc[1];
+			continue;
+		}
 
-        result += source[pos++];
-    }
+		result += source[pos++];
+	}
 }
 
 // ModuleSource:: String | ModuleSourceCharacters
 export function parseModuleSource(
-    source: string,
-    pos: number,
-    end: number,
+	source: string,
+	pos: number,
+	end: number,
 ): [string, number] | undefined {
-    if (pos >= end) return;
+	if (pos >= end) return;
 
-    if (source[pos] === '"') {
-        return parseString(source, pos, end);
-    }
+	if (source[pos] === '"') {
+		return parseString(source, pos, end);
+	}
 
-    let lookahead = pos;
-    while (
-        lookahead < end &&
-        !('"!' + LineTerminator).includes(source[lookahead])
-    ) {
-        lookahead++;
-    }
+	let lookahead = pos;
+	while (
+		lookahead < end &&
+		!('"!' + LineTerminator).includes(source[lookahead])
+	) {
+		lookahead++;
+	}
 
-    if (lookahead === pos) return;
+	if (lookahead === pos) return;
 
-    return [source.substring(pos, lookahead), lookahead];
+	return [source.substring(pos, lookahead), lookahead];
 }
 
 // SymbolReference:
 //     ComponentPath Meaning?
 //     Meaning
 export function parseSymbolReference(
-    source: string,
-    pos: number,
-    end: number,
+	source: string,
+	pos: number,
+	end: number,
 ): [SymbolReference, number] | undefined {
-    const path = parseComponentPath(source, pos, end);
-    pos = path?.[1] ?? pos;
+	const path = parseComponentPath(source, pos, end);
+	pos = path?.[1] ?? pos;
 
-    const meaning = parseMeaning(source, pos, end);
-    pos = meaning?.[1] ?? pos;
+	const meaning = parseMeaning(source, pos, end);
+	pos = meaning?.[1] ?? pos;
 
-    if (path || meaning) {
-        return [{ path: path?.[0], meaning: meaning?.[0] }, pos];
-    }
+	if (path || meaning) {
+		return [{ path: path?.[0], meaning: meaning?.[0] }, pos];
+	}
 }
 
 // Component::
@@ -278,31 +278,31 @@ export function parseSymbolReference(
 //     ComponentCharacters
 //     `[` DeclarationReference `]` <--- THIS ONE IS NOT IMPLEMENTED.
 export function parseComponent(
-    source: string,
-    pos: number,
-    end: number,
+	source: string,
+	pos: number,
+	end: number,
 ): [string, number] | undefined {
-    if (pos < end && source[pos] === '"') {
-        return parseString(source, pos, end);
-    }
+	if (pos < end && source[pos] === '"') {
+		return parseString(source, pos, end);
+	}
 
-    let lookahead = pos;
-    while (
-        lookahead < end &&
-        !(
-            '"' +
-            Punctuators +
-            FutureReservedPunctuator +
-            LineTerminator
-        ).includes(source[lookahead]) &&
-        !WhiteSpace.test(source[lookahead])
-    ) {
-        lookahead++;
-    }
+	let lookahead = pos;
+	while (
+		lookahead < end &&
+		!(
+			'"' +
+			Punctuators +
+			FutureReservedPunctuator +
+			LineTerminator
+		).includes(source[lookahead]) &&
+		!WhiteSpace.test(source[lookahead])
+	) {
+		lookahead++;
+	}
 
-    if (lookahead === pos) return;
+	if (lookahead === pos) return;
 
-    return [source.substring(pos, lookahead), lookahead];
+	return [source.substring(pos, lookahead), lookahead];
 }
 
 // ComponentPath:
@@ -311,26 +311,26 @@ export function parseComponent(
 //     ComponentPath `#` Component                      // Navigate via 'members' of |ComponentPath|
 //     ComponentPath `~` Component                      // Navigate via 'locals' of |ComponentPath|
 export function parseComponentPath(source: string, pos: number, end: number) {
-    const components: ComponentPath[] = [];
-    let component = parseComponent(source, pos, end);
+	const components: ComponentPath[] = [];
+	let component = parseComponent(source, pos, end);
 
-    if (!component) return;
-    pos = component[1];
-    components.push({ navigation: ".", path: component[0] });
+	if (!component) return;
+	pos = component[1];
+	components.push({ navigation: ".", path: component[0] });
 
-    while (pos < end && NavigationPunctuator.includes(source[pos])) {
-        const navigation = source[pos] as "." | "#" | "~";
-        pos++;
-        component = parseComponent(source, pos, end);
-        if (!component) {
-            return;
-        }
+	while (pos < end && NavigationPunctuator.includes(source[pos])) {
+		const navigation = source[pos] as "." | "#" | "~";
+		pos++;
+		component = parseComponent(source, pos, end);
+		if (!component) {
+			return;
+		}
 
-        pos = component[1];
-        components.push({ navigation, path: component[0] });
-    }
+		pos = component[1];
+		components.push({ navigation, path: component[0] });
+	}
 
-    return [components, pos] as const;
+	return [components, pos] as const;
 }
 
 // The TSDoc specification permits the first four branches of Meaning. TypeDoc adds the UserLabel
@@ -345,73 +345,73 @@ export function parseComponentPath(source: string, pos: number, end: number) {
 // UserLabel:
 //     UserLabelStart UserLabelCharacter*
 export function parseMeaning(
-    source: string,
-    pos: number,
-    end: number,
+	source: string,
+	pos: number,
+	end: number,
 ): [Meaning, number] | undefined {
-    if (source[pos++] !== ":") return;
+	if (source[pos++] !== ":") return;
 
-    const keyword = MeaningKeywords.find(
-        (kw) => pos + kw.length <= end && source.startsWith(kw, pos),
-    );
+	const keyword = MeaningKeywords.find(
+		(kw) => pos + kw.length <= end && source.startsWith(kw, pos),
+	);
 
-    if (keyword) {
-        pos += keyword.length;
-    }
+	if (keyword) {
+		pos += keyword.length;
+	}
 
-    if (!keyword && UserLabelStart.includes(source[pos])) {
-        let lookahead = pos + 1;
+	if (!keyword && UserLabelStart.includes(source[pos])) {
+		let lookahead = pos + 1;
 
-        while (
-            lookahead < end &&
-            UserLabelCharacter.includes(source[lookahead])
-        ) {
-            lookahead++;
-        }
+		while (
+			lookahead < end &&
+			UserLabelCharacter.includes(source[lookahead])
+		) {
+			lookahead++;
+		}
 
-        return [{ label: source.substring(pos, lookahead) }, lookahead];
-    }
+		return [{ label: source.substring(pos, lookahead) }, lookahead];
+	}
 
-    if (
-        pos + 1 < end &&
-        source[pos] === "(" &&
-        DecimalDigit.includes(source[pos + 1])
-    ) {
-        let lookahead = pos + 1;
+	if (
+		pos + 1 < end &&
+		source[pos] === "(" &&
+		DecimalDigit.includes(source[pos + 1])
+	) {
+		let lookahead = pos + 1;
 
-        while (lookahead < end && DecimalDigit.includes(source[lookahead])) {
-            lookahead++;
-        }
+		while (lookahead < end && DecimalDigit.includes(source[lookahead])) {
+			lookahead++;
+		}
 
-        if (lookahead < end && source[lookahead] === ")") {
-            return [
-                {
-                    keyword,
-                    index: parseInt(source.substring(pos + 1, lookahead)),
-                },
-                lookahead + 1,
-            ];
-        }
-    }
+		if (lookahead < end && source[lookahead] === ")") {
+			return [
+				{
+					keyword,
+					index: parseInt(source.substring(pos + 1, lookahead)),
+				},
+				lookahead + 1,
+			];
+		}
+	}
 
-    if (!keyword && pos < end && DecimalDigit.includes(source[pos])) {
-        let lookahead = pos;
+	if (!keyword && pos < end && DecimalDigit.includes(source[pos])) {
+		let lookahead = pos;
 
-        while (lookahead < end && DecimalDigit.includes(source[lookahead])) {
-            lookahead++;
-        }
+		while (lookahead < end && DecimalDigit.includes(source[lookahead])) {
+			lookahead++;
+		}
 
-        return [
-            {
-                index: parseInt(source.substring(pos, lookahead)),
-            },
-            lookahead,
-        ];
-    }
+		return [
+			{
+				index: parseInt(source.substring(pos, lookahead)),
+			},
+			lookahead,
+		];
+	}
 
-    if (keyword) {
-        return [{ keyword }, pos];
-    }
+	if (keyword) {
+		return [{ keyword }, pos];
+	}
 }
 
 // // NOTE: The following grammar is incorrect as |SymbolReference| and |ModuleSource| have an
@@ -425,44 +425,44 @@ export function parseMeaning(
 //   ModuleSource `!` `~` SymbolReference          // Reference to a local of a module
 //   `!` SymbolReference                           // Reference to global symbol
 export function parseDeclarationReference(
-    source: string,
-    pos: number,
-    end: number,
+	source: string,
+	pos: number,
+	end: number,
 ): [DeclarationReference, number] | undefined {
-    let moduleSource: string | undefined;
-    let symbolReference: SymbolReference | undefined;
-    let resolutionStart: "global" | "local" = "local";
+	let moduleSource: string | undefined;
+	let symbolReference: SymbolReference | undefined;
+	let resolutionStart: "global" | "local" = "local";
 
-    const moduleSourceOrSymbolRef = parseModuleSource(source, pos, end);
-    if (moduleSourceOrSymbolRef) {
-        if (
-            moduleSourceOrSymbolRef[1] < end &&
-            source[moduleSourceOrSymbolRef[1]] === "!"
-        ) {
-            // We had a module source!
-            pos = moduleSourceOrSymbolRef[1] + 1;
-            resolutionStart = "global";
-            moduleSource = moduleSourceOrSymbolRef[0];
-        }
-    } else if (source[pos] === "!") {
-        pos++;
-        resolutionStart = "global";
-    }
+	const moduleSourceOrSymbolRef = parseModuleSource(source, pos, end);
+	if (moduleSourceOrSymbolRef) {
+		if (
+			moduleSourceOrSymbolRef[1] < end &&
+			source[moduleSourceOrSymbolRef[1]] === "!"
+		) {
+			// We had a module source!
+			pos = moduleSourceOrSymbolRef[1] + 1;
+			resolutionStart = "global";
+			moduleSource = moduleSourceOrSymbolRef[0];
+		}
+	} else if (source[pos] === "!") {
+		pos++;
+		resolutionStart = "global";
+	}
 
-    const ref = parseSymbolReference(source, pos, end);
-    if (ref) {
-        symbolReference = ref[0];
-        pos = ref[1];
-    }
+	const ref = parseSymbolReference(source, pos, end);
+	if (ref) {
+		symbolReference = ref[0];
+		pos = ref[1];
+	}
 
-    if (!moduleSource && !symbolReference) return;
+	if (!moduleSource && !symbolReference) return;
 
-    return [
-        {
-            moduleSource,
-            resolutionStart,
-            symbolReference,
-        },
-        pos,
-    ];
+	return [
+		{
+			moduleSource,
+			resolutionStart,
+			symbolReference,
+		},
+		pos,
+	];
 }

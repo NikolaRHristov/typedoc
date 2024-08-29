@@ -1,9 +1,9 @@
 export declare function escapeHtml(html: string): string;
 export declare const enum ParserState {
-    BeforeAttributeName = 0,
-    AfterAttributeName = 1,
-    BeforeAttributeValue = 2,
-    END = 3
+	BeforeAttributeName = 0,
+	AfterAttributeName = 1,
+	BeforeAttributeValue = 2,
+	END = 3,
 }
 /**
  * Parser for HTML attributes, each call to {@link step} will
@@ -26,36 +26,35 @@ export declare const enum ParserState {
  * ```
  */
 export declare class HtmlAttributeParser {
-    readonly text: string;
-    pos: number;
-    state: ParserState;
-    currentAttributeName: string;
-    currentAttributeValueStart: number;
-    currentAttributeValueEnd: number;
-    currentAttributeValue: string;
-    private temporaryBuffer;
-    private characterReferenceCode;
-    constructor(text: string, pos?: number);
-    step(): void;
-    private peek;
-    private consume;
-    beforeAttributeName(): void;
-    attributeName(): void;
-    afterAttributeName(): void;
-    beforeAttributeValue(): void;
-    attributeValueDoubleQuoted(): void;
-    attributeValueSingleQuoted(): void;
-    attributeValueUnquoted(): void;
-    afterAttributeValueQuoted(): void;
-    characterReference(): void;
-    namedCharacterReference(): void;
-    ambiguousAmpersand(): void;
-    numericCharacterReference(): void;
-    hexadecimalCharacterReferenceStart(): void;
-    decimalCharacterReferenceStart(): void;
-    hexadecimalCharacterReference(): void;
-    decimalCharacterReference(): void;
-    numericCharacterReferenceEndState(): void;
-    private flushTemporaryBuffer;
+	readonly text: string;
+	pos: number;
+	state: ParserState;
+	currentAttributeName: string;
+	currentAttributeValueStart: number;
+	currentAttributeValueEnd: number;
+	currentAttributeValue: string;
+	private temporaryBuffer;
+	private characterReferenceCode;
+	constructor(text: string, pos?: number);
+	step(): void;
+	private peek;
+	private consume;
+	beforeAttributeName(): void;
+	attributeName(): void;
+	afterAttributeName(): void;
+	beforeAttributeValue(): void;
+	attributeValueDoubleQuoted(): void;
+	attributeValueSingleQuoted(): void;
+	attributeValueUnquoted(): void;
+	afterAttributeValueQuoted(): void;
+	characterReference(): void;
+	namedCharacterReference(): void;
+	ambiguousAmpersand(): void;
+	numericCharacterReference(): void;
+	hexadecimalCharacterReferenceStart(): void;
+	decimalCharacterReferenceStart(): void;
+	hexadecimalCharacterReference(): void;
+	decimalCharacterReference(): void;
+	numericCharacterReferenceEndState(): void;
+	private flushTemporaryBuffer;
 }
-//# sourceMappingURL=html.d.ts.map

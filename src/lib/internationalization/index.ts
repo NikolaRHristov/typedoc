@@ -5,8 +5,8 @@
  * @document ../../../internal-docs/internationalization.md
  */
 export {
-    type TranslatableStrings,
-    Internationalization,
-    type TranslatedString,
-    type TranslationProxy,
+	type TranslatableStrings,
+	Internationalization,
+	type TranslatedString,
+	type TranslationProxy,
 } from "./internationalization";

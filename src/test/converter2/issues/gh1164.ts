@@ -4,5 +4,5 @@
  *  @returns Test description.
  */
 export function gh1164(scope: string) {
-    return scope;
+	return scope;
 }

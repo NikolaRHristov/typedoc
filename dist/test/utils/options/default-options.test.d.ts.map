@@ -1,1 +1,10 @@
-{"version":3,"file":"default-options.test.d.ts","sourceRoot":"","sources":["../../../../src/test/utils/options/default-options.test.ts"],"names":[],"mappings":""}
+{
+	"version": 3,
+	"file": "default-options.test.d.ts",
+	"sourceRoot": "",
+	"sources": [
+		"../../../../src/test/utils/options/default-options.test.ts"
+	],
+	"names": [],
+	"mappings": ""
+}

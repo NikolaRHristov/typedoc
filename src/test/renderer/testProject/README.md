@@ -1,6 +1,7 @@
 # Example
 
-> **This is not actually an example.** It is used by TypeDoc's tests. For example documentation https://typedoc.org/api/ is recommended.
+> **This is not actually an example.** It is used by TypeDoc's tests. For
+> example documentation https://typedoc.org/api/ is recommended.
 
 ## Installation
 
@@ -24,8 +25,7 @@ $ examples --out path/to/documentation/ path/to/example/project/
 
 ### Arguments
 
--   `--example <project>`<br>
-    Example explanation.
+-   `--example <project>`<br> Example explanation.
 
 ## Example with Cyrillic
 

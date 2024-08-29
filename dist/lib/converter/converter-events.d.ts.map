@@ -1,1 +1,10 @@
-{"version":3,"file":"converter-events.d.ts","sourceRoot":"","sources":["../../../src/lib/converter/converter-events.ts"],"names":[],"mappings":"AAAA,eAAO,MAAM,eAAe;;;;;;;;;;CAUlB,CAAC"}
+{
+	"version": 3,
+	"file": "converter-events.d.ts",
+	"sourceRoot": "",
+	"sources": [
+		"../../../src/lib/converter/converter-events.ts"
+	],
+	"names": [],
+	"mappings": "AAAA,eAAO,MAAM,eAAe;;;;;;;;;;CAUlB,CAAC"
+}

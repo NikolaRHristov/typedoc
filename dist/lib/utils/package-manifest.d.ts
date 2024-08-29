@@ -1,12 +1,21 @@
-import type { Logger } from "./loggers";
 import type { Minimatch } from "minimatch";
+
+import type { Logger } from "./loggers";
+
 /**
  * Loads a package.json and validates that it is a JSON Object
  */
-export declare function loadPackageManifest(logger: Logger, packageJsonPath: string): Record<string, unknown> | undefined;
+export declare function loadPackageManifest(
+	logger: Logger,
+	packageJsonPath: string,
+): Record<string, unknown> | undefined;
 /**
  * Given a list of (potentially wildcard containing) package paths,
  * return all the actual package folders found.
  */
-export declare function expandPackages(logger: Logger, packageJsonDir: string, workspaces: string[], exclude: Minimatch[]): string[];
-//# sourceMappingURL=package-manifest.d.ts.map
+export declare function expandPackages(
+	logger: Logger,
+	packageJsonDir: string,
+	workspaces: string[],
+	exclude: Minimatch[],
+): string[];

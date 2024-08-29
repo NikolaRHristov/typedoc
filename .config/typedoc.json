@@ -1,57 +1,57 @@
 {
-    "$schema": "https://typedoc.org/schema.json",
-    "intentionallyNotExported": [
-        "ComponentClass",
-        "AbstractComponent",
-        "ConverterComponent",
-        "RendererComponent",
-        "SORT_STRATEGIES",
-        "_ModelToObject",
-        "EventHooksMomento",
-        "MarkedPlugin",
-        "MeaningKeywords"
-    ],
-    "sort": ["kind", "instance-first", "required-first", "alphabetical"],
-    "entryPoints": ["../src/index.ts"],
-    "alwaysCreateEntryPointModule": false,
-    "projectDocuments": ["../internal-docs/plugins.md"],
-    "excludeExternals": true,
-    "excludeInternal": false,
-    "excludePrivate": true,
-    "excludeReferences": true,
-    "jsDocCompatibility": false,
-    "treatWarningsAsErrors": false,
-    "categorizeByGroup": false,
-    "categoryOrder": ["Reflections", "Types", "Comments", "*"],
-    "validation": {
-        "notExported": true,
-        "invalidLink": true,
-        "notDocumented": false
-    },
-    "visibilityFilters": {
-        "protected": false,
-        "private": false,
-        "inherited": true,
-        "external": false,
-        "@internal": false
-    },
-    "searchGroupBoosts": {
-        "Classes": 2.0,
-        "Interfaces": 2.0,
-        "Enumerations": 2.0,
-        "Type Aliases": 2.0
-    },
-    "searchInComments": true,
-    "searchInDocuments": true,
-    "navigation": {
-        "includeCategories": true,
-        "includeGroups": false
-    },
-    "includeVersion": true,
-    "logLevel": "Verbose",
-    "externalSymbolLinkMappings": {
-        "@types/markdown-it": {
-            "MarkdownIt": "https://markdown-it.github.io/markdown-it/#MarkdownIt"
-        }
-    }
+	"$schema": "https://typedoc.org/schema.json",
+	"intentionallyNotExported": [
+		"ComponentClass",
+		"AbstractComponent",
+		"ConverterComponent",
+		"RendererComponent",
+		"SORT_STRATEGIES",
+		"_ModelToObject",
+		"EventHooksMomento",
+		"MarkedPlugin",
+		"MeaningKeywords"
+	],
+	"sort": ["kind", "instance-first", "required-first", "alphabetical"],
+	"entryPoints": ["../src/index.ts"],
+	"alwaysCreateEntryPointModule": false,
+	"projectDocuments": ["../internal-docs/plugins.md"],
+	"excludeExternals": true,
+	"excludeInternal": false,
+	"excludePrivate": true,
+	"excludeReferences": true,
+	"jsDocCompatibility": false,
+	"treatWarningsAsErrors": false,
+	"categorizeByGroup": false,
+	"categoryOrder": ["Reflections", "Types", "Comments", "*"],
+	"validation": {
+		"notExported": true,
+		"invalidLink": true,
+		"notDocumented": false
+	},
+	"visibilityFilters": {
+		"protected": false,
+		"private": false,
+		"inherited": true,
+		"external": false,
+		"@internal": false
+	},
+	"searchGroupBoosts": {
+		"Classes": 2.0,
+		"Interfaces": 2.0,
+		"Enumerations": 2.0,
+		"Type Aliases": 2.0
+	},
+	"searchInComments": true,
+	"searchInDocuments": true,
+	"navigation": {
+		"includeCategories": true,
+		"includeGroups": false
+	},
+	"includeVersion": true,
+	"logLevel": "Verbose",
+	"externalSymbolLinkMappings": {
+		"@types/markdown-it": {
+			"MarkdownIt": "https://markdown-it.github.io/markdown-it/#MarkdownIt"
+		}
+	}
 }

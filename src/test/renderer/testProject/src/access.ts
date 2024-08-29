@@ -27,29 +27,29 @@ export function fakeProtectedFunction() {}
  * @private
  */
 export class PrivateClass {
-    /**
-     * A variable that is made private via comment.
-     * @private
-     */
-    fakePrivateVariable: string;
+	/**
+	 * A variable that is made private via comment.
+	 * @private
+	 */
+	fakePrivateVariable: string;
 
-    /**
-     * A variable that is made protected via comment.
-     * @protected
-     */
-    fakeProtectedVariable: string;
+	/**
+	 * A variable that is made protected via comment.
+	 * @protected
+	 */
+	fakeProtectedVariable: string;
 
-    /**
-     * A function that is made private via comment.
-     * @private
-     */
-    fakePrivateFunction() {}
+	/**
+	 * A function that is made private via comment.
+	 * @private
+	 */
+	fakePrivateFunction() {}
 
-    /**
-     * A function that is made protected via comment.
-     * @protected
-     */
-    fakeProtectedFunction() {}
+	/**
+	 * A function that is made protected via comment.
+	 * @protected
+	 */
+	fakeProtectedFunction() {}
 }
 
 /**
@@ -57,7 +57,7 @@ export class PrivateClass {
  * @private
  */
 export module PrivateModule {
-    export function functionInsidePrivateModule() {}
+	export function functionInsidePrivateModule() {}
 }
 
 export type BigIntLiteral = -123n;

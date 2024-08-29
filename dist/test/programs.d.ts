@@ -6,4 +6,3 @@ export declare function getConverterProgram(): ts.Program;
 export declare function getConverter2Base(): string;
 export declare function getConverter2App(): Application;
 export declare function getConverter2Program(): ts.Program;
-//# sourceMappingURL=programs.d.ts.map

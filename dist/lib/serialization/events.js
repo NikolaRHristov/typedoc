@@ -9,10 +9,9 @@ exports.SerializeEvent = void 0;
  * @see {@link Serializer.EVENT_END}
  */
 class SerializeEvent {
-    constructor(project, output) {
-        this.project = project;
-        this.output = output;
-    }
+	constructor(project, output) {
+		this.project = project;
+		this.output = output;
+	}
 }
 exports.SerializeEvent = SerializeEvent;
-//# sourceMappingURL=events.js.map

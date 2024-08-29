@@ -1,5 +1,5 @@
 export class Foo {
-    set foo(_value: Bar) {}
+	set foo(_value: Bar) {}
 }
 
 class Bar {}

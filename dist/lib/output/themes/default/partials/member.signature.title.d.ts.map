@@ -1,1 +1,10 @@
-{"version":3,"file":"member.signature.title.d.ts","sourceRoot":"","sources":["../../../../../../src/lib/output/themes/default/partials/member.signature.title.tsx"],"names":[],"mappings":"AACA,OAAO,KAAK,EAAE,yBAAyB,EAAE,MAAM,8BAA8B,CAAC;AAC9E,OAAO,EAAE,GAAG,EAAE,MAAM,mBAAmB,CAAC;AACxC,OAAO,EAA4C,KAAK,mBAAmB,EAAE,MAAM,oBAAoB,CAAC;AA2BxG,wBAAgB,oBAAoB,CAChC,OAAO,EAAE,yBAAyB,EAClC,KAAK,EAAE,mBAAmB,EAC1B,EACI,QAAgB,EAChB,UAAkB,EAClB,cAAsE,GACzE,GAAE;IAAE,QAAQ,CAAC,EAAE,OAAO,CAAC;IAAC,UAAU,CAAC,EAAE,OAAO,CAAC;IAAC,cAAc,CAAC,EAAE,OAAO,CAAA;CAAO,eA8BjF"}
+{
+	"version": 3,
+	"file": "member.signature.title.d.ts",
+	"sourceRoot": "",
+	"sources": [
+		"../../../../../../src/lib/output/themes/default/partials/member.signature.title.tsx"
+	],
+	"names": [],
+	"mappings": "AACA,OAAO,KAAK,EAAE,yBAAyB,EAAE,MAAM,8BAA8B,CAAC;AAC9E,OAAO,EAAE,GAAG,EAAE,MAAM,mBAAmB,CAAC;AACxC,OAAO,EAA4C,KAAK,mBAAmB,EAAE,MAAM,oBAAoB,CAAC;AA2BxG,wBAAgB,oBAAoB,CAChC,OAAO,EAAE,yBAAyB,EAClC,KAAK,EAAE,mBAAmB,EAC1B,EACI,QAAgB,EAChB,UAAkB,EAClB,cAAsE,GACzE,GAAE;IAAE,QAAQ,CAAC,EAAE,OAAO,CAAC;IAAC,UAAU,CAAC,EAAE,OAAO,CAAC;IAAC,cAAc,CAAC,EAAE,OAAO,CAAA;CAAO,eA8BjF"
+}

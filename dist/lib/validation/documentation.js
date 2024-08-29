@@ -83,4 +83,3 @@ function validateDocumentation(project, logger, requiredToBeDocumented) {
         }
     }
 }
-//# sourceMappingURL=documentation.js.map

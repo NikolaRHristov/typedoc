@@ -1,1 +1,10 @@
-{"version":3,"file":"index-signature.d.ts","sourceRoot":"","sources":["../../../../src/lib/converter/factories/index-signature.ts"],"names":[],"mappings":"AACA,OAAO,EAAE,MAAM,YAAY,CAAC;AAO5B,OAAO,KAAK,EAAE,OAAO,EAAE,MAAM,YAAY,CAAC;AAG1C,wBAAgB,sBAAsB,CAAC,OAAO,EAAE,OAAO,EAAE,MAAM,EAAE,EAAE,CAAC,MAAM,QA4CzE"}
+{
+	"version": 3,
+	"file": "index-signature.d.ts",
+	"sourceRoot": "",
+	"sources": [
+		"../../../../src/lib/converter/factories/index-signature.ts"
+	],
+	"names": [],
+	"mappings": "AACA,OAAO,EAAE,MAAM,YAAY,CAAC;AAO5B,OAAO,KAAK,EAAE,OAAO,EAAE,MAAM,YAAY,CAAC;AAG1C,wBAAgB,sBAAsB,CAAC,OAAO,EAAE,OAAO,EAAE,MAAM,EAAE,EAAE,CAAC,MAAM,QA4CzE"
+}

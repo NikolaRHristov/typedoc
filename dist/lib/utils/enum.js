@@ -33,4 +33,3 @@ function getEnumKeys(Enum) {
     const E = Enum;
     return Object.keys(E).filter((k) => E[E[k]] === k);
 }
-//# sourceMappingURL=enum.js.map

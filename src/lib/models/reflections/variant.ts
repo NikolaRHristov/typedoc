@@ -11,11 +11,11 @@ import type { TypeParameterReflection } from "./type-parameter";
  * This is used during deserialization to reconstruct serialized objects.
  */
 export interface ReflectionVariant {
-    declaration: DeclarationReflection;
-    param: ParameterReflection;
-    project: ProjectReflection;
-    reference: ReferenceReflection;
-    signature: SignatureReflection;
-    typeParam: TypeParameterReflection;
-    document: DocumentReflection;
+	declaration: DeclarationReflection;
+	param: ParameterReflection;
+	project: ProjectReflection;
+	reference: ReferenceReflection;
+	signature: SignatureReflection;
+	typeParam: TypeParameterReflection;
+	document: DocumentReflection;
 }

@@ -1,3 +1,3 @@
 export function load() {
-    // nop
+	// nop
 }

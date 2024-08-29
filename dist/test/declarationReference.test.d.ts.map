@@ -1,1 +1,10 @@
-{"version":3,"file":"declarationReference.test.d.ts","sourceRoot":"","sources":["../../src/test/declarationReference.test.ts"],"names":[],"mappings":""}
+{
+	"version": 3,
+	"file": "declarationReference.test.d.ts",
+	"sourceRoot": "",
+	"sources": [
+		"../../src/test/declarationReference.test.ts"
+	],
+	"names": [],
+	"mappings": ""
+}

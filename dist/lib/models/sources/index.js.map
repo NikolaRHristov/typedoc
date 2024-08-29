@@ -1,1 +1,10 @@
-{"version":3,"file":"index.js","sourceRoot":"","sources":["../../../../src/lib/models/sources/index.ts"],"names":[],"mappings":";;;AAAA,+BAAyC;AAAhC,uGAAA,eAAe,OAAA"}
+{
+	"version": 3,
+	"file": "index.js",
+	"sourceRoot": "",
+	"sources": [
+		"../../../../src/lib/models/sources/index.ts"
+	],
+	"names": [],
+	"mappings": ";;;AAAA,+BAAyC;AAAhC,uGAAA,eAAe,OAAA"
+}

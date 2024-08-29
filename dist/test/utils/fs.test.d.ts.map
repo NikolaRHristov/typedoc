@@ -1,1 +1,10 @@
-{"version":3,"file":"fs.test.d.ts","sourceRoot":"","sources":["../../../src/test/utils/fs.test.ts"],"names":[],"mappings":""}
+{
+	"version": 3,
+	"file": "fs.test.d.ts",
+	"sourceRoot": "",
+	"sources": [
+		"../../../src/test/utils/fs.test.ts"
+	],
+	"names": [],
+	"mappings": ""
+}

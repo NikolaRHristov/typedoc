@@ -1,6 +1,8 @@
-import { Component, AbstractComponent } from "../utils/component";
+import { AbstractComponent, Component } from "../utils/component";
 import type { Converter } from "./converter";
+
 export { Component };
-export declare abstract class ConverterComponent extends AbstractComponent<Converter, {}> {
-}
-//# sourceMappingURL=components.d.ts.map
+export declare abstract class ConverterComponent extends AbstractComponent<
+	Converter,
+	{}
+> {}

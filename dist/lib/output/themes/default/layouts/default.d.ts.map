@@ -1,1 +1,10 @@
-{"version":3,"file":"default.d.ts","sourceRoot":"","sources":["../../../../../../src/lib/output/themes/default/layouts/default.tsx"],"names":[],"mappings":"AAAA,OAAO,KAAK,EAAE,cAAc,EAAE,MAAM,UAAU,CAAC;AAC/C,OAAO,KAAK,EAAE,UAAU,EAAE,MAAM,oBAAoB,CAAC;AACrD,OAAO,EAAE,GAAG,EAAO,MAAM,mBAAmB,CAAC;AAC7C,OAAO,KAAK,EAAE,SAAS,EAAE,MAAM,iBAAiB,CAAC;AAEjD,OAAO,KAAK,EAAE,yBAAyB,EAAE,MAAM,8BAA8B,CAAC;AAE9E,eAAO,MAAM,aAAa,YACb,yBAAyB,YACxB,cAAc,CAAC,SAAS,CAAC,UAAU,CAAC,CAAC,SACxC,SAAS,CAAC,UAAU,CAAC,gBAoE/B,CAAC"}
+{
+	"version": 3,
+	"file": "default.d.ts",
+	"sourceRoot": "",
+	"sources": [
+		"../../../../../../src/lib/output/themes/default/layouts/default.tsx"
+	],
+	"names": [],
+	"mappings": "AAAA,OAAO,KAAK,EAAE,cAAc,EAAE,MAAM,UAAU,CAAC;AAC/C,OAAO,KAAK,EAAE,UAAU,EAAE,MAAM,oBAAoB,CAAC;AACrD,OAAO,EAAE,GAAG,EAAO,MAAM,mBAAmB,CAAC;AAC7C,OAAO,KAAK,EAAE,SAAS,EAAE,MAAM,iBAAiB,CAAC;AAEjD,OAAO,KAAK,EAAE,yBAAyB,EAAE,MAAM,8BAA8B,CAAC;AAE9E,eAAO,MAAM,aAAa,YACb,yBAAyB,YACxB,cAAc,CAAC,SAAS,CAAC,UAAU,CAAC,CAAC,SACxC,SAAS,CAAC,UAAU,CAAC,gBAoE/B,CAAC"
+}

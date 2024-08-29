@@ -1,7 +1,7 @@
 function factory() {
-    /** inner docs */
-    function fn() {}
-    return fn;
+	/** inner docs */
+	function fn() {}
+	return fn;
 }
 
 export const built = factory();
@@ -10,8 +10,8 @@ export const built = factory();
 export const built2 = factory();
 
 const obj = {
-    /** inner docs */
-    fn(x: unknown) {},
+	/** inner docs */
+	fn(x: unknown) {},
 };
 
 export const fn = obj.fn;

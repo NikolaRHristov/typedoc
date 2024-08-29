@@ -41,38 +41,38 @@ export type NeverIfInternal<T> = IfInternal<never, T>;
  * Resolves a string type into a union of characters, `"ab"` turns into `"a" | "b"`.
  */
 export type Chars<T extends string> = T extends `${infer C}${infer R}`
-    ? C | Chars<R>
-    : never;
+	? C | Chars<R>
+	: never;
 
 /**
  * Utility to help type checking ensure that there is no uncovered case.
  */
 export function assertNever(x: never): never {
-    throw new Error(
-        `Expected handling to cover all possible cases, but it didn't cover: ${Util.inspect(
-            x,
-        )}`,
-    );
+	throw new Error(
+		`Expected handling to cover all possible cases, but it didn't cover: ${Util.inspect(
+			x,
+		)}`,
+	);
 }
 
 export function camelToTitleCase(text: string) {
-    return (
-        text.substring(0, 1).toUpperCase() +
-        text.substring(1).replace(/[a-z][A-Z]/g, (x) => `${x[0]} ${x[1]}`)
-    );
+	return (
+		text.substring(0, 1).toUpperCase() +
+		text.substring(1).replace(/[a-z][A-Z]/g, (x) => `${x[0]} ${x[1]}`)
+	);
 }
 
 export function NonEnumerable(
-    _cls: unknown,
-    context: ClassFieldDecoratorContext,
+	_cls: unknown,
+	context: ClassFieldDecoratorContext,
 ) {
-    context.addInitializer(function () {
-        Object.defineProperty(this, context.name, {
-            enumerable: false,
-            configurable: true,
-            writable: true,
-        });
-    });
+	context.addInitializer(function () {
+		Object.defineProperty(this, context.name, {
+			enumerable: false,
+			configurable: true,
+			writable: true,
+		});
+	});
 }
 
 /**
@@ -84,8 +84,8 @@ const loadSymbol = Symbol.for("typedoc_loads");
 const pathSymbol = Symbol.for("typedoc_paths");
 
 interface TypeDocGlobals {
-    [loadSymbol]?: number;
-    [pathSymbol]?: string[];
+	[loadSymbol]?: number;
+	[pathSymbol]?: string[];
 }
 const g = globalThis as TypeDocGlobals;
 
@@ -95,9 +95,9 @@ g[pathSymbol] ||= [];
 g[pathSymbol].push(dirname(dirname(dirname(__dirname))));
 
 export function hasBeenLoadedMultipleTimes() {
-    return g[loadSymbol] !== 1;
+	return g[loadSymbol] !== 1;
 }
 
 export function getLoadedPaths() {
-    return g[pathSymbol] || [];
+	return g[pathSymbol] || [];
 }

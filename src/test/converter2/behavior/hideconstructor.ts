@@ -2,13 +2,13 @@
 
 /** @hideconstructor */
 export class StaticOnly {
-    static foo() {}
+	static foo() {}
 
-    /** @hideconstructor */
-    notHidden = true;
+	/** @hideconstructor */
+	notHidden = true;
 }
 
 export class IgnoredCtor {
-    /** @hideconstructor */
-    constructor() {}
+	/** @hideconstructor */
+	constructor() {}
 }

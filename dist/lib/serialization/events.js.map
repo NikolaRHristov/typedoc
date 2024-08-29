@@ -1,1 +1,10 @@
-{"version":3,"file":"events.js","sourceRoot":"","sources":["../../../src/lib/serialization/events.ts"],"names":[],"mappings":";;;AAGA;;;;;;GAMG;AACH,MAAa,cAAc;IAQvB,YAAY,OAA0B,EAAE,MAA8B;QAClE,IAAI,CAAC,OAAO,GAAG,OAAO,CAAC;QACvB,IAAI,CAAC,MAAM,GAAG,MAAM,CAAC;IACzB,CAAC;CACJ;AAZD,wCAYC"}
+{
+	"version": 3,
+	"file": "events.js",
+	"sourceRoot": "",
+	"sources": [
+		"../../../src/lib/serialization/events.ts"
+	],
+	"names": [],
+	"mappings": ";;;AAGA;;;;;;GAMG;AACH,MAAa,cAAc;IAQvB,YAAY,OAA0B,EAAE,MAA8B;QAClE,IAAI,CAAC,OAAO,GAAG,OAAO,CAAC;QACvB,IAAI,CAAC,MAAM,GAAG,MAAM,CAAC;IACzB,CAAC;CACJ;AAZD,wCAYC"
+}

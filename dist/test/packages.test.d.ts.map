@@ -1,1 +1,10 @@
-{"version":3,"file":"packages.test.d.ts","sourceRoot":"","sources":["../../src/test/packages.test.ts"],"names":[],"mappings":""}
+{
+	"version": 3,
+	"file": "packages.test.d.ts",
+	"sourceRoot": "",
+	"sources": [
+		"../../src/test/packages.test.ts"
+	],
+	"names": [],
+	"mappings": ""
+}

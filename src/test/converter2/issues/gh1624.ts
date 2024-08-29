@@ -1,10 +1,10 @@
 export interface Bar {
-    /** Some property style doc. */
-    baz: () => number;
+	/** Some property style doc. */
+	baz: () => number;
 }
 
 export class Foo implements Bar {
-    baz(): number {
-        return 0;
-    }
+	baz(): number {
+		return 0;
+	}
 }

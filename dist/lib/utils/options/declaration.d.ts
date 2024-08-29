@@ -427,4 +427,3 @@ export type DeclarationOptionToOptionType<T extends DeclarationOption> = T exten
  */
 export declare function convert(value: unknown, option: DeclarationOption, i18n: TranslationProxy, configPath: string, oldValue?: unknown): unknown;
 export declare function getDefaultValue(option: DeclarationOption): unknown;
-//# sourceMappingURL=declaration.d.ts.map

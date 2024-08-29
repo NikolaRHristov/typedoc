@@ -36,4 +36,3 @@ export declare class SourcePlugin extends ConverterComponent {
      */
     private onBeginResolve;
 }
-//# sourceMappingURL=SourcePlugin.d.ts.map

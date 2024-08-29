@@ -9,15 +9,15 @@ import type { ProjectReflection as JSONProjectReflection } from "./schema";
  * @see {@link Serializer.EVENT_END}
  */
 export class SerializeEvent {
-    /**
-     * The project the renderer is currently processing.
-     */
-    readonly project: ProjectReflection;
+	/**
+	 * The project the renderer is currently processing.
+	 */
+	readonly project: ProjectReflection;
 
-    output: JSONProjectReflection | undefined;
+	output: JSONProjectReflection | undefined;
 
-    constructor(project: ProjectReflection, output?: JSONProjectReflection) {
-        this.project = project;
-        this.output = output;
-    }
+	constructor(project: ProjectReflection, output?: JSONProjectReflection) {
+		this.project = project;
+		this.output = output;
+	}
 }

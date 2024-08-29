@@ -2,12 +2,12 @@
  * @beta
  */
 export namespace BetaStuff {
-    export class AlsoBeta {
-        betaFish() {}
+	export class AlsoBeta {
+		betaFish() {}
 
-        /** @alpha */
-        alphaFish() {}
-    }
+		/** @alpha */
+		alphaFish() {}
+	}
 }
 
 /** @alpha @beta */

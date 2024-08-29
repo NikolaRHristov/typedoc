@@ -1,5 +1,5 @@
 export class Foo {
-    [x: string]: Bar;
+	[x: string]: Bar;
 }
 
 class Bar {}

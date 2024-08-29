@@ -1,0 +1,1 @@
+{"version":3,"file":"lineLexer.d.ts","sourceRoot":"","sources":["../../../../src/lib/converter/comments/lineLexer.ts"],"names":[],"mappings":"AAAA,OAAO,KAAK,KAAK,EAAE,MAAM,YAAY,CAAC;AACtC,OAAO,EAAE,KAAK,KAAK,EAAmB,MAAM,SAAS,CAAC;AAEtD,wBAAiB,eAAe,CAC5B,IAAI,EAAE,MAAM,EACZ,MAAM,EAAE,EAAE,CAAC,YAAY,EAAE,GAC1B,SAAS,CAAC,KAAK,EAAE,SAAS,EAAE,SAAS,CAAC,CA2BxC"}

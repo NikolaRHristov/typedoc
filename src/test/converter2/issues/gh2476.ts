@@ -1,11 +1,11 @@
 declare function test(options?: test.Options): void;
 
 declare namespace test {
-    /** Test options */
-    interface Options {
-        a: string;
-        b: number;
-    }
+	/** Test options */
+	interface Options {
+		a: string;
+		b: number;
+	}
 }
 
 export { test };

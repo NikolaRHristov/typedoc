@@ -4,19 +4,19 @@
  * @typeParam T - Source interface type parameter
  */
 export interface InterfaceSource<T> {
-    /**
-     * Source interface property description
-     *
-     * @typeParam T - Source interface type parameter
-     */
-    property: T;
+	/**
+	 * Source interface property description
+	 *
+	 * @typeParam T - Source interface type parameter
+	 */
+	property: T;
 
-    /**
-     * Source interface method description
-     *
-     * @param arg
-     */
-    someMethod(arg: number): T;
+	/**
+	 * Source interface method description
+	 *
+	 * @param arg
+	 */
+	someMethod(arg: number): T;
 }
 
 /**
@@ -24,17 +24,17 @@ export interface InterfaceSource<T> {
  *
  */
 export interface InterfaceTarget<T> {
-    /**
-     * @inheritDoc InterfaceSource.property
-     */
-    property: T;
+	/**
+	 * @inheritDoc InterfaceSource.property
+	 */
+	property: T;
 
-    /**
-     * @inheritDoc InterfaceSource.someMethod
-     *
-     * @param arg
-     */
-    someMethod(arg: number): T;
+	/**
+	 * @inheritDoc InterfaceSource.someMethod
+	 *
+	 * @param arg
+	 */
+	someMethod(arg: number): T;
 }
 
 /**
@@ -56,10 +56,10 @@ export interface InterfaceTarget<T> {
  * @returns Stringified sum or concatenation of numeric arguments
  */
 export function functionSource<T>(arg1: T, arg2: T): string {
-    if (typeof arg1 === "number" && typeof arg2 === "number") {
-        return `${arg1 + arg2}`;
-    }
-    return `${arg1}${arg2}`;
+	if (typeof arg1 === "number" && typeof arg2 === "number") {
+		return `${arg1 + arg2}`;
+	}
+	return `${arg1}${arg2}`;
 }
 
 /**
@@ -76,5 +76,5 @@ export function functionSource<T>(arg1: T, arg2: T): string {
  *
  */
 export function functionTargetLocal<T>(arg1: T, arg2: T) {
-    return "";
+	return "";
 }

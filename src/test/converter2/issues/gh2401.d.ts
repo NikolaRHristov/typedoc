@@ -3,5 +3,5 @@
  * @module foo:bar
  */
 declare module "foo:bar" {
-    export function doSomething(a: any): void;
+	export function doSomething(a: any): void;
 }

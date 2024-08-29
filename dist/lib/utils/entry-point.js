@@ -303,4 +303,3 @@ function expandInputFiles(logger, entryPoints, options, supportedFile) {
     });
     return files;
 }
-//# sourceMappingURL=entry-point.js.map

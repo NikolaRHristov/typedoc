@@ -1,1 +1,10 @@
-{"version":3,"file":"relative.js","sourceRoot":"","sources":["../../../src/test/plugins/relative.ts"],"names":[],"mappings":";;AAAA,oBAEC;AAFD,SAAgB,IAAI;IAChB,MAAM;AACV,CAAC"}
+{
+	"version": 3,
+	"file": "relative.js",
+	"sourceRoot": "",
+	"sources": [
+		"../../../src/test/plugins/relative.ts"
+	],
+	"names": [],
+	"mappings": ";;AAAA,oBAEC;AAFD,SAAgB,IAAI;IAChB,MAAM;AACV,CAAC"
+}

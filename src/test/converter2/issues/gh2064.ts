@@ -1,3 +1,3 @@
 export class PrivateCtorDecl {
-    constructor(private x = 123) {}
+	constructor(private x = 123) {}
 }

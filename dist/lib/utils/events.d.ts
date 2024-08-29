@@ -26,4 +26,3 @@ export declare class EventDispatcher<T extends Record<keyof T, unknown[]>> {
      */
     trigger<K extends keyof T>(event: K, ...args: T[K]): void;
 }
-//# sourceMappingURL=events.d.ts.map

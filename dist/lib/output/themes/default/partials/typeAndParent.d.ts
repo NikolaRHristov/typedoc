@@ -1,5 +1,8 @@
-import type { DefaultThemeRenderContext } from "../DefaultThemeRenderContext";
 import { type Type } from "../../../../models";
 import { JSX } from "../../../../utils";
-export declare const typeAndParent: (context: DefaultThemeRenderContext, props: Type) => JSX.Element;
-//# sourceMappingURL=typeAndParent.d.ts.map
+import type { DefaultThemeRenderContext } from "../DefaultThemeRenderContext";
+
+export declare const typeAndParent: (
+	context: DefaultThemeRenderContext,
+	props: Type,
+) => JSX.Element;

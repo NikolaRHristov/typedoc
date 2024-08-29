@@ -20,9 +20,9 @@ exports.emptyArray = [];
  * @param item
  */
 function insertPrioritySorted(arr, item) {
-    const index = binaryFindPartition(arr, (v) => v.priority < item.priority);
-    arr.splice(index === -1 ? arr.length : index, 0, item);
-    return arr;
+	const index = binaryFindPartition(arr, (v) => v.priority < item.priority);
+	arr.splice(index === -1 ? arr.length : index, 0, item);
+	return arr;
 }
 /**
  * Inserts an item into an array sorted by order. If two items have the same order,
@@ -32,9 +32,9 @@ function insertPrioritySorted(arr, item) {
  * @param item
  */
 function insertOrderSorted(arr, item) {
-    const index = binaryFindPartition(arr, (v) => v.order > item.order);
-    arr.splice(index === -1 ? arr.length : index, 0, item);
-    return arr;
+	const index = binaryFindPartition(arr, (v) => v.order > item.order);
+	arr.splice(index === -1 ? arr.length : index, 0, item);
+	return arr;
 }
 /**
  * Performs a binary search of a given array, returning the index of the first item
@@ -44,20 +44,20 @@ function insertOrderSorted(arr, item) {
  * @param partition should return true while less than the partition point.
  */
 function binaryFindPartition(arr, partition) {
-    if (arr.length === 0) {
-        return -1;
-    }
-    let low = 0, high = arr.length - 1;
-    while (high > low) {
-        const mid = low + Math.floor((high - low) / 2);
-        if (partition(arr[mid])) {
-            high = mid;
-        }
-        else {
-            low = mid + 1;
-        }
-    }
-    return partition(arr[low]) ? low : -1;
+	if (arr.length === 0) {
+		return -1;
+	}
+	let low = 0,
+		high = arr.length - 1;
+	while (high > low) {
+		const mid = low + Math.floor((high - low) / 2);
+		if (partition(arr[mid])) {
+			high = mid;
+		} else {
+			low = mid + 1;
+		}
+	}
+	return partition(arr[low]) ? low : -1;
 }
 /**
  * Removes an item from the array if the array exists and the item is included
@@ -66,13 +66,13 @@ function binaryFindPartition(arr, partition) {
  * @param item
  */
 function removeIfPresent(arr, item) {
-    if (!arr) {
-        return;
-    }
-    const index = arr.indexOf(item);
-    if (index !== -1) {
-        arr.splice(index, 1);
-    }
+	if (!arr) {
+		return;
+	}
+	const index = arr.indexOf(item);
+	if (index !== -1) {
+		arr.splice(index, 1);
+	}
 }
 /**
  * Remove items in an array which match a predicate.
@@ -80,66 +80,64 @@ function removeIfPresent(arr, item) {
  * @param predicate
  */
 function removeIf(arr, predicate) {
-    for (let i = 0; i < arr.length; i++) {
-        if (predicate(arr[i])) {
-            arr.splice(i, 1);
-            i--;
-        }
-    }
+	for (let i = 0; i < arr.length; i++) {
+		if (predicate(arr[i])) {
+			arr.splice(i, 1);
+			i--;
+		}
+	}
 }
 /**
  * Filters out duplicate values from the given iterable.
  * @param arr
  */
 function unique(arr) {
-    return Array.from(new Set(arr));
+	return Array.from(new Set(arr));
 }
 function partition(iter, predicate) {
-    const left = [];
-    const right = [];
-    for (const item of iter) {
-        if (predicate(item)) {
-            left.push(item);
-        }
-        else {
-            right.push(item);
-        }
-    }
-    return [left, right];
+	const left = [];
+	const right = [];
+	for (const item of iter) {
+		if (predicate(item)) {
+			left.push(item);
+		} else {
+			right.push(item);
+		}
+	}
+	return [left, right];
 }
 function* zip(...args) {
-    const iterators = args.map((x) => x[Symbol.iterator]());
-    for (;;) {
-        const next = iterators.map((i) => i.next());
-        if (next.some((v) => v.done)) {
-            break;
-        }
-        yield next.map((v) => v.value);
-    }
+	const iterators = args.map((x) => x[Symbol.iterator]());
+	for (;;) {
+		const next = iterators.map((i) => i.next());
+		if (next.some((v) => v.done)) {
+			break;
+		}
+		yield next.map((v) => v.value);
+	}
 }
 function filterMap(iter, fn) {
-    const result = [];
-    for (const item of iter || []) {
-        const newItem = fn(item);
-        if (newItem !== void 0) {
-            result.push(newItem);
-        }
-    }
-    return result;
+	const result = [];
+	for (const item of iter || []) {
+		const newItem = fn(item);
+		if (newItem !== void 0) {
+			result.push(newItem);
+		}
+	}
+	return result;
 }
 function firstDefined(array, callback) {
-    if (array === undefined) {
-        return undefined;
-    }
-    for (let i = 0; i < array.length; i++) {
-        const result = callback(array[i], i);
-        if (result !== undefined) {
-            return result;
-        }
-    }
-    return undefined;
+	if (array === undefined) {
+		return undefined;
+	}
+	for (let i = 0; i < array.length; i++) {
+		const result = callback(array[i], i);
+		if (result !== undefined) {
+			return result;
+		}
+	}
+	return undefined;
 }
 function filter(array, predicate) {
-    return array ? array.filter(predicate) : exports.emptyArray;
+	return array ? array.filter(predicate) : exports.emptyArray;
 }
-//# sourceMappingURL=array.js.map

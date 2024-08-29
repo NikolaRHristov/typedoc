@@ -21,4 +21,3 @@ export declare const OptionDefaults: {
     kindSortOrder: readonly EnumKeys<typeof ReflectionKind>[];
     requiredToBeDocumented: readonly EnumKeys<typeof ReflectionKind>[];
 };
-//# sourceMappingURL=defaults.d.ts.map

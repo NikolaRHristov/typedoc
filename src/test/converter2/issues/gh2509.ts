@@ -1,9 +1,9 @@
 export interface Int {
-    /** Cb */
-    cb: () => Promise<any>;
+	/** Cb */
+	cb: () => Promise<any>;
 
-    nested: {
-        /** Cb2 */
-        cb: () => any;
-    };
+	nested: {
+		/** Cb2 */
+		cb: () => any;
+	};
 }

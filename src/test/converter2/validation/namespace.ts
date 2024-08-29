@@ -1,5 +1,5 @@
 export type Foo = Bar.Baz;
 
 namespace Bar {
-    export type Baz = 123;
+	export type Baz = 123;
 }

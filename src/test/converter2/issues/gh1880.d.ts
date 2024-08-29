@@ -4,8 +4,8 @@
  * @enum
  */
 export declare const SomeEnum: {
-    /**
-     * This is the auto property.
-     */
-    readonly AUTO: "auto";
+	/**
+	 * This is the auto property.
+	 */
+	readonly AUTO: "auto";
 };

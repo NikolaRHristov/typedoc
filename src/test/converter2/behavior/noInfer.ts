@@ -1,6 +1,6 @@
 export function createStreetLight<C extends string>(
-    colors: C[],
-    defaultColor?: NoInfer<C>,
+	colors: C[],
+	defaultColor?: NoInfer<C>,
 ) {}
 
 // @ts-expect-error

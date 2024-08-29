@@ -18,73 +18,72 @@ const kind_1 = require("./kind");
  * @category Reflections
  */
 class ReferenceReflection extends declaration_1.DeclarationReflection {
-    /**
-     * Creates a reference reflection. Should only be used within the factory function.
-     * @internal
-     */
-    constructor(name, reflection, parent) {
-        super(name, kind_1.ReflectionKind.Reference, parent);
-        this.variant = "reference";
-        this._target = reflection.id;
-    }
-    /**
-     * Tries to get the reflection that is referenced. This may be another reference reflection.
-     * To fully resolve any references, use {@link tryGetTargetReflectionDeep}.
-     */
-    tryGetTargetReflection() {
-        return this.project.getReflectionById(this._target);
-    }
-    /**
-     * Tries to get the reflection that is referenced, this will fully resolve references.
-     * To only resolve one reference, use {@link tryGetTargetReflection}.
-     */
-    tryGetTargetReflectionDeep() {
-        let result = this.tryGetTargetReflection();
-        while (result instanceof ReferenceReflection) {
-            result = result.tryGetTargetReflection();
-        }
-        return result;
-    }
-    /**
-     * Gets the reflection that is referenced. This may be another reference reflection.
-     * To fully resolve any references, use {@link getTargetReflectionDeep}.
-     */
-    getTargetReflection() {
-        const target = this.tryGetTargetReflection();
-        if (!target) {
-            throw new Error("Reference was unresolved.");
-        }
-        return target;
-    }
-    /**
-     * Gets the reflection that is referenced, this will fully resolve references.
-     * To only resolve one reference, use {@link getTargetReflection}.
-     */
-    getTargetReflectionDeep() {
-        let result = this.getTargetReflection();
-        while (result instanceof ReferenceReflection) {
-            result = result.getTargetReflection();
-        }
-        return result;
-    }
-    getChildByName(arg) {
-        return this.getTargetReflection().getChildByName(arg);
-    }
-    toObject(serializer) {
-        return {
-            ...super.toObject(serializer),
-            variant: this.variant,
-            target: this.tryGetTargetReflection()?.id ?? -1,
-        };
-    }
-    fromObject(de, obj) {
-        super.fromObject(de, obj);
-        de.defer((project) => {
-            this._target =
-                project.getReflectionById(de.oldIdToNewId[obj.target] ?? -1)
-                    ?.id ?? -1;
-        });
-    }
+	/**
+	 * Creates a reference reflection. Should only be used within the factory function.
+	 * @internal
+	 */
+	constructor(name, reflection, parent) {
+		super(name, kind_1.ReflectionKind.Reference, parent);
+		this.variant = "reference";
+		this._target = reflection.id;
+	}
+	/**
+	 * Tries to get the reflection that is referenced. This may be another reference reflection.
+	 * To fully resolve any references, use {@link tryGetTargetReflectionDeep}.
+	 */
+	tryGetTargetReflection() {
+		return this.project.getReflectionById(this._target);
+	}
+	/**
+	 * Tries to get the reflection that is referenced, this will fully resolve references.
+	 * To only resolve one reference, use {@link tryGetTargetReflection}.
+	 */
+	tryGetTargetReflectionDeep() {
+		let result = this.tryGetTargetReflection();
+		while (result instanceof ReferenceReflection) {
+			result = result.tryGetTargetReflection();
+		}
+		return result;
+	}
+	/**
+	 * Gets the reflection that is referenced. This may be another reference reflection.
+	 * To fully resolve any references, use {@link getTargetReflectionDeep}.
+	 */
+	getTargetReflection() {
+		const target = this.tryGetTargetReflection();
+		if (!target) {
+			throw new Error("Reference was unresolved.");
+		}
+		return target;
+	}
+	/**
+	 * Gets the reflection that is referenced, this will fully resolve references.
+	 * To only resolve one reference, use {@link getTargetReflection}.
+	 */
+	getTargetReflectionDeep() {
+		let result = this.getTargetReflection();
+		while (result instanceof ReferenceReflection) {
+			result = result.getTargetReflection();
+		}
+		return result;
+	}
+	getChildByName(arg) {
+		return this.getTargetReflection().getChildByName(arg);
+	}
+	toObject(serializer) {
+		return {
+			...super.toObject(serializer),
+			variant: this.variant,
+			target: this.tryGetTargetReflection()?.id ?? -1,
+		};
+	}
+	fromObject(de, obj) {
+		super.fromObject(de, obj);
+		de.defer((project) => {
+			this._target =
+				project.getReflectionById(de.oldIdToNewId[obj.target] ?? -1)
+					?.id ?? -1;
+		});
+	}
 }
 exports.ReferenceReflection = ReferenceReflection;
-//# sourceMappingURL=reference.js.map

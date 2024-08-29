@@ -1,5 +1,5 @@
 declare const m: {
-    SomeClass: any;
+	SomeClass: any;
 };
 
 export type SomeType = typeof m.SomeClass.someProp;

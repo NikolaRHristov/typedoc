@@ -1,8 +1,8 @@
 export enum Foo {
-    A,
-    B = Math.random(),
+	A,
+	B = Math.random(),
 }
 
 export enum Bar {
-    C = "C",
+	C = "C",
 }

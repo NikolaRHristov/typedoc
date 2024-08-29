@@ -10,7 +10,7 @@ export function hidden(a: string): void;
 
 /** @hidden */
 export function hidden(a: string | number): void {
-    console.log(a);
+	console.log(a);
 }
 
 /** @hidden */

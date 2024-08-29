@@ -4,16 +4,16 @@
 // constructed.
 
 declare namespace WebAssembly {
-    interface Instance {
-        __shikiHack: never;
-        exports: unknown;
-    }
-    interface WebAssemblyInstantiatedSource {
-        __shikiHack: never;
-    }
-    type ImportValue = unknown;
+	interface Instance {
+		__shikiHack: never;
+		exports: unknown;
+	}
+	interface WebAssemblyInstantiatedSource {
+		__shikiHack: never;
+	}
+	type ImportValue = unknown;
 }
 
 interface Response {
-    __shikiHack: never;
+	__shikiHack: never;
 }

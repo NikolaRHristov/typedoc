@@ -8,5 +8,9 @@ exports.Internationalization = void 0;
  * @document ../../../internal-docs/internationalization.md
  */
 var internationalization_1 = require("./internationalization");
-Object.defineProperty(exports, "Internationalization", { enumerable: true, get: function () { return internationalization_1.Internationalization; } });
-//# sourceMappingURL=index.js.map
+Object.defineProperty(exports, "Internationalization", {
+	enumerable: true,
+	get: function () {
+		return internationalization_1.Internationalization;
+	},
+});

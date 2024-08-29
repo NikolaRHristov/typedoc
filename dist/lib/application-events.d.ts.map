@@ -1,1 +1,10 @@
-{"version":3,"file":"application-events.d.ts","sourceRoot":"","sources":["../../src/lib/application-events.ts"],"names":[],"mappings":"AAAA,eAAO,MAAM,iBAAiB;;;;CAIpB,CAAC"}
+{
+	"version": 3,
+	"file": "application-events.d.ts",
+	"sourceRoot": "",
+	"sources": [
+		"../../src/lib/application-events.ts"
+	],
+	"names": [],
+	"mappings": "AAAA,eAAO,MAAM,iBAAiB;;;;CAIpB,CAAC"
+}

@@ -2,11 +2,11 @@
  * @namespace
  */
 export let NS = {
-    property: "blah",
+	property: "blah",
 };
 
 export namespace NS {
-    export type T = string;
+	export type T = string;
 }
 
 export type NS2 = { foo: string };
@@ -15,5 +15,5 @@ export type NS2 = { foo: string };
  * @namespace
  */
 export const NS2 = {
-    property: "blah",
+	property: "blah",
 };

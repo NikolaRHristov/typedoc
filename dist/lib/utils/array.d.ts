@@ -51,4 +51,3 @@ export declare function zip<T extends Iterable<any>[]>(...args: T): Iterable<{
 export declare function filterMap<T, U>(iter: Iterable<T> | undefined, fn: (item: T) => U | undefined): U[];
 export declare function firstDefined<T, U>(array: readonly T[] | undefined, callback: (element: T, index: number) => U | undefined): U | undefined;
 export declare function filter<T>(array: readonly T[] | undefined, predicate: (value: T, index: number, array: readonly T[]) => boolean): readonly T[];
-//# sourceMappingURL=array.d.ts.map

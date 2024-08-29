@@ -1,5 +1,11 @@
-import type { DefaultThemeRenderContext } from "../DefaultThemeRenderContext";
+import {
+	type DeclarationReflection,
+	type DocumentReflection,
+} from "../../../../models";
 import { JSX } from "../../../../utils";
-import { type DeclarationReflection, type DocumentReflection } from "../../../../models";
-export declare function member(context: DefaultThemeRenderContext, props: DeclarationReflection | DocumentReflection): JSX.Element;
-//# sourceMappingURL=member.d.ts.map
+import type { DefaultThemeRenderContext } from "../DefaultThemeRenderContext";
+
+export declare function member(
+	context: DefaultThemeRenderContext,
+	props: DeclarationReflection | DocumentReflection,
+): JSX.Element;

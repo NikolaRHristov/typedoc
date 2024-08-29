@@ -1,1 +1,10 @@
-{"version":3,"file":"reflectionPreview.d.ts","sourceRoot":"","sources":["../../../../../../src/lib/output/themes/default/partials/reflectionPreview.tsx"],"names":[],"mappings":"AAAA,OAAO,EAAyC,KAAK,UAAU,EAAkB,MAAM,oBAAoB,CAAC;AAC5G,OAAO,EAAE,GAAG,EAAE,MAAM,mBAAmB,CAAC;AAExC,OAAO,KAAK,EAAE,yBAAyB,EAAE,MAAM,8BAA8B,CAAC;AAE9E,wBAAgB,iBAAiB,CAAC,OAAO,EAAE,yBAAyB,EAAE,KAAK,EAAE,UAAU,2BAgBtF"}
+{
+	"version": 3,
+	"file": "reflectionPreview.d.ts",
+	"sourceRoot": "",
+	"sources": [
+		"../../../../../../src/lib/output/themes/default/partials/reflectionPreview.tsx"
+	],
+	"names": [],
+	"mappings": "AAAA,OAAO,EAAyC,KAAK,UAAU,EAAkB,MAAM,oBAAoB,CAAC;AAC5G,OAAO,EAAE,GAAG,EAAE,MAAM,mBAAmB,CAAC;AAExC,OAAO,KAAK,EAAE,yBAAyB,EAAE,MAAM,8BAA8B,CAAC;AAE9E,wBAAgB,iBAAiB,CAAC,OAAO,EAAE,yBAAyB,EAAE,KAAK,EAAE,UAAU,2BAgBtF"
+}

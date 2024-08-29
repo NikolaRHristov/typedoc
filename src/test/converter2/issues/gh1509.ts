@@ -1,5 +1,5 @@
 export interface Foo {
-    foo: number;
+	foo: number;
 }
 
 export interface PartialFoo extends Partial<Foo> {}

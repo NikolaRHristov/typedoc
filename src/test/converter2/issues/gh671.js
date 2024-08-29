@@ -3,5 +3,5 @@
  * @param {boolean} [int=true] whether to parse as an integer or float
  */
 export function toNumber(x, int = true) {
-    return int ? parseInt(x) : parseFloat(x);
+	return int ? parseInt(x) : parseFloat(x);
 }

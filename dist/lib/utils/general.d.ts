@@ -34,14 +34,18 @@ export type NeverIfInternal<T> = IfInternal<never, T>;
 /**
  * Resolves a string type into a union of characters, `"ab"` turns into `"a" | "b"`.
  */
-export type Chars<T extends string> = T extends `${infer C}${infer R}` ? C | Chars<R> : never;
+export type Chars<T extends string> = T extends `${infer C}${infer R}`
+	? C | Chars<R>
+	: never;
 /**
  * Utility to help type checking ensure that there is no uncovered case.
  */
 export declare function assertNever(x: never): never;
 export declare function camelToTitleCase(text: string): string;
-export declare function NonEnumerable(_cls: unknown, context: ClassFieldDecoratorContext): void;
+export declare function NonEnumerable(
+	_cls: unknown,
+	context: ClassFieldDecoratorContext,
+): void;
 export declare function hasBeenLoadedMultipleTimes(): boolean;
 export declare function getLoadedPaths(): string[];
 export {};
-//# sourceMappingURL=general.d.ts.map

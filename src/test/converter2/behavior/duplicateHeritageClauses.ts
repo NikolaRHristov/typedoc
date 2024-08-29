@@ -1,10 +1,10 @@
 export interface A {
-    a?: string;
+	a?: string;
 }
 
 export interface B extends A {}
 export interface B extends A {
-    b?: string;
+	b?: string;
 }
 
 export interface C extends A {}

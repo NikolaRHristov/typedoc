@@ -1,5 +1,5 @@
 export declare class Decl {
-    prop: number;
+	prop: number;
 }
 
 export declare const x: number;

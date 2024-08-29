@@ -1,1 +1,10 @@
-{"version":3,"file":"reflection.d.ts","sourceRoot":"","sources":["../../../../../../src/lib/output/themes/default/templates/reflection.tsx"],"names":[],"mappings":"AACA,OAAO,KAAK,EAAE,yBAAyB,EAAE,MAAM,8BAA8B,CAAC;AAC9E,OAAO,KAAK,EAAE,SAAS,EAAE,MAAM,iBAAiB,CAAC;AACjD,OAAO,EACH,KAAK,mBAAmB,EAK3B,MAAM,oBAAoB,CAAC;AAC5B,OAAO,EAAE,GAAG,EAAO,MAAM,mBAAmB,CAAC;AAE7C,wBAAgB,kBAAkB,CAAC,OAAO,EAAE,yBAAyB,EAAE,KAAK,EAAE,SAAS,CAAC,mBAAmB,CAAC,eAqE3G"}
+{
+	"version": 3,
+	"file": "reflection.d.ts",
+	"sourceRoot": "",
+	"sources": [
+		"../../../../../../src/lib/output/themes/default/templates/reflection.tsx"
+	],
+	"names": [],
+	"mappings": "AACA,OAAO,KAAK,EAAE,yBAAyB,EAAE,MAAM,8BAA8B,CAAC;AAC9E,OAAO,KAAK,EAAE,SAAS,EAAE,MAAM,iBAAiB,CAAC;AACjD,OAAO,EACH,KAAK,mBAAmB,EAK3B,MAAM,oBAAoB,CAAC;AAC5B,OAAO,EAAE,GAAG,EAAO,MAAM,mBAAmB,CAAC;AAE7C,wBAAgB,kBAAkB,CAAC,OAAO,EAAE,yBAAyB,EAAE,KAAK,EAAE,SAAS,CAAC,mBAAmB,CAAC,eAqE3G"
+}

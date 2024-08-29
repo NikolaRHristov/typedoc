@@ -29,7 +29,10 @@ export declare function writeFileSync(fileName: string, data: string): void;
  * @param fileName  The name of the file that should be written.
  * @param data  The contents of the file.
  */
-export declare function writeFile(fileName: string, data: string): Promise<void>;
+export declare function writeFile(
+	fileName: string,
+	data: string,
+): Promise<void>;
 /**
  * Copy a file or directory recursively.
  */
@@ -38,27 +41,46 @@ export declare function copySync(src: string, dest: string): void;
 /**
  * Simpler version of `glob.sync` that only covers our use cases, always ignoring node_modules.
  */
-export declare function glob(pattern: string, root: string, options?: {
-    includeDirectories?: boolean;
-    followSymlinks?: boolean;
-}): string[];
+export declare function glob(
+	pattern: string,
+	root: string,
+	options?: {
+		includeDirectories?: boolean;
+		followSymlinks?: boolean;
+	},
+): string[];
 export declare function hasTsExtension(path: string): boolean;
 export declare function hasDeclarationFileExtension(path: string): boolean;
-export declare function discoverInParentDir<T extends {}>(name: string, dir: string, read: (content: string) => T | undefined): {
-    file: string;
-    content: T;
-} | undefined;
-export declare function discoverInParentDirExactMatch<T extends {}>(name: string, dir: string, read: (content: string) => T | undefined): {
-    file: string;
-    content: T;
-} | undefined;
-export declare function discoverPackageJson(dir: string): {
-    file: string;
-    content: {
-        version?: string | undefined;
-    } & {
-        name: string;
-    };
-} | undefined;
-export declare function findPackageForPath(sourcePath: string): string | undefined;
-//# sourceMappingURL=fs.d.ts.map
+export declare function discoverInParentDir<T extends {}>(
+	name: string,
+	dir: string,
+	read: (content: string) => T | undefined,
+):
+	| {
+			file: string;
+			content: T;
+	  }
+	| undefined;
+export declare function discoverInParentDirExactMatch<T extends {}>(
+	name: string,
+	dir: string,
+	read: (content: string) => T | undefined,
+):
+	| {
+			file: string;
+			content: T;
+	  }
+	| undefined;
+export declare function discoverPackageJson(dir: string):
+	| {
+			file: string;
+			content: {
+				version?: string | undefined;
+			} & {
+				name: string;
+			};
+	  }
+	| undefined;
+export declare function findPackageForPath(
+	sourcePath: string,
+): string | undefined;

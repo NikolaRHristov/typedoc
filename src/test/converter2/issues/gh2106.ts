@@ -1,17 +1,17 @@
 export function balance(address: string): Coin {
-    return {
-        amount: "",
-        denom: "",
-    };
+	return {
+		amount: "",
+		denom: "",
+	};
 }
 
 export interface Coin {
-    denom: string;
-    amount: string;
+	denom: string;
+	amount: string;
 }
 
 export const Coin = {
-    thisIsAValue: true,
+	thisIsAValue: true,
 };
 
 export type TypeOf = typeof Coin;

@@ -1,1 +1,10 @@
-{"version":3,"file":"InheritDocPlugin.d.ts","sourceRoot":"","sources":["../../../../src/lib/converter/plugins/InheritDocPlugin.ts"],"names":[],"mappings":"AAQA,OAAO,EAAa,kBAAkB,EAAE,MAAM,eAAe,CAAC;AAI9D,OAAO,EAAsB,KAAK,iBAAiB,EAAE,MAAM,aAAa,CAAC;AAMzE;;;;;;;;;;;;GAYG;AACH,qBACa,gBAAiB,SAAQ,kBAAkB;IAEpD,QAAQ,CAAC,UAAU,EAAG,iBAAiB,CAAC;IAGxC,OAAO,CAAC,YAAY,CAAsD;IAE1E;;OAEG;IACM,UAAU;IAUnB;;;;OAIG;IACH,OAAO,CAAC,iBAAiB;IA6DzB,OAAO,CAAC,WAAW;IAuEnB,OAAO,CAAC,gCAAgC;CA4B3C"}
+{
+	"version": 3,
+	"file": "InheritDocPlugin.d.ts",
+	"sourceRoot": "",
+	"sources": [
+		"../../../../src/lib/converter/plugins/InheritDocPlugin.ts"
+	],
+	"names": [],
+	"mappings": "AAQA,OAAO,EAAa,kBAAkB,EAAE,MAAM,eAAe,CAAC;AAI9D,OAAO,EAAsB,KAAK,iBAAiB,EAAE,MAAM,aAAa,CAAC;AAMzE;;;;;;;;;;;;GAYG;AACH,qBACa,gBAAiB,SAAQ,kBAAkB;IAEpD,QAAQ,CAAC,UAAU,EAAG,iBAAiB,CAAC;IAGxC,OAAO,CAAC,YAAY,CAAsD;IAE1E;;OAEG;IACM,UAAU;IAUnB;;;;OAIG;IACH,OAAO,CAAC,iBAAiB;IA6DzB,OAAO,CAAC,WAAW;IAuEnB,OAAO,CAAC,gCAAgC;CA4B3C"
+}

@@ -7,28 +7,29 @@ exports.SourceReference = void 0;
  * @see {@link DeclarationReflection.sources}
  */
 class SourceReference {
-    constructor(fileName, line, character) {
-        this.fileName = fileName;
-        this.fullFileName = fileName;
-        this.line = line;
-        this.character = character;
-    }
-    equals(other) {
-        return (this.fullFileName == other.fullFileName &&
-            this.line === other.line &&
-            this.character === other.character);
-    }
-    toObject() {
-        return {
-            fileName: this.fileName,
-            line: this.line,
-            character: this.character,
-            url: this.url,
-        };
-    }
-    fromObject(_de, obj) {
-        this.url = obj.url;
-    }
+	constructor(fileName, line, character) {
+		this.fileName = fileName;
+		this.fullFileName = fileName;
+		this.line = line;
+		this.character = character;
+	}
+	equals(other) {
+		return (
+			this.fullFileName == other.fullFileName &&
+			this.line === other.line &&
+			this.character === other.character
+		);
+	}
+	toObject() {
+		return {
+			fileName: this.fileName,
+			line: this.line,
+			character: this.character,
+			url: this.url,
+		};
+	}
+	fromObject(_de, obj) {
+		this.url = obj.url;
+	}
 }
 exports.SourceReference = SourceReference;
-//# sourceMappingURL=file.js.map

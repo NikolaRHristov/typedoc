@@ -1,1 +1,10 @@
-{"version":3,"file":"header.d.ts","sourceRoot":"","sources":["../../../../../../src/lib/output/themes/default/partials/header.tsx"],"names":[],"mappings":"AACA,OAAO,EAAE,GAAG,EAAE,MAAM,mBAAmB,CAAC;AACxC,OAAO,KAAK,EAAE,yBAAyB,EAAE,MAAM,8BAA8B,CAAC;AAC9E,OAAO,KAAK,EAAE,SAAS,EAAE,MAAM,iBAAiB,CAAC;AACjD,OAAO,EAAE,KAAK,UAAU,EAAkB,MAAM,oBAAoB,CAAC;AAErE,eAAO,MAAM,MAAM,YAAa,yBAAyB,SAAS,SAAS,CAAC,UAAU,CAAC,gBAsBtF,CAAC"}
+{
+	"version": 3,
+	"file": "header.d.ts",
+	"sourceRoot": "",
+	"sources": [
+		"../../../../../../src/lib/output/themes/default/partials/header.tsx"
+	],
+	"names": [],
+	"mappings": "AACA,OAAO,EAAE,GAAG,EAAE,MAAM,mBAAmB,CAAC;AACxC,OAAO,KAAK,EAAE,yBAAyB,EAAE,MAAM,8BAA8B,CAAC;AAC9E,OAAO,KAAK,EAAE,SAAS,EAAE,MAAM,iBAAiB,CAAC;AACjD,OAAO,EAAE,KAAK,UAAU,EAAkB,MAAM,oBAAoB,CAAC;AAErE,eAAO,MAAM,MAAM,YAAa,yBAAyB,SAAS,SAAS,CAAC,UAAU,CAAC,gBAsBtF,CAAC"
+}

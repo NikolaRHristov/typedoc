@@ -2,8 +2,8 @@
 export type Foo = () => number;
 
 export class Bar {
-    /**
-     * {@inheritDoc Foo:type}
-     */
-    x = 1;
+	/**
+	 * {@inheritDoc Foo:type}
+	 */
+	x = 1;
 }

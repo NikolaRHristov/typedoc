@@ -1,6 +1,9 @@
-import type { DefaultThemeRenderContext } from "../DefaultThemeRenderContext";
 import type { ProjectReflection } from "../../../../models";
-import type { PageEvent } from "../../../events";
 import { JSX } from "../../../../utils";
-export declare const indexTemplate: ({ markdown }: DefaultThemeRenderContext, props: PageEvent<ProjectReflection>) => JSX.Element;
-//# sourceMappingURL=index.d.ts.map
+import type { PageEvent } from "../../../events";
+import type { DefaultThemeRenderContext } from "../DefaultThemeRenderContext";
+
+export declare const indexTemplate: (
+	{ markdown }: DefaultThemeRenderContext,
+	props: PageEvent<ProjectReflection>,
+) => JSX.Element;

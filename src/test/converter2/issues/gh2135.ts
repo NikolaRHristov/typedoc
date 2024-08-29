@@ -1,6 +1,6 @@
 export class Camera {
-    /** One */
-    static useCameraPermissions = createPermissionHook();
+	/** One */
+	static useCameraPermissions = createPermissionHook();
 }
 
 /** Two */

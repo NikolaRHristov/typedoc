@@ -1,5 +1,5 @@
 export class Test {
-    method() {}
+	method() {}
 }
 
 export { Test as Test2 };

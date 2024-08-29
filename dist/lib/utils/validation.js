@@ -11,47 +11,52 @@ const opt = Symbol();
  */
 exports.additionalProperties = Symbol();
 function validate(schema, obj) {
-    let type = schema;
-    if (opt in schema) {
-        if (obj == null) {
-            return true;
-        }
-        type = schema[opt];
-    }
-    if (type === String) {
-        return typeof obj === "string";
-    }
-    if (type === Number) {
-        return typeof obj === "number";
-    }
-    if (type === Boolean) {
-        return typeof obj === "boolean";
-    }
-    if (typeof type === "function") {
-        return type(obj);
-    }
-    if (Array.isArray(type)) {
-        if (type[0] === Array) {
-            return (Array.isArray(obj) &&
-                obj.every((item) => validate(type[1], item)));
-        }
-        return type.includes(obj);
-    }
-    if (exports.additionalProperties in schema &&
-        !schema[exports.additionalProperties]) {
-        if (Object.keys(obj).some((key) => !(key in schema))) {
-            return false;
-        }
-    }
-    return (!!obj &&
-        typeof obj === "object" &&
-        !Array.isArray(obj) &&
-        Object.entries(type).every(([key, prop]) => validate(prop, obj[key])));
+	let type = schema;
+	if (opt in schema) {
+		if (obj == null) {
+			return true;
+		}
+		type = schema[opt];
+	}
+	if (type === String) {
+		return typeof obj === "string";
+	}
+	if (type === Number) {
+		return typeof obj === "number";
+	}
+	if (type === Boolean) {
+		return typeof obj === "boolean";
+	}
+	if (typeof type === "function") {
+		return type(obj);
+	}
+	if (Array.isArray(type)) {
+		if (type[0] === Array) {
+			return (
+				Array.isArray(obj) &&
+				obj.every((item) => validate(type[1], item))
+			);
+		}
+		return type.includes(obj);
+	}
+	if (
+		exports.additionalProperties in schema &&
+		!schema[exports.additionalProperties]
+	) {
+		if (Object.keys(obj).some((key) => !(key in schema))) {
+			return false;
+		}
+	}
+	return (
+		!!obj &&
+		typeof obj === "object" &&
+		!Array.isArray(obj) &&
+		Object.entries(type).every(([key, prop]) => validate(prop, obj[key]))
+	);
 }
 function optional(x) {
-    return { [opt]: x };
+	return { [opt]: x };
 }
 function isTagString(x) {
-    return typeof x === "string" && /^@[a-zA-Z][a-zA-Z0-9]*$/.test(x);
+	return typeof x === "string" && /^@[a-zA-Z][a-zA-Z0-9]*$/.test(x);
 }
-//# sourceMappingURL=validation.js.map

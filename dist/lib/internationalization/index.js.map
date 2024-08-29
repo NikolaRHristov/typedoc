@@ -1,1 +1,10 @@
-{"version":3,"file":"index.js","sourceRoot":"","sources":["../../../src/lib/internationalization/index.ts"],"names":[],"mappings":";;;AAAA;;;;;GAKG;AACH,+DAKgC;AAH5B,4HAAA,oBAAoB,OAAA"}
+{
+	"version": 3,
+	"file": "index.js",
+	"sourceRoot": "",
+	"sources": [
+		"../../../src/lib/internationalization/index.ts"
+	],
+	"names": [],
+	"mappings": ";;;AAAA;;;;;GAKG;AACH,+DAKgC;AAH5B,4HAAA,oBAAoB,OAAA"
+}

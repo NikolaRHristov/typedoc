@@ -2,14 +2,14 @@
  * Foo docs
  */
 export type Foo = {
-    /**
-     * Foo.a docs
-     */
-    a: 123;
-    /**
-     * Foo.b docs
-     */
-    b: 456;
+	/**
+	 * Foo.a docs
+	 */
+	a: 123;
+	/**
+	 * Foo.b docs
+	 */
+	b: 456;
 };
 
 /**
@@ -18,5 +18,5 @@ export type Foo = {
  * @interface
  */
 export type Bar = {
-    [K in keyof Foo]: string;
+	[K in keyof Foo]: string;
 };

@@ -1,1 +1,10 @@
-{"version":3,"file":"components.js","sourceRoot":"","sources":["../../../src/lib/serialization/components.ts"],"names":[],"mappings":""}
+{
+	"version": 3,
+	"file": "components.js",
+	"sourceRoot": "",
+	"sources": [
+		"../../../src/lib/serialization/components.ts"
+	],
+	"names": [],
+	"mappings": ""
+}

@@ -1,1 +1,10 @@
-{"version":3,"file":"behavior.c2.test.d.ts","sourceRoot":"","sources":["../../src/test/behavior.c2.test.ts"],"names":[],"mappings":""}
+{
+	"version": 3,
+	"file": "behavior.c2.test.d.ts",
+	"sourceRoot": "",
+	"sources": [
+		"../../src/test/behavior.c2.test.ts"
+	],
+	"names": [],
+	"mappings": ""
+}

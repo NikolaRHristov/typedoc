@@ -3,10 +3,10 @@
  * @class
  */
 export const VariableClass = class {
-    /** Stat docs */
-    static stat = 1;
-    /** Inst docs */
-    inst = "2";
+	/** Stat docs */
+	static stat = 1;
+	/** Inst docs */
+	inst = "2";
 };
 
 /**
@@ -14,21 +14,21 @@ export const VariableClass = class {
  * @class
  */
 export declare const CallableClass: {
-    /** Stat docs */
-    stat: string;
-    /** Static signature */
-    (): number;
+	/** Stat docs */
+	stat: string;
+	/** Static signature */
+	(): number;
 } & {
-    /** Ctor docs */
-    new (): {
-        /** Call docs */
-        (): string;
+	/** Ctor docs */
+	new (): {
+		/** Call docs */
+		(): string;
 
-        /** Inst docs */
-        inst: string;
-        /** Method docs */
-        method(): string;
-    };
+		/** Inst docs */
+		inst: string;
+		/** Method docs */
+		method(): string;
+	};
 };
 
 /**

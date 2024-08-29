@@ -1,1 +1,10 @@
-{"version":3,"file":"minimalSourceFile.d.ts","sourceRoot":"","sources":["../../../src/lib/utils/minimalSourceFile.ts"],"names":[],"mappings":"AAAA,OAAO,KAAK,EAAE,gBAAgB,EAAE,cAAc,EAAE,MAAM,YAAY,CAAC;AAQnE,qBAAa,iBAAkB,YAAW,cAAc;IAIhD,QAAQ,CAAC,QAAQ,EAAE,MAAM;IAH7B,QAAQ,CAAC,IAAI,EAAE,MAAM,CAAC;gBAElB,IAAI,EAAE,MAAM,EACH,QAAQ,EAAE,MAAM;IAc7B,6BAA6B,CAAC,GAAG,EAAE,MAAM,GAAG,gBAAgB;CA0B/D"}
+{
+	"version": 3,
+	"file": "minimalSourceFile.d.ts",
+	"sourceRoot": "",
+	"sources": [
+		"../../../src/lib/utils/minimalSourceFile.ts"
+	],
+	"names": [],
+	"mappings": "AAAA,OAAO,KAAK,EAAE,gBAAgB,EAAE,cAAc,EAAE,MAAM,YAAY,CAAC;AAQnE,qBAAa,iBAAkB,YAAW,cAAc;IAIhD,QAAQ,CAAC,QAAQ,EAAE,MAAM;IAH7B,QAAQ,CAAC,IAAI,EAAE,MAAM,CAAC;gBAElB,IAAI,EAAE,MAAM,EACH,QAAQ,EAAE,MAAM;IAc7B,6BAA6B,CAAC,GAAG,EAAE,MAAM,GAAG,gBAAgB;CA0B/D"
+}

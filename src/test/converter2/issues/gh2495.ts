@@ -1,9 +1,9 @@
 export interface IAnimal {
-    name: number;
+	name: number;
 }
 
 export interface IFish extends IAnimal {
-    maxDepth: number;
+	maxDepth: number;
 }
 
 export class IFish implements IFish {}

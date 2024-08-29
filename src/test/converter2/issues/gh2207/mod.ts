@@ -8,5 +8,5 @@
  * Doc for the `foo` function.
  */
 export function foo(): string {
-    return "foo";
+	return "foo";
 }

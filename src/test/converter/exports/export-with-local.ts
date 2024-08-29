@@ -4,5 +4,5 @@ export const x = 5;
 let localVar = 0;
 
 export function add(x: number, y: number) {
-    return x + y + localVar;
+	return x + y + localVar;
 }

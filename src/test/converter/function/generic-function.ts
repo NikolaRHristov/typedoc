@@ -5,7 +5,7 @@
  * @returns      Generic function return value.
  */
 export function genericFunction<T extends Object>(value: T): T {
-    return value;
+	return value;
 }
 
 /**
@@ -16,10 +16,10 @@ export function genericFunction<T extends Object>(value: T): T {
  * @returns A generic array.
  */
 export function functionWithGenericArrayParameter<T>(
-    param: T,
-    params: T[],
+	param: T,
+	params: T[],
 ): T[] {
-    return params;
+	return params;
 }
 
 /**
@@ -27,5 +27,5 @@ export function functionWithGenericArrayParameter<T>(
  * @template T this describes T
  */
 export function functionWithTemplate<T>(param: T): T {
-    return param;
+	return param;
 }

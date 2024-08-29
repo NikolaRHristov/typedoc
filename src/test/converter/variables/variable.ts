@@ -7,6 +7,6 @@ export let y: Promise<string>;
 export let z: Promise<object>;
 
 export const satisfies = {
-    a: 1,
-    b: "2",
+	a: 1,
+	b: "2",
 } satisfies Record<string, string | number>;

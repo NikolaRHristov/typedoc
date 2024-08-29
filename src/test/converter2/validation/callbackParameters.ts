@@ -5,16 +5,16 @@
  * @param hashCode The hash code function
  */
 export function gh2154(
-    data: unknown,
-    equals: (a: 1, b: 2) => boolean,
-    hashCode: (data: 3) => number,
+	data: unknown,
+	equals: (a: 1, b: 2) => boolean,
+	hashCode: (data: 3) => number,
 ) {}
 
 export class AnotherTest {
-    /**
-     * Property is documented
-     * @param a test
-     * @param b another
-     */
-    equals!: (a: 1, b: 2) => boolean;
+	/**
+	 * Property is documented
+	 * @param a test
+	 * @param b another
+	 */
+	equals!: (a: 1, b: 2) => boolean;
 }

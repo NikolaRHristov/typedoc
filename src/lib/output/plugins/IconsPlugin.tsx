@@ -1,9 +1,10 @@
+import { join } from "path";
+
+import { JSX, renderElement } from "../../utils";
+import { writeFile } from "../../utils/fs";
 import { Component, RendererComponent } from "../components";
 import { RendererEvent } from "../events";
-import { writeFile } from "../../utils/fs";
 import { DefaultTheme } from "../themes/default/DefaultTheme";
-import { join } from "path";
-import { JSX, renderElement } from "../../utils";
 
 const ICONS_JS = `
 (function() {
@@ -32,32 +33,41 @@ const ICONS_JS = `
  */
 @Component({ name: "icons" })
 export class IconsPlugin extends RendererComponent {
-    iconHtml?: string;
+	iconHtml?: string;
 
-    override initialize() {
-        this.owner.on(RendererEvent.BEGIN, this.onBeginRender.bind(this));
-    }
+	override initialize() {
+		this.owner.on(RendererEvent.BEGIN, this.onBeginRender.bind(this));
+	}
 
-    private onBeginRender(_event: RendererEvent) {
-        if (this.owner.theme instanceof DefaultTheme) {
-            this.owner.postRenderAsyncJobs.push((event) => this.onRenderEnd(event));
-        }
-    }
+	private onBeginRender(_event: RendererEvent) {
+		if (this.owner.theme instanceof DefaultTheme) {
+			this.owner.postRenderAsyncJobs.push((event) =>
+				this.onRenderEnd(event),
+			);
+		}
+	}
 
-    private async onRenderEnd(event: RendererEvent) {
-        const children: JSX.Element[] = [];
-        const icons = (this.owner.theme as DefaultTheme).icons;
+	private async onRenderEnd(event: RendererEvent) {
+		const children: JSX.Element[] = [];
+		const icons = (this.owner.theme as DefaultTheme).icons;
 
-        for (const [name, icon] of Object.entries(icons)) {
-            children.push(<g id={`icon-${name}`}>{icon.call(icons).children}</g>);
-        }
+		for (const [name, icon] of Object.entries(icons)) {
+			children.push(
+				<g id={`icon-${name}`}>{icon.call(icons).children}</g>,
+			);
+		}
 
-        const svg = renderElement(<svg xmlns="http://www.w3.org/2000/svg">{children}</svg>);
-        const js = ICONS_JS.replace("SVG_HTML", renderElement(<>{children}</>).replaceAll("`", "\\`"));
+		const svg = renderElement(
+			<svg xmlns="http://www.w3.org/2000/svg">{children}</svg>,
+		);
+		const js = ICONS_JS.replace(
+			"SVG_HTML",
+			renderElement(<>{children}</>).replaceAll("`", "\\`"),
+		);
 
-        const svgPath = join(event.outputDirectory, "assets/icons.svg");
-        const jsPath = join(event.outputDirectory, "assets/icons.js");
+		const svgPath = join(event.outputDirectory, "assets/icons.svg");
+		const jsPath = join(event.outputDirectory, "assets/icons.js");
 
-        await Promise.all([writeFile(svgPath, svg), writeFile(jsPath, js)]);
-    }
+		await Promise.all([writeFile(svgPath, svg), writeFile(jsPath, js)]);
+	}
 }

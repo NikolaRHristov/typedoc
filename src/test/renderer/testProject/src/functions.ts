@@ -26,11 +26,11 @@ export function exportedFunction(): void {}
  *
  */
 export let variableFunction = function (
-    paramZ: string,
-    paramG: any,
-    paramA: classes.NameInterface
+	paramZ: string,
+	paramG: any,
+	paramA: classes.NameInterface,
 ): number {
-    return 0;
+	return 0;
 };
 
 /**
@@ -49,11 +49,11 @@ export let variableFunction = function (
  *
  */
 export function functionWithArguments(
-    paramZ: string,
-    paramG: any,
-    paramA: classes.NameInterface
+	paramZ: string,
+	paramG: any,
+	paramA: classes.NameInterface,
 ): number {
-    return 0;
+	return 0;
 }
 
 /**
@@ -63,8 +63,8 @@ export function functionWithArguments(
  * @param optionalParam  An optional parameter.
  */
 export function functionWithOptionalValue(
-    requiredParam: string,
-    optionalParam?: string
+	requiredParam: string,
+	optionalParam?: string,
 ) {}
 
 /**
@@ -74,13 +74,13 @@ export function functionWithOptionalValue(
  * @returns The input value or the default value.
  */
 export function functionWithDefaults(
-    valueA: string = "defaultValue",
-    valueB: number = 100,
-    valueC: number = Number.NaN,
-    valueD: boolean = true,
-    valueE: boolean = false
+	valueA: string = "defaultValue",
+	valueB: number = 100,
+	valueC: number = Number.NaN,
+	valueD: boolean = true,
+	valueE: boolean = false,
 ): string {
-    return valueA;
+	return valueA;
 }
 
 /**
@@ -90,7 +90,7 @@ export function functionWithDefaults(
  * @returns The combined string.
  */
 export function functionWithRest(...rest: string[]): string {
-    return rest.join(", ");
+	return rest.join(", ");
 }
 
 /**
@@ -113,15 +113,15 @@ export function multipleSignatures(value: { name: string }): string;
  * in the generated documentation.
  */
 export function multipleSignatures(): string {
-    if (arguments.length > 0) {
-        if (typeof arguments[0] === "object") {
-            return arguments[0].name;
-        } else {
-            return arguments[0];
-        }
-    }
+	if (arguments.length > 0) {
+		if (typeof arguments[0] === "object") {
+			return arguments[0].name;
+		} else {
+			return arguments[0];
+		}
+	}
 
-    return "";
+	return "";
 }
 
 /**
@@ -132,7 +132,7 @@ export function multipleSignatures(): string {
  * @return  Returns the typed value.
  */
 export function genericFunction<T>(value: T): T {
-    return value;
+	return value;
 }
 
 /**
@@ -141,27 +141,27 @@ export function genericFunction<T>(value: T): T {
  * @param arg An argument.
  */
 export function moduleFunction(arg: string): string {
-    return "";
+	return "";
 }
 
 /**
  * This is the module extending the function moduleFunction().
  */
 export module moduleFunction {
-    /**
-     * This variable is appended to a function.
-     */
-    export let functionVariable: string;
+	/**
+	 * This variable is appended to a function.
+	 */
+	export let functionVariable: string;
 
-    /**
-     * This function is appended to another function.
-     */
-    export function append() {}
+	/**
+	 * This function is appended to another function.
+	 */
+	export function append() {}
 
-    /**
-     * This function is appended to another function.
-     */
-    export function prepend() {}
+	/**
+	 * This function is appended to another function.
+	 */
+	export function prepend() {}
 }
 
 /**
@@ -169,11 +169,11 @@ export module moduleFunction {
  * Also no type information is given, the object should be correctly reflected.
  */
 export function createSomething() {
-    return {
-        foo: "bar",
-        doSomething: (a: number) => a + 1,
-        doAnotherThing: () => {},
-    };
+	return {
+		foo: "bar",
+		doSomething: (a: number) => a + 1,
+		doAnotherThing: () => {},
+	};
 }
 
 /**

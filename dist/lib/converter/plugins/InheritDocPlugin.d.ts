@@ -29,4 +29,3 @@ export declare class InheritDocPlugin extends ConverterComponent {
     private copyComment;
     private createCircularDependencyWarnings;
 }
-//# sourceMappingURL=InheritDocPlugin.d.ts.map

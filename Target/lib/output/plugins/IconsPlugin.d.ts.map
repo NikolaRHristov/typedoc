@@ -1,0 +1,1 @@
+{"version":3,"file":"IconsPlugin.d.ts","sourceRoot":"","sources":["../../../../src/lib/output/plugins/IconsPlugin.tsx"],"names":[],"mappings":"AAIA,OAAO,EAAa,iBAAiB,EAAE,MAAM,eAAe,CAAC;AAyB7D;;;GAGG;AACH,qBACa,WAAY,SAAQ,iBAAiB;IACjD,QAAQ,CAAC,EAAE,MAAM,CAAC;IAET,UAAU;IAInB,OAAO,CAAC,aAAa;YAQP,WAAW;CAuBzB"}

@@ -12,16 +12,24 @@
  * ```
  * @module
  */
-import type { IntrinsicElements, JsxElement, JsxChildren, JsxComponent } from "./jsx.elements";
-import { JsxFragment as Fragment } from "./jsx.elements";
-export type { JsxElement as Element, JsxChildren as Children, JsxComponent, } from "./jsx.elements";
+import {
+	JsxFragment as Fragment,
+	type IntrinsicElements,
+	type JsxChildren,
+	type JsxComponent,
+	type JsxElement,
+} from "./jsx.elements";
+
+export type {
+	JsxElement as Element,
+	JsxChildren as Children,
+	JsxComponent,
+} from "./jsx.elements";
 export { JsxFragment as Fragment } from "./jsx.elements";
 /**
  * Used to inject HTML directly into the document.
  */
-export declare function Raw(_props: {
-    html: string;
-}): null;
+export declare function Raw(_props: { html: string }): null;
 /**
  * TypeScript's rules for looking up the JSX.IntrinsicElements and JSX.Element
  * interfaces are incredibly strange. It will find them if they are included as
@@ -32,7 +40,7 @@ export declare function Raw(_props: {
  * @hidden
  */
 export declare namespace JSX {
-    export { IntrinsicElements, JsxElement as Element };
+	export { IntrinsicElements, JsxElement as Element };
 }
 /**
  * JSX factory function to create an "element" that can later be rendered with {@link renderElement}
@@ -40,9 +48,12 @@ export declare namespace JSX {
  * @param props
  * @param children
  */
-export declare function createElement(tag: typeof Fragment | string | JsxComponent<any>, props: object | null, ...children: JsxChildren[]): JsxElement;
-export declare function setRenderSettings(options: {
-    pretty: boolean;
-}): void;
-export declare const renderElement: (element: JsxElement | null | undefined) => string;
-//# sourceMappingURL=jsx.d.ts.map
+export declare function createElement(
+	tag: typeof Fragment | string | JsxComponent<any>,
+	props: object | null,
+	...children: JsxChildren[]
+): JsxElement;
+export declare function setRenderSettings(options: { pretty: boolean }): void;
+export declare const renderElement: (
+	element: JsxElement | null | undefined,
+) => string;
