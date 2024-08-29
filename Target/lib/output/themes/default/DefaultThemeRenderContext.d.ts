@@ -48,7 +48,7 @@ export declare class DefaultThemeRenderContext {
     header: (props: PageEvent<Reflection>) => import("../../../utils/jsx.elements").JsxElement;
     hierarchy: (props: import("../../../models").DeclarationHierarchy | undefined) => import("../../../utils/jsx.elements").JsxElement | undefined;
     index: (props: import("../../../models").ContainerReflection) => import("../../../utils/jsx.elements").JsxElement;
-    member: (props: DeclarationReflection | DocumentReflection) => import("../../../utils/jsx.elements").JsxElement;
+    member: (props: DocumentReflection | DeclarationReflection) => import("../../../utils/jsx.elements").JsxElement;
     memberDeclaration: (props: DeclarationReflection) => import("../../../utils/jsx.elements").JsxElement;
     memberGetterSetter: (props: DeclarationReflection) => import("../../../utils/jsx.elements").JsxElement;
     memberReference: (props: import("../../../models").ReferenceReflection) => import("../../../utils/jsx.elements").JsxElement;

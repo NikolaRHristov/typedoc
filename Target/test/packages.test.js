@@ -67,12 +67,12 @@ describe("Packages support", () => {
                     strict: true,
                     sourceMap: true,
                 },
-                exclude: ["node_modules", "dist"],
+                exclude: ["node_modules", "Target"],
             });
             const childTsconfig = {
                 extends: "../../tsconfig.json",
                 compilerOptions: {
-                    outDir: "dist",
+                    outDir: "Target",
                 },
             };
             project.addJsonFile("package.json", {
@@ -130,7 +130,7 @@ describe("Packages support", () => {
         it("handles single packages", () => {
             project.addJsonFile("tsconfig.json", {
                 compilerOptions: {
-                    outDir: "dist",
+                    outDir: "Target",
                     sourceMap: true,
                     strict: true,
                 },
@@ -159,7 +159,7 @@ describe("Packages support", () => {
         it("Handles TS 4.7 extensions", () => {
             project.addJsonFile("tsconfig.json", {
                 compilerOptions: {
-                    outDir: "dist",
+                    outDir: "Target",
                     sourceMap: true,
                     strict: true,
                 },

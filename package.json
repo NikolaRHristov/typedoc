@@ -23,7 +23,7 @@
 	},
 	"types": "./Target/index.d.ts",
 	"bin": {
-		"typedoc": "bin/typedoc"
+		"playform-typedoc": "bin/playform-typedoc"
 	},
 	"files": [
 		"/bin",

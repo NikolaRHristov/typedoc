@@ -6,7 +6,7 @@
 
 		// Add our `ts` internal types
 		"typeRoots": ["node_modules/@types", "src/lib/types"],
-		"types": ["@types/node", "@types/lunr", "@types/mocha"],
+		// "types": ["@types/node", "@types/lunr", "@types/mocha"],
 		// Speed up dev compilation time
 		"incremental": true,
 		"tsBuildInfoFile": "Target/.tsbuildinfo",
