@@ -131,4 +131,3 @@ function resolveLinkTag(reflection, part, externalResolver, options) {
         part.text.substring(pos).trim() || defaultDisplayText || part.text;
     return part;
 }
-//# sourceMappingURL=linkResolver.js.map

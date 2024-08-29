@@ -39,4 +39,3 @@ export declare function parseComponent(source: string, pos: number, end: number)
 export declare function parseComponentPath(source: string, pos: number, end: number): readonly [ComponentPath[], number] | undefined;
 export declare function parseMeaning(source: string, pos: number, end: number): [Meaning, number] | undefined;
 export declare function parseDeclarationReference(source: string, pos: number, end: number): [DeclarationReference, number] | undefined;
-//# sourceMappingURL=declarationReference.d.ts.map

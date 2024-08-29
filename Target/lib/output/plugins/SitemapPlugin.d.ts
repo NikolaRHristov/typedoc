@@ -5,4 +5,3 @@ export declare class SitemapPlugin extends RendererComponent {
     private onRendererBegin;
     private buildSitemap;
 }
-//# sourceMappingURL=SitemapPlugin.d.ts.map

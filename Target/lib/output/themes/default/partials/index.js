@@ -1,15 +1,18 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.index = index;
-const lib_1 = require("../../lib");
 const utils_1 = require("../../../../utils");
+const lib_1 = require("../../lib");
 function renderCategory({ urlTo, icons, getReflectionClasses, markdown }, item, prependName = "") {
     return (utils_1.JSX.createElement("section", { class: "tsd-index-section" },
         utils_1.JSX.createElement("h3", { class: "tsd-index-heading" }, prependName ? `${prependName} - ${item.title}` : item.title),
         item.description && (utils_1.JSX.createElement("div", { class: "tsd-comment tsd-typography" },
             utils_1.JSX.createElement(utils_1.Raw, { html: markdown(item.description) }))),
         utils_1.JSX.createElement("div", { class: "tsd-index-list" }, item.children.map((item) => (utils_1.JSX.createElement(utils_1.JSX.Fragment, null,
-            utils_1.JSX.createElement("a", { href: urlTo(item), class: (0, lib_1.classNames)({ "tsd-index-link": true, deprecated: item.isDeprecated() }, getReflectionClasses(item)) },
+            utils_1.JSX.createElement("a", { href: urlTo(item), class: (0, lib_1.classNames)({
+                    "tsd-index-link": true,
+                    deprecated: item.isDeprecated(),
+                }, getReflectionClasses(item)) },
                 icons[item.kind](),
                 utils_1.JSX.createElement("span", null, (0, lib_1.renderName)(item))),
             "\n"))))));
@@ -43,4 +46,3 @@ function index(context, props) {
         utils_1.JSX.createElement("section", { class: "tsd-panel-group tsd-index-group" },
             utils_1.JSX.createElement("section", { class: "tsd-panel tsd-index-panel" }, content))));
 }
-//# sourceMappingURL=index.js.map

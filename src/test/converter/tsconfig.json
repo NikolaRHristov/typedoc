@@ -9,7 +9,7 @@
 		"strictNullChecks": true,
 		"allowJs": true,
 		"noEmit": true,
-		"outDir": "dist",
+		"outDir": "Target",
 
 		// See #1524. We might force this to false eventually.
 		"skipLibCheck": true

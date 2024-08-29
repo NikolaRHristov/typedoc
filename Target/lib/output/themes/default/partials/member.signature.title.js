@@ -1,12 +1,12 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.memberSignatureTitle = memberSignatureTitle;
-const lib_1 = require("../../lib");
-const utils_1 = require("../../../../utils");
 const models_1 = require("../../../../models");
+const utils_1 = require("../../../../utils");
+const lib_1 = require("../../lib");
 function renderParameterWithType(context, item) {
     return (utils_1.JSX.createElement(utils_1.JSX.Fragment, null,
-        !!item.flags.isRest && utils_1.JSX.createElement("span", { class: "tsd-signature-symbol" }, "..."),
+        !!item.flags.isRest && (utils_1.JSX.createElement("span", { class: "tsd-signature-symbol" }, "...")),
         utils_1.JSX.createElement("span", { class: "tsd-kind-parameter" }, item.name),
         utils_1.JSX.createElement("span", { class: "tsd-signature-symbol" },
             !!item.flags.isOptional && "?",
@@ -16,15 +16,19 @@ function renderParameterWithType(context, item) {
 }
 function renderParameterWithoutType(item) {
     return (utils_1.JSX.createElement(utils_1.JSX.Fragment, null,
-        !!item.flags.isRest && utils_1.JSX.createElement("span", { class: "tsd-signature-symbol" }, "..."),
+        !!item.flags.isRest && (utils_1.JSX.createElement("span", { class: "tsd-signature-symbol" }, "...")),
         utils_1.JSX.createElement("span", { class: "tsd-kind-parameter" }, item.name),
-        (item.flags.isOptional || item.defaultValue) && utils_1.JSX.createElement("span", { class: "tsd-signature-symbol" }, "?")));
+        (item.flags.isOptional || item.defaultValue) && (utils_1.JSX.createElement("span", { class: "tsd-signature-symbol" }, "?"))));
 }
 function memberSignatureTitle(context, props, { hideName = false, arrowStyle = false, hideParamTypes = context.options.getValue("hideParameterTypesInTitle"), } = {}) {
-    const renderParam = hideParamTypes ? renderParameterWithoutType : renderParameterWithType.bind(null, context);
+    const renderParam = hideParamTypes
+        ? renderParameterWithoutType
+        : renderParameterWithType.bind(null, context);
     return (utils_1.JSX.createElement(utils_1.JSX.Fragment, null,
         !hideName ? (utils_1.JSX.createElement("span", { class: (0, lib_1.getKindClass)(props) }, (0, lib_1.wbr)(props.name))) : (utils_1.JSX.createElement(utils_1.JSX.Fragment, null, props.kind === models_1.ReflectionKind.ConstructorSignature && (utils_1.JSX.createElement(utils_1.JSX.Fragment, null,
-            !!props.flags.isAbstract && utils_1.JSX.createElement("span", { class: "tsd-signature-keyword" }, "abstract "),
+            !!props.flags.isAbstract && (utils_1.JSX.createElement("span", { class: "tsd-signature-keyword" },
+                "abstract",
+                " ")),
             utils_1.JSX.createElement("span", { class: "tsd-signature-keyword" }, "new "))))),
         (0, lib_1.renderTypeParametersSignature)(context, props.typeParameters),
         utils_1.JSX.createElement("span", { class: "tsd-signature-symbol" }, "("),
@@ -34,4 +38,3 @@ function memberSignatureTitle(context, props, { hideName = false, arrowStyle = f
             utils_1.JSX.createElement("span", { class: "tsd-signature-symbol" }, arrowStyle ? " => " : ": "),
             context.type(props.type)))));
 }
-//# sourceMappingURL=member.signature.title.js.map

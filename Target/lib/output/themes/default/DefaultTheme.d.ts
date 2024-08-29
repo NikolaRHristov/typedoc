@@ -42,9 +42,6 @@ export declare class DefaultTheme extends Theme {
      * elements, so custom themes must also use svg elements.
      */
     icons: {
-        search: () => JSX.Element;
-        anchor: () => JSX.Element;
-        checkbox: () => JSX.Element;
         1: () => JSX.Element;
         2: () => JSX.Element;
         4: () => JSX.Element;
@@ -69,8 +66,11 @@ export declare class DefaultTheme extends Theme {
         2097152: () => JSX.Element;
         4194304: () => JSX.Element;
         8388608: () => JSX.Element;
+        anchor: () => JSX.Element;
         chevronDown: () => JSX.Element;
+        checkbox: () => JSX.Element;
         menu: () => JSX.Element;
+        search: () => JSX.Element;
         chevronSmall: () => JSX.Element;
     };
     getRenderContext(pageEvent: PageEvent<Reflection>): DefaultThemeRenderContext;
@@ -140,4 +140,3 @@ export declare class DefaultTheme extends Theme {
      */
     static applyAnchorUrl(reflection: Reflection, container: Reflection): void;
 }
-//# sourceMappingURL=DefaultTheme.d.ts.map

@@ -1,11 +1,4 @@
-/**
- * Parser to handle plain text markdown.
- *
- * Responsible for recognizing relative paths within the text and turning
- * them into references.
- * @module
- */
-import type { TranslationProxy, TranslatedString } from "../../internationalization";
+import type { TranslatedString, TranslationProxy } from "../../internationalization";
 import type { CommentDisplayPart } from "../../models";
 import type { FileRegistry } from "../../models/FileRegistry";
 import { type Token } from "./lexer";
@@ -25,4 +18,3 @@ export declare class TextParserReentryState {
  * so that they can be correctly resolved during rendering.
  */
 export declare function textContent(sourcePath: string, token: Token, i18n: TranslationProxy, warning: (msg: TranslatedString, token: Token) => void, outContent: CommentDisplayPart[], files: FileRegistry, atNewLine: boolean, reentry: TextParserReentryState): void;
-//# sourceMappingURL=textParser.d.ts.map

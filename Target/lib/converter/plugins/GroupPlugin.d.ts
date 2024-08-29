@@ -45,4 +45,3 @@ export declare class GroupPlugin extends ConverterComponent {
      */
     static sortGroupCallback(a: ReflectionGroup, b: ReflectionGroup): number;
 }
-//# sourceMappingURL=GroupPlugin.d.ts.map

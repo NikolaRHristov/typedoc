@@ -142,4 +142,3 @@ describe("Options - TypeDocReader", () => {
         logger.expectMessage("error: 123");
     });
 });
-//# sourceMappingURL=typedoc.test.js.map

@@ -28,4 +28,3 @@ function getHeritageTypes(declarations, kind) {
 function isObjectType(type) {
     return typeof type.objectFlags === "number";
 }
-//# sourceMappingURL=nodes.js.map

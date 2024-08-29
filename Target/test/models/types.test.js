@@ -226,4 +226,3 @@ describe("Type.toString", () => {
         });
     });
 });
-//# sourceMappingURL=types.test.js.map

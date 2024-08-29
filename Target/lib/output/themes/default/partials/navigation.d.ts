@@ -8,4 +8,3 @@ export declare function settings(context: DefaultThemeRenderContext): JSX.Elemen
 export declare const navigation: (context: DefaultThemeRenderContext, props: PageEvent<Reflection>) => JSX.Element;
 export declare function pageSidebar(context: DefaultThemeRenderContext, props: PageEvent<Reflection>): JSX.Element;
 export declare function pageNavigation(context: DefaultThemeRenderContext, props: PageEvent<Reflection>): JSX.Element;
-//# sourceMappingURL=navigation.d.ts.map

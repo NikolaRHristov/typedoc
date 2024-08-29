@@ -13,4 +13,3 @@ var NavigationPlugin_1 = require("./NavigationPlugin");
 Object.defineProperty(exports, "NavigationPlugin", { enumerable: true, get: function () { return NavigationPlugin_1.NavigationPlugin; } });
 var SitemapPlugin_1 = require("./SitemapPlugin");
 Object.defineProperty(exports, "SitemapPlugin", { enumerable: true, get: function () { return SitemapPlugin_1.SitemapPlugin; } });
-//# sourceMappingURL=index.js.map

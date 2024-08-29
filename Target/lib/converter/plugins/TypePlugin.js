@@ -39,11 +39,11 @@ var __setFunctionName = (this && this.__setFunctionName) || function (f, name, p
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.TypePlugin = void 0;
+const application_events_1 = require("../../application-events");
 const index_1 = require("../../models/reflections/index");
 const types_1 = require("../../models/types");
 const components_1 = require("../components");
 const converter_1 = require("../converter");
-const application_events_1 = require("../../application-events");
 /**
  * Responsible for adding `implementedBy` / `implementedFrom`
  */
@@ -170,4 +170,3 @@ let TypePlugin = (() => {
     return TypePlugin = _classThis;
 })();
 exports.TypePlugin = TypePlugin;
-//# sourceMappingURL=TypePlugin.js.map

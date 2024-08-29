@@ -100,4 +100,3 @@ function getConverter2Program() {
     }
     return converter2Program;
 }
-//# sourceMappingURL=programs.js.map

@@ -28,13 +28,13 @@ exports.parseCommentString = parseCommentString;
 const assert_1 = __importStar(require("assert"));
 const yaml_1 = require("yaml");
 const models_1 = require("../../models");
+const FileRegistry_1 = require("../../models/FileRegistry");
 const utils_1 = require("../../utils");
+const fs_1 = require("../../utils/fs");
 const paths_1 = require("../../utils/paths");
 const lexer_1 = require("./lexer");
 const tagName_1 = require("./tagName");
-const FileRegistry_1 = require("../../models/FileRegistry");
 const textParser_1 = require("./textParser");
-const fs_1 = require("../../utils/fs");
 function makeLookaheadGenerator(gen) {
     let trackHistory = false;
     const history = [];
@@ -518,4 +518,3 @@ function inlineTag(lexer, block, config, i18n, warning) {
     }
     block.push(inlineTag);
 }
-//# sourceMappingURL=parser.js.map

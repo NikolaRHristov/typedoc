@@ -1100,4 +1100,3 @@ describe("Issue Tests", () => {
         (0, assert_1.deepStrictEqual)(data2.comment, undefined);
     });
 });
-//# sourceMappingURL=issues.c2.test.js.map

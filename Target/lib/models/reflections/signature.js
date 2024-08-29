@@ -75,4 +75,3 @@ class SignatureReflection extends abstract_1.Reflection {
     }
 }
 exports.SignatureReflection = SignatureReflection;
-//# sourceMappingURL=signature.js.map

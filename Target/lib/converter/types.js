@@ -754,4 +754,3 @@ function normalizeUnion(types) {
         types.splice(Math.min(trueIndex, falseIndex), 1, new models_1.IntrinsicType("boolean"));
     }
 }
-//# sourceMappingURL=types.js.map

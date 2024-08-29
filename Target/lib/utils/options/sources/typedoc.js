@@ -797,4 +797,3 @@ function addTypeDocOptions(options) {
 function isObject(x) {
     return !!x && typeof x === "object" && !Array.isArray(x);
 }
-//# sourceMappingURL=typedoc.js.map

@@ -8,4 +8,3 @@ export declare function getLinks(refl: Reflection): Array<{
     target: undefined | string | [ReflectionKind, string];
 }>;
 export declare function equalKind(refl: Reflection, kind: ReflectionKind): void;
-//# sourceMappingURL=utils.d.ts.map

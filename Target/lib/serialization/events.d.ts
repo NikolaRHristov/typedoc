@@ -15,4 +15,3 @@ export declare class SerializeEvent {
     output: JSONProjectReflection | undefined;
     constructor(project: ProjectReflection, output?: JSONProjectReflection);
 }
-//# sourceMappingURL=events.d.ts.map

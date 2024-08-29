@@ -16,4 +16,3 @@ export declare class TypePlugin extends ConverterComponent {
     private onResolveEnd;
     private finishResolve;
 }
-//# sourceMappingURL=TypePlugin.d.ts.map

@@ -4,4 +4,3 @@ export { ArgumentsReader, PackageJsonReader, TypeDocReader, TSConfigReader, } fr
 export { CommentStyle, EmitStrategy, ParameterType, ParameterHint, } from "./declaration";
 export type { TypeDocOptions, TypeDocOptionMap, ValidationOptions, KeyToDeclaration, DeclarationOption, DeclarationOptionBase, StringDeclarationOption, NumberDeclarationOption, BooleanDeclarationOption, ArrayDeclarationOption, MixedDeclarationOption, ObjectDeclarationOption, MapDeclarationOption, FlagsDeclarationOption, DeclarationOptionToOptionType, TypeDocOptionValues, ParameterTypeToOptionTypeMap, ManuallyValidatedOption, JsDocCompatibility, } from "./declaration";
 export { OptionDefaults } from "./defaults";
-//# sourceMappingURL=index.d.ts.map

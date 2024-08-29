@@ -48,4 +48,3 @@ function getHumanName(name) {
     }
     return name;
 }
-//# sourceMappingURL=tsutils.js.map

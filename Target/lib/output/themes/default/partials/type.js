@@ -2,10 +2,10 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.validateStateIsClean = validateStateIsClean;
 exports.type = type;
+const assert_1 = require("assert");
 const models_1 = require("../../../../models");
 const utils_1 = require("../../../../utils");
 const lib_1 = require("../../lib");
-const assert_1 = require("assert");
 const EXPORTABLE = models_1.ReflectionKind.Class |
     models_1.ReflectionKind.Interface |
     models_1.ReflectionKind.Enum |
@@ -18,7 +18,8 @@ function getNameCollisionCount(project, name) {
     if (collisions === undefined) {
         collisions = {};
         for (const reflection of project.getReflectionsByKind(EXPORTABLE)) {
-            collisions[reflection.name] = (collisions[reflection.name] ?? 0) + 1;
+            collisions[reflection.name] =
+                (collisions[reflection.name] ?? 0) + 1;
         }
         nameCollisionCache.set(project, collisions);
     }
@@ -56,7 +57,7 @@ function renderUniquePath(context, reflection) {
 const indentSize = 4;
 let indentationDepth = 0;
 function includeIndentation() {
-    return indentationDepth > 0 ? utils_1.JSX.createElement("span", null, "\u00A0".repeat(indentationDepth * indentSize)) : utils_1.JSX.createElement(utils_1.JSX.Fragment, null);
+    return indentationDepth > 0 ? (utils_1.JSX.createElement("span", null, "\u00A0".repeat(indentationDepth * indentSize))) : (utils_1.JSX.createElement(utils_1.JSX.Fragment, null));
 }
 function validateStateIsClean(page) {
     (0, assert_1.ok)(indentationDepth === 0, `Rendering ${page}: Indentation depth increment/decrement not matched: ${indentationDepth}`);
@@ -95,9 +96,11 @@ const typeRenderers = {
             type.objectType.reflection &&
             type.indexType instanceof models_1.LiteralType &&
             typeof type.indexType.value === "string") {
-            const childReflection = type.objectType.reflection.getChildByName([type.indexType.value]);
+            const childReflection = type.objectType.reflection.getChildByName([
+                type.indexType.value,
+            ]);
             if (childReflection) {
-                indexType = utils_1.JSX.createElement("a", { href: context.urlTo(childReflection) }, indexType);
+                indexType = (utils_1.JSX.createElement("a", { href: context.urlTo(childReflection) }, indexType));
             }
         }
         return (utils_1.JSX.createElement(utils_1.JSX.Fragment, null,
@@ -126,7 +129,11 @@ const typeRenderers = {
     },
     mapped(context, type) {
         indentationDepth++;
-        const parts = [utils_1.JSX.createElement("span", { class: "tsd-signature-symbol" }, "{"), utils_1.JSX.createElement("br", null), includeIndentation()];
+        const parts = [
+            utils_1.JSX.createElement("span", { class: "tsd-signature-symbol" }, "{"),
+            utils_1.JSX.createElement("br", null),
+            includeIndentation(),
+        ];
         switch (type.readonlyModifier) {
             case "+":
                 parts.push(utils_1.JSX.createElement("span", { class: "tsd-signature-keyword" }, "readonly "));
@@ -173,7 +180,7 @@ const typeRenderers = {
     },
     predicate(context, type) {
         return (utils_1.JSX.createElement(utils_1.JSX.Fragment, null,
-            !!type.asserts && utils_1.JSX.createElement("span", { class: "tsd-signature-keyword" }, "asserts "),
+            !!type.asserts && (utils_1.JSX.createElement("span", { class: "tsd-signature-keyword" }, "asserts ")),
             utils_1.JSX.createElement("span", { class: "tsd-kind-parameter" }, type.name),
             !!type.targetType && (utils_1.JSX.createElement(utils_1.JSX.Fragment, null,
                 utils_1.JSX.createElement("span", { class: "tsd-signature-keyword" }, " is "),
@@ -199,7 +206,7 @@ const typeRenderers = {
             name = (utils_1.JSX.createElement("a", { href: type.externalUrl, class: "tsd-signature-type external", target: "_blank" }, type.name));
         }
         else if (type.refersToTypeParameter) {
-            name = utils_1.JSX.createElement("span", { class: "tsd-signature-type tsd-kind-type-parameter" }, type.name);
+            name = (utils_1.JSX.createElement("span", { class: "tsd-signature-type tsd-kind-type-parameter" }, type.name));
         }
         else {
             name = utils_1.JSX.createElement("span", { class: "tsd-signature-type" }, type.name);
@@ -250,7 +257,7 @@ const typeRenderers = {
                 for (const sig of item.signatures) {
                     members.push(utils_1.JSX.createElement(utils_1.JSX.Fragment, null,
                         renderName(sig),
-                        item.flags.isOptional && utils_1.JSX.createElement("span", { class: "tsd-signature-symbol" }, "?"),
+                        item.flags.isOptional && (utils_1.JSX.createElement("span", { class: "tsd-signature-symbol" }, "?")),
                         context.memberSignatureTitle(sig, {
                             hideName: true,
                             arrowStyle: false,
@@ -289,7 +296,10 @@ const typeRenderers = {
                 utils_1.JSX.createElement("span", { class: "tsd-signature-symbol" }, ")")));
         }
         for (const item of type.declaration.signatures || []) {
-            members.push(context.memberSignatureTitle(item, { hideName: true, hideParamTypes: false }));
+            members.push(context.memberSignatureTitle(item, {
+                hideName: true,
+                hideParamTypes: false,
+            }));
         }
         if (members.length) {
             const membersWithSeparators = members.flatMap((m) => [
@@ -321,12 +331,12 @@ const typeRenderers = {
     templateLiteral(context, type) {
         return (utils_1.JSX.createElement(utils_1.JSX.Fragment, null,
             utils_1.JSX.createElement("span", { class: "tsd-signature-symbol" }, "`"),
-            type.head && utils_1.JSX.createElement("span", { class: "tsd-signature-type" }, type.head),
+            type.head && (utils_1.JSX.createElement("span", { class: "tsd-signature-type" }, type.head)),
             type.tail.map((item) => (utils_1.JSX.createElement(utils_1.JSX.Fragment, null,
                 utils_1.JSX.createElement("span", { class: "tsd-signature-symbol" }, "${"),
                 renderType(context, item[0], models_1.TypeContext.templateLiteralElement),
                 utils_1.JSX.createElement("span", { class: "tsd-signature-symbol" }, "}"),
-                item[1] && utils_1.JSX.createElement("span", { class: "tsd-signature-type" }, item[1])))),
+                item[1] && (utils_1.JSX.createElement("span", { class: "tsd-signature-type" }, item[1]))))),
             utils_1.JSX.createElement("span", { class: "tsd-signature-symbol" }, "`")));
     },
     tuple(context, type) {
@@ -387,4 +397,3 @@ function renderType(context, type, where, options = { topLevelLinks: false }) {
 function type(context, type, options = { topLevelLinks: false }) {
     return renderType(context, type, models_1.TypeContext.none, options);
 }
-//# sourceMappingURL=type.js.map

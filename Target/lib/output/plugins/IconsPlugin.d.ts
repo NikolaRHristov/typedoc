@@ -9,4 +9,3 @@ export declare class IconsPlugin extends RendererComponent {
     private onBeginRender;
     private onRenderEnd;
 }
-//# sourceMappingURL=IconsPlugin.d.ts.map

@@ -5,9 +5,9 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.lexBlockComment = lexBlockComment;
 const typescript_1 = __importDefault(require("typescript"));
-const lexer_1 = require("./lexer");
 const ReflectionSymbolId_1 = require("../../models/reflections/ReflectionSymbolId");
 const symbols_1 = require("../utils/symbols");
+const lexer_1 = require("./lexer");
 function* lexBlockComment(file, pos = 0, end = file.length, jsDoc = undefined, checker = undefined) {
     // Wrapper around our real lex function to collapse adjacent text tokens.
     let textToken;
@@ -376,4 +376,3 @@ function getRightmostName(name) {
     }
     return name;
 }
-//# sourceMappingURL=blockLexer.js.map

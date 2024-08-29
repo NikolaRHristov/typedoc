@@ -595,4 +595,3 @@ const characterReferenceCodePointReplacements = new Map([
     [0x9e, 0x017e], // LATIN SMALL LETTER Z WITH CARON (ž)
     [0x9f, 0x0178], // LATIN CAPITAL LETTER Y WITH DIAERESIS (Ÿ)
 ]);
-//# sourceMappingURL=html.js.map

@@ -179,4 +179,3 @@ function mergeConfigs(from, into) {
     }
     into.noStandardTags = from.noStandardTags ?? into.noStandardTags;
 }
-//# sourceMappingURL=tsconfig.js.map

@@ -4,4 +4,3 @@ export declare const tsdocInlineTags: readonly ["@link", "@inheritDoc", "@label"
 export declare const inlineTags: readonly ["@link", "@inheritDoc", "@label", "@linkcode", "@linkplain"];
 export declare const tsdocModifierTags: readonly ["@alpha", "@beta", "@eventProperty", "@experimental", "@internal", "@override", "@packageDocumentation", "@public", "@readonly", "@sealed", "@virtual"];
 export declare const modifierTags: readonly ["@alpha", "@beta", "@eventProperty", "@experimental", "@internal", "@override", "@packageDocumentation", "@public", "@readonly", "@sealed", "@virtual", "@class", "@enum", "@event", "@hidden", "@hideCategories", "@hideconstructor", "@hideGroups", "@ignore", "@interface", "@namespace", "@overload", "@private", "@protected", "@showCategories", "@showGroups"];
-//# sourceMappingURL=tsdoc-defaults.d.ts.map

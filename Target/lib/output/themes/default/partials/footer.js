@@ -38,4 +38,3 @@ function footer(context) {
         customFooterDisplay,
         context.hook("footer.end", context)));
 }
-//# sourceMappingURL=footer.js.map

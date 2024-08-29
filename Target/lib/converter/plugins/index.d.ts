@@ -7,4 +7,3 @@ export { LinkResolverPlugin } from "./LinkResolverPlugin";
 export { PackagePlugin } from "./PackagePlugin";
 export { SourcePlugin } from "./SourcePlugin";
 export { TypePlugin } from "./TypePlugin";
-//# sourceMappingURL=index.d.ts.map

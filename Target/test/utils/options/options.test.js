@@ -235,4 +235,3 @@ describe("Option", () => {
         (0, assert_1.deepStrictEqual)(container.emit, "both");
     });
 });
-//# sourceMappingURL=options.test.js.map

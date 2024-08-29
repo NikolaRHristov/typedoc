@@ -222,4 +222,3 @@ let PackagePlugin = (() => {
     return PackagePlugin = _classThis;
 })();
 exports.PackagePlugin = PackagePlugin;
-//# sourceMappingURL=PackagePlugin.js.map

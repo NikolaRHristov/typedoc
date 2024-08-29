@@ -61,4 +61,3 @@ export declare function discoverPackageJson(dir: string): {
     };
 } | undefined;
 export declare function findPackageForPath(sourcePath: string): string | undefined;
-//# sourceMappingURL=fs.d.ts.map

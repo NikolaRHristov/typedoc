@@ -145,4 +145,3 @@ class ValidatingFileRegistry extends FileRegistry {
     }
 }
 exports.ValidatingFileRegistry = ValidatingFileRegistry;
-//# sourceMappingURL=FileRegistry.js.map

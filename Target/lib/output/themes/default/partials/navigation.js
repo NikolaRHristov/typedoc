@@ -47,9 +47,12 @@ function settings(context) {
                 .toLowerCase();
             visibilityOptions.push(buildFilterItem(context, filterName, context.internationalization.translateTagName(key), defaultFilters[key]));
         }
-        else if ((key === "protected" && !context.options.getValue("excludeProtected")) ||
-            (key === "private" && !context.options.getValue("excludePrivate")) ||
-            (key === "external" && !context.options.getValue("excludeExternals")) ||
+        else if ((key === "protected" &&
+            !context.options.getValue("excludeProtected")) ||
+            (key === "private" &&
+                !context.options.getValue("excludePrivate")) ||
+            (key === "external" &&
+                !context.options.getValue("excludeExternals")) ||
             key === "inherited") {
             visibilityOptions.push(buildFilterItem(context, key, context.internationalization.flagString(flagOptionNameToReflectionFlag[key]), defaultFilters[key]));
         }
@@ -90,7 +93,8 @@ function buildSectionNavigation(context, headings) {
     const levels = [[]];
     function finalizeLevel(finishedHandlingHeadings) {
         const level = levels.pop();
-        if (levels[levels.length - 1].length === 0 && finishedHandlingHeadings) {
+        if (levels[levels.length - 1].length === 0 &&
+            finishedHandlingHeadings) {
             levels[levels.length - 1] = level;
             return;
         }
@@ -145,4 +149,3 @@ function pageNavigation(context, props) {
                 context.i18n.theme_on_this_page())),
         utils_1.JSX.createElement("div", { class: "tsd-accordion-details" }, sections)));
 }
-//# sourceMappingURL=navigation.js.map

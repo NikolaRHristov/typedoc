@@ -21,4 +21,3 @@ export declare class StableKeyMap<K extends {
     values(): IterableIterator<V>;
     [Symbol.iterator](): IterableIterator<[K, V]>;
 }
-//# sourceMappingURL=map.d.ts.map

@@ -171,4 +171,3 @@ describe("loadPlugins", () => {
         }
     });
 });
-//# sourceMappingURL=plugins.test.js.map

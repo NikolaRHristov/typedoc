@@ -58,4 +58,3 @@ export declare class HtmlAttributeParser {
     numericCharacterReferenceEndState(): void;
     private flushTemporaryBuffer;
 }
-//# sourceMappingURL=html.d.ts.map

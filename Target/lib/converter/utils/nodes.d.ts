@@ -4,4 +4,3 @@ export declare function isNamedNode(node: unknown): node is {
 };
 export declare function getHeritageTypes(declarations: readonly (ts.ClassDeclaration | ts.InterfaceDeclaration)[], kind: ts.SyntaxKind.ImplementsKeyword | ts.SyntaxKind.ExtendsKeyword): ts.ExpressionWithTypeArguments[];
 export declare function isObjectType(type: ts.Type): type is ts.ObjectType;
-//# sourceMappingURL=nodes.d.ts.map

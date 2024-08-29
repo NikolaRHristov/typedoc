@@ -54,4 +54,3 @@ function optional(x) {
 function isTagString(x) {
     return typeof x === "string" && /^@[a-zA-Z][a-zA-Z0-9]*$/.test(x);
 }
-//# sourceMappingURL=validation.js.map

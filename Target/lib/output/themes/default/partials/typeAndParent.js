@@ -10,14 +10,15 @@ const typeAndParent = (context, props) => {
             "[]"));
     }
     if (props instanceof models_1.ReferenceType && props.reflection) {
-        const refl = props.reflection instanceof models_1.SignatureReflection ? props.reflection.parent : props.reflection;
+        const refl = props.reflection instanceof models_1.SignatureReflection
+            ? props.reflection.parent
+            : props.reflection;
         const parent = refl.parent;
         return (utils_1.JSX.createElement(utils_1.JSX.Fragment, null,
-            parent?.url ? utils_1.JSX.createElement("a", { href: context.urlTo(parent) }, parent.name) : parent?.name,
+            parent?.url ? (utils_1.JSX.createElement("a", { href: context.urlTo(parent) }, parent.name)) : (parent?.name),
             ".",
-            refl.url ? utils_1.JSX.createElement("a", { href: context.urlTo(refl) }, refl.name) : refl.name));
+            refl.url ? (utils_1.JSX.createElement("a", { href: context.urlTo(refl) }, refl.name)) : (refl.name)));
     }
     return utils_1.JSX.createElement(utils_1.JSX.Fragment, null, props.toString());
 };
 exports.typeAndParent = typeAndParent;
-//# sourceMappingURL=typeAndParent.js.map

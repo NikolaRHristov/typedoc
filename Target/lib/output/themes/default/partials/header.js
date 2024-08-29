@@ -1,14 +1,16 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.header = void 0;
-const lib_1 = require("../../lib");
-const utils_1 = require("../../../../utils");
 const models_1 = require("../../../../models");
+const utils_1 = require("../../../../utils");
+const lib_1 = require("../../lib");
 const header = (context, props) => {
     const HeadingLevel = props.model.isProject() ? "h2" : "h1";
     return (utils_1.JSX.createElement("div", { class: "tsd-page-title" },
-        !!props.model.parent && utils_1.JSX.createElement("ul", { class: "tsd-breadcrumb" }, context.breadcrumb(props.model)),
-        !props.model.isDocument() && (utils_1.JSX.createElement(HeadingLevel, { class: (0, lib_1.classNames)({ deprecated: props.model.isDeprecated() }) },
+        !!props.model.parent && (utils_1.JSX.createElement("ul", { class: "tsd-breadcrumb" }, context.breadcrumb(props.model))),
+        !props.model.isDocument() && (utils_1.JSX.createElement(HeadingLevel, { class: (0, lib_1.classNames)({
+                deprecated: props.model.isDeprecated(),
+            }) },
             props.model.kind !== models_1.ReflectionKind.Project &&
                 `${context.internationalization.kindSingularString(props.model.kind)} `,
             (0, lib_1.getDisplayName)(props.model),
@@ -19,4 +21,3 @@ const header = (context, props) => {
             context.reflectionFlags(props.model)))));
 };
 exports.header = header;
-//# sourceMappingURL=header.js.map

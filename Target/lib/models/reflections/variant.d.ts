@@ -18,4 +18,3 @@ export interface ReflectionVariant {
     typeParam: TypeParameterReflection;
     document: DocumentReflection;
 }
-//# sourceMappingURL=variant.d.ts.map

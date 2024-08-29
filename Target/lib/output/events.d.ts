@@ -1,6 +1,6 @@
+import type { DeclarationReflection, DocumentReflection, Reflection, ReflectionKind } from "../models";
 import type { ProjectReflection } from "../models/reflections/project";
 import type { RenderTemplate, UrlMapping } from "./models/UrlMapping";
-import type { DeclarationReflection, DocumentReflection, Reflection, ReflectionKind } from "../models";
 /**
  * An event emitted by the {@link Renderer} class at the very beginning and
  * ending of the entire rendering process.
@@ -178,4 +178,3 @@ export declare class IndexEvent {
     removeResult(index: number): void;
     constructor(searchResults: Array<DeclarationReflection | DocumentReflection>);
 }
-//# sourceMappingURL=events.d.ts.map

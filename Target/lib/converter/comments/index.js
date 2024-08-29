@@ -193,4 +193,3 @@ function getJsDocComment(declaration, config, logger, checker, files) {
         return result;
     }
 }
-//# sourceMappingURL=index.js.map

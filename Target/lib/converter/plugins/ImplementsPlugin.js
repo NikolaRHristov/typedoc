@@ -46,10 +46,10 @@ const typescript_1 = __importDefault(require("typescript"));
 const application_events_1 = require("../../application-events");
 const index_1 = require("../../models/reflections/index");
 const types_1 = require("../../models/types");
+const utils_1 = require("../../utils");
 const array_1 = require("../../utils/array");
 const components_1 = require("../components");
 const converter_1 = require("../converter");
-const utils_1 = require("../../utils");
 /**
  * A plugin that detects interface implementations of functions and
  * properties on classes and links them.
@@ -419,4 +419,3 @@ function findMatchingMember(toMatch, container) {
     return container.children?.find((child) => child.name == toMatch.name &&
         child.flags.isStatic === toMatch.flags.isStatic);
 }
-//# sourceMappingURL=ImplementsPlugin.js.map

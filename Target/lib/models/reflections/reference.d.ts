@@ -47,4 +47,3 @@ export declare class ReferenceReflection extends DeclarationReflection {
     toObject(serializer: Serializer): JSONOutput.ReferenceReflection;
     fromObject(de: Deserializer, obj: JSONOutput.ReferenceReflection): void;
 }
-//# sourceMappingURL=reference.d.ts.map

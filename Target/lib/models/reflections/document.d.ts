@@ -30,4 +30,3 @@ export declare class DocumentReflection extends Reflection {
     toObject(serializer: Serializer): JSONOutput.DocumentReflection;
     fromObject(de: Deserializer, obj: JSONOutput.DocumentReflection): void;
 }
-//# sourceMappingURL=document.d.ts.map

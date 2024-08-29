@@ -264,4 +264,3 @@ function* lexLineComments2(file, pos, end) {
         return file[pos];
     }
 }
-//# sourceMappingURL=lineLexer.js.map

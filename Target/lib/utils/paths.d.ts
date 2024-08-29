@@ -14,4 +14,3 @@ export declare function nicePath(absPath: string): string;
  * @returns The normalized path.
  */
 export declare function normalizePath(path: string): string;
-//# sourceMappingURL=paths.d.ts.map

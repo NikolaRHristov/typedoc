@@ -19,4 +19,3 @@ describe("normalizePath", () => {
         (0, assert_1.equal)((0, utils_1.normalizePath)("/c/users\\foo"), "/c/users\\foo");
     });
 });
-//# sourceMappingURL=path.test.js.map

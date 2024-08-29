@@ -31,4 +31,3 @@ Object.defineProperty(exports, "SerializeEvent", { enumerable: true, get: functi
 exports.JSONOutput = __importStar(require("./schema"));
 var serializer_1 = require("./serializer");
 Object.defineProperty(exports, "Serializer", { enumerable: true, get: function () { return serializer_1.Serializer; } });
-//# sourceMappingURL=index.js.map

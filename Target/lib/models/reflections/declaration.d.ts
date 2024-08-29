@@ -145,4 +145,3 @@ export declare class DeclarationReflection extends ContainerReflection {
     toObject(serializer: Serializer): JSONOutput.DeclarationReflection;
     fromObject(de: Deserializer, obj: JSONOutput.DeclarationReflection | JSONOutput.ProjectReflection): void;
 }
-//# sourceMappingURL=declaration.d.ts.map

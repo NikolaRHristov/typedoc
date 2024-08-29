@@ -18,4 +18,3 @@ export declare class ParameterReflection extends Reflection {
     toObject(serializer: Serializer): JSONOutput.ParameterReflection;
     fromObject(de: Deserializer, obj: JSONOutput.ParameterReflection): void;
 }
-//# sourceMappingURL=parameter.d.ts.map

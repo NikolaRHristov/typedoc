@@ -7,13 +7,13 @@ exports.discoverFileComments = discoverFileComments;
 exports.discoverNodeComment = discoverNodeComment;
 exports.discoverComment = discoverComment;
 exports.discoverSignatureComment = discoverSignatureComment;
+const assert_1 = require("assert");
 const typescript_1 = __importDefault(require("typescript"));
 const models_1 = require("../../models");
 const utils_1 = require("../../utils");
+const array_1 = require("../../utils/array");
 const declaration_1 = require("../../utils/options/declaration");
 const paths_1 = require("../../utils/paths");
-const assert_1 = require("assert");
-const array_1 = require("../../utils/array");
 const variablePropertyKinds = [
     typescript_1.default.SyntaxKind.PropertyDeclaration,
     typescript_1.default.SyntaxKind.PropertySignature,
@@ -445,4 +445,3 @@ function permittedRange(text, ranges, commentStyle) {
                 text[ranges[0].pos + 2] === "*");
     }
 }
-//# sourceMappingURL=discovery.js.map

@@ -77,7 +77,7 @@ describe("Packages support", () => {
             };
             project.addJsonFile("package.json", {
                 name: "typedoc-multi-package-example",
-                main: "dist/index.js",
+                main: "Target/index.js",
                 workspaces: ["packages/*"],
             });
             // Bar, types entry point
@@ -97,24 +97,24 @@ describe("Packages support", () => {
             });
             project.addJsonFile("packages/baz/tsconfig.json", childTsconfig);
             // Bay, entry point with "typedoc.entryPoint"
-            project.addFile("packages/bay/dist/index.js", "module.exports = 123");
+            project.addFile("packages/bay/Target/index.js", "module.exports = 123");
             project.addFile("packages/bay/index.ts", "export function foo() {}");
             project.addJsonFile("packages/bay/package.json", {
                 name: "typedoc-multi-package-bay",
                 version: "1.0.0",
-                main: "dist/index",
+                main: "Target/index",
                 typedoc: {
                     entryPoint: "index.ts",
                 },
             });
             project.addJsonFile("packages/bay/tsconfig.json", childTsconfig);
             // Ign, ignored package
-            project.addFile("packages/ign/dist/index.js", "module.exports = 123");
+            project.addFile("packages/ign/Target/index.js", "module.exports = 123");
             project.addFile("packages/ign/index.ts", "export function ign() {}");
             project.addJsonFile("packages/ign/package.json", {
                 name: "typedoc-multi-package-ign",
                 version: "1.0.0",
-                main: "dist/index",
+                main: "Target/index",
             });
             project.addJsonFile("packages/ign/tsconfig.json", childTsconfig);
             project.write();
@@ -138,10 +138,10 @@ describe("Packages support", () => {
             });
             project.addJsonFile("package.json", {
                 name: "typedoc-single-package",
-                main: "dist/index.js",
+                main: "Target/index.js",
             });
-            project.addFile("dist/index.js", `//# sourceMappingURL=index.js.map`);
-            project.addJsonFile("dist/index.js.map", {
+            project.addFile("Target/index.js", `//# sourceMappingURL=index.js.map`);
+            project.addJsonFile("Target/index.js.map", {
                 version: 3,
                 file: "index.js",
                 sourceRoot: "",
@@ -167,10 +167,10 @@ describe("Packages support", () => {
             });
             project.addJsonFile("package.json", {
                 name: "typedoc-single-package",
-                main: "dist/index.cjs",
+                main: "Target/index.cjs",
             });
-            project.addFile("dist/index.cjs", `//# sourceMappingURL=index.cjs.map`);
-            project.addJsonFile("dist/index.cjs.map", {
+            project.addFile("Target/index.cjs", `//# sourceMappingURL=index.cjs.map`);
+            project.addJsonFile("Target/index.cjs.map", {
                 version: 3,
                 file: "index.cjs",
                 sourceRoot: "",
@@ -194,4 +194,3 @@ describe("Packages support", () => {
         __disposeResources(env_1);
     }
 });
-//# sourceMappingURL=packages.test.js.map

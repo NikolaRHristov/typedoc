@@ -54,4 +54,3 @@ Serializer.EVENT_BEGIN = "begin";
  * @event
  */
 Serializer.EVENT_END = "end";
-//# sourceMappingURL=serializer.js.map

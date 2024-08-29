@@ -8,4 +8,3 @@ export interface TypeConverter<TNode extends ts.TypeNode = ts.TypeNode, TType ex
 }
 export declare function loadConverters(): void;
 export declare function convertType(context: Context, typeOrNode: ts.Type | ts.TypeNode | undefined): SomeType;
-//# sourceMappingURL=types.d.ts.map

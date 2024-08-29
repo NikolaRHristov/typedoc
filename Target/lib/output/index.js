@@ -17,4 +17,3 @@ Object.defineProperty(exports, "DefaultTheme", { enumerable: true, get: function
 Object.defineProperty(exports, "Slugger", { enumerable: true, get: function () { return DefaultTheme_1.Slugger; } });
 var DefaultThemeRenderContext_1 = require("./themes/default/DefaultThemeRenderContext");
 Object.defineProperty(exports, "DefaultThemeRenderContext", { enumerable: true, get: function () { return DefaultThemeRenderContext_1.DefaultThemeRenderContext; } });
-//# sourceMappingURL=index.js.map

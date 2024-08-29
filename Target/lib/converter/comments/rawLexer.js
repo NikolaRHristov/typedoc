@@ -207,4 +207,3 @@ function* lexCommentString2(file) {
         return file.startsWith("`".repeat(n), pos) && file[pos + n] !== "`";
     }
 }
-//# sourceMappingURL=rawLexer.js.map

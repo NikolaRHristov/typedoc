@@ -4,4 +4,3 @@ exports.load = load;
 function load() {
     // nop
 }
-//# sourceMappingURL=relative.js.map

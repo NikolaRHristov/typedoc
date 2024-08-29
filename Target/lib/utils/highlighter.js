@@ -165,4 +165,3 @@ function getStyles() {
     (0, assert_1.ok)(highlighter, "Tried to highlight with an uninitialized highlighter");
     return highlighter.getStyles();
 }
-//# sourceMappingURL=highlighter.js.map

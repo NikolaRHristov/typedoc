@@ -33,4 +33,3 @@ export declare class ReflectionCategory {
     toObject(serializer: Serializer): JSONOutput.ReflectionCategory;
     fromObject(de: Deserializer, obj: JSONOutput.ReflectionCategory): void;
 }
-//# sourceMappingURL=ReflectionCategory.d.ts.map

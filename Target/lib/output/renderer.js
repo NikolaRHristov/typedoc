@@ -421,4 +421,3 @@ exports.Renderer = Renderer;
 // HACK: THIS HAS TO STAY DOWN HERE
 // if you try to move it up to the top of the file, then you'll run into stuff being used before it has been defined.
 require("./plugins");
-//# sourceMappingURL=renderer.js.map

@@ -11,4 +11,3 @@ export declare class ArgumentsReader implements OptionsReader {
     constructor(priority: number, args?: string[]);
     read(container: Options, logger: Logger): void;
 }
-//# sourceMappingURL=arguments.d.ts.map

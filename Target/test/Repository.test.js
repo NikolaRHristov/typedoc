@@ -276,4 +276,3 @@ describe("RepositoryManager - git enabled", () => {
         (0, assert_1.deepStrictEqual)(repo.getURL(ign, 1), undefined);
     });
 });
-//# sourceMappingURL=Repository.test.js.map

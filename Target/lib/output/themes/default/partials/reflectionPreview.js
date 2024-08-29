@@ -16,7 +16,8 @@ function reflectionPreview(context, props) {
             utils_1.JSX.createElement("span", { class: (0, lib_1.getKindClass)(props) }, props.name),
             (0, lib_1.renderTypeParametersSignature)(context, props.typeParameters),
             " ",
-            context.type(new models_1.ReflectionType(props), { topLevelLinks: true })));
+            context.type(new models_1.ReflectionType(props), {
+                topLevelLinks: true,
+            })));
     }
 }
-//# sourceMappingURL=reflectionPreview.js.map

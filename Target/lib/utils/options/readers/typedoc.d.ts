@@ -34,4 +34,3 @@ export declare class TypeDocReader implements OptionsReader {
      */
     private findTypedocFile;
 }
-//# sourceMappingURL=typedoc.d.ts.map

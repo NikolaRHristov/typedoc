@@ -54,4 +54,3 @@ describe("Entry Points", () => {
         (0, assert_1.deepStrictEqual)(entryPoints.length, 1, "entry-points/index.ts should have been the sole entry point");
     });
 });
-//# sourceMappingURL=entry-point.test.js.map

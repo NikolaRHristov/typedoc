@@ -320,4 +320,3 @@ module.exports = (0, translatable_1.buildIncompleteTranslation)({
     theme_class_hierarchy_title: "クラス継承図",
     theme_loading: "読み込み中...",
 });
-//# sourceMappingURL=jp.cjs.map

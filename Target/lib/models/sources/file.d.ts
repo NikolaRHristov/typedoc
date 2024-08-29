@@ -32,4 +32,3 @@ export declare class SourceReference {
     toObject(): JSONSourceReference;
     fromObject(_de: Deserializer, obj: JSONSourceReference): void;
 }
-//# sourceMappingURL=file.d.ts.map

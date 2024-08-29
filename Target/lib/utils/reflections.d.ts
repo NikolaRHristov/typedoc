@@ -3,4 +3,3 @@ export declare function discoverAllReferenceTypes(project: ProjectReflection, fo
     type: ReferenceType;
     owner: Reflection;
 }[];
-//# sourceMappingURL=reflections.d.ts.map

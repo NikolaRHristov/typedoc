@@ -2,12 +2,12 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Internationalization = void 0;
 const assert_1 = require("assert");
-const utils_1 = require("../utils");
-const translatable_1 = require("./translatable");
 const fs_1 = require("fs");
 const path_1 = require("path");
-const kind_1 = require("../models/reflections/kind");
 const models_1 = require("../models");
+const kind_1 = require("../models/reflections/kind");
+const utils_1 = require("../utils");
+const translatable_1 = require("./translatable");
 // If we're running in ts-node, then we need the TS source rather than
 // the compiled file.
 const ext = process[Symbol.for("ts-node.register.instance")]
@@ -233,4 +233,3 @@ class Internationalization {
     }
 }
 exports.Internationalization = Internationalization;
-//# sourceMappingURL=internationalization.js.map

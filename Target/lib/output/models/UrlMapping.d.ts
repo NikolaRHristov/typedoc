@@ -11,4 +11,3 @@ export declare class UrlMapping<Model = any> {
  * @returns either a string to be written to the file, or an element to be serialized and then written.
  */
 export type RenderTemplate<T> = (data: T) => JSX.Element | string;
-//# sourceMappingURL=UrlMapping.d.ts.map

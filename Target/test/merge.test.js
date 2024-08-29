@@ -32,4 +32,3 @@ describe("Merging projects", () => {
         (0, assert_1.deepStrictEqual)(link.target, testClass, "Cross project link did not work");
     });
 });
-//# sourceMappingURL=merge.test.js.map

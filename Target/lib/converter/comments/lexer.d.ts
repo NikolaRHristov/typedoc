@@ -15,4 +15,3 @@ export interface Token {
     tsLinkTarget?: ReflectionSymbolId;
     tsLinkText?: string;
 }
-//# sourceMappingURL=lexer.d.ts.map

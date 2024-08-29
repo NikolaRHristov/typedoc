@@ -3,10 +3,10 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.commentSummary = commentSummary;
 exports.commentTags = commentTags;
 exports.reflectionFlags = reflectionFlags;
-const utils_1 = require("../../../../utils");
 const models_1 = require("../../../../models");
-const anchor_icon_1 = require("./anchor-icon");
+const utils_1 = require("../../../../utils");
 const lib_1 = require("../../lib");
+const anchor_icon_1 = require("./anchor-icon");
 // Note: Comment modifiers are handled in `renderFlags`
 function commentSummary({ markdown }, props) {
     if (!props.comment?.summary.some((part) => part.text))
@@ -38,7 +38,12 @@ function commentTags(context, props) {
         })),
         afterTags));
 }
-const flagsNotRendered = ["@showCategories", "@showGroups", "@hideCategories", "@hideGroups"];
+const flagsNotRendered = [
+    "@showCategories",
+    "@showGroups",
+    "@hideCategories",
+    "@hideGroups",
+];
 function reflectionFlags(context, props) {
     const allFlags = props.flags.getFlagStrings(context.internationalization);
     if (props.comment) {
@@ -50,4 +55,3 @@ function reflectionFlags(context, props) {
     }
     return (0, lib_1.join)(" ", allFlags, (item) => utils_1.JSX.createElement("code", { class: "tsd-tag" }, item));
 }
-//# sourceMappingURL=comment.js.map

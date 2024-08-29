@@ -43,4 +43,3 @@ class PackageJsonReader {
     }
 }
 exports.PackageJsonReader = PackageJsonReader;
-//# sourceMappingURL=package-json.js.map

@@ -115,7 +115,7 @@ export default tslint.config(
 		ignores: [
 			"eslint.config.mjs",
 			"src/test/renderer/specs",
-			"dist",
+			"Target",
 			"docs",
 			"tmp",
 			"coverage",

@@ -59,4 +59,3 @@ function skipWith(text, pos, reg) {
     }
     return pos;
 }
-//# sourceMappingURL=tagName.js.map

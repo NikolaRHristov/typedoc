@@ -237,4 +237,3 @@ export declare abstract class Reflection {
     toObject(serializer: Serializer): JSONOutput.Reflection;
     fromObject(de: Deserializer, obj: JSONOutput.Reflection): void;
 }
-//# sourceMappingURL=abstract.d.ts.map

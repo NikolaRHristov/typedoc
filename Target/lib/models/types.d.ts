@@ -540,4 +540,3 @@ export declare class UnknownType extends Type {
     needsParenthesis(context: TypeContext): boolean;
     toObject(): JSONOutput.UnknownType;
 }
-//# sourceMappingURL=types.d.ts.map

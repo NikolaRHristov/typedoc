@@ -466,4 +466,3 @@ function shouldShowGroups(reflection, opts) {
     }
     return reflection.comment?.hasModifier("@showGroups") === true;
 }
-//# sourceMappingURL=DefaultTheme.js.map

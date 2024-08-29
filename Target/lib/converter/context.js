@@ -7,11 +7,11 @@ exports.Context = void 0;
 const assert_1 = require("assert");
 const typescript_1 = __importDefault(require("typescript"));
 const index_1 = require("../models/index");
-const nodes_1 = require("./utils/nodes");
-const converter_events_1 = require("./converter-events");
-const symbols_1 = require("./utils/symbols");
-const comments_1 = require("./comments");
 const tsutils_1 = require("../utils/tsutils");
+const comments_1 = require("./comments");
+const converter_events_1 = require("./converter-events");
+const nodes_1 = require("./utils/nodes");
+const symbols_1 = require("./utils/symbols");
 /**
  * The context describes the current state the converter is in.
  */
@@ -196,4 +196,3 @@ class Context {
     }
 }
 exports.Context = Context;
-//# sourceMappingURL=context.js.map

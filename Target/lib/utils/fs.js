@@ -341,4 +341,3 @@ function findPackageForPath(sourcePath) {
         return packageJson.content.name;
     }
 }
-//# sourceMappingURL=fs.js.map

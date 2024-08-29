@@ -9,13 +9,18 @@ function typeParameters(context, typeParameters) {
             utils_1.JSX.createElement("ul", { class: "tsd-type-parameter-list" }, typeParameters.map((item) => (utils_1.JSX.createElement("li", null,
                 utils_1.JSX.createElement("span", null,
                     utils_1.JSX.createElement("a", { id: item.anchor, class: "tsd-anchor" }),
-                    item.flags.isConst && utils_1.JSX.createElement("span", { class: "tsd-signature-keyword" }, "const "),
+                    item.flags.isConst && (utils_1.JSX.createElement("span", { class: "tsd-signature-keyword" },
+                        "const",
+                        " ")),
                     item.varianceModifier && (utils_1.JSX.createElement("span", { class: "tsd-signature-keyword" },
                         item.varianceModifier,
                         " ")),
                     utils_1.JSX.createElement("span", { class: "tsd-kind-type-parameter" }, item.name),
                     !!item.type && (utils_1.JSX.createElement(utils_1.JSX.Fragment, null,
-                        utils_1.JSX.createElement("span", { class: "tsd-signature-keyword" }, " extends "),
+                        utils_1.JSX.createElement("span", { class: "tsd-signature-keyword" },
+                            " ",
+                            "extends",
+                            " "),
                         context.type(item.type))),
                     !!item.default && (utils_1.JSX.createElement(utils_1.JSX.Fragment, null,
                         " = ",
@@ -23,4 +28,3 @@ function typeParameters(context, typeParameters) {
                 context.commentSummary(item),
                 context.commentTags(item))))))));
 }
-//# sourceMappingURL=typeParameters.js.map

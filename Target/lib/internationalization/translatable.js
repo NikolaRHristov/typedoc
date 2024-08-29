@@ -361,4 +361,3 @@ exports.translatable = {
 // Compiler errors here which says a property is missing indicates that the key on translatable
 // contains a placeholder _0/_1, etc. but the value does not match the expected constraint.
 exports.translatable;
-//# sourceMappingURL=translatable.js.map

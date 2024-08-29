@@ -1,4 +1,4 @@
-import { type Comment, type CommentDisplayPart, Reflection, ReflectionSymbolId } from "../../models";
+import { Reflection, ReflectionSymbolId, type Comment, type CommentDisplayPart } from "../../models";
 import { type DeclarationReference } from "./declarationReference";
 export type ExternalResolveResult = {
     target: string;
@@ -18,4 +18,3 @@ export type LinkResolverOptions = {
 };
 export declare function resolveLinks(comment: Comment, reflection: Reflection, externalResolver: ExternalSymbolResolver, options: LinkResolverOptions): void;
 export declare function resolvePartLinks(reflection: Reflection, parts: readonly CommentDisplayPart[], externalResolver: ExternalSymbolResolver, options: LinkResolverOptions): CommentDisplayPart[];
-//# sourceMappingURL=linkResolver.d.ts.map

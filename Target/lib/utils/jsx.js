@@ -154,4 +154,3 @@ const renderElement = function renderElement(element) {
     }
 };
 exports.renderElement = renderElement;
-//# sourceMappingURL=jsx.js.map

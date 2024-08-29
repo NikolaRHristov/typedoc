@@ -30,4 +30,3 @@ export declare function validate<T extends Schema>(schema: T, obj: unknown): obj
 export declare function optional<T extends Schema>(x: T): Optional<T>;
 export declare function isTagString(x: unknown): x is `@${string}`;
 export {};
-//# sourceMappingURL=validation.d.ts.map

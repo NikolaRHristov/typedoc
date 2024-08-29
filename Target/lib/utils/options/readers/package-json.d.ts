@@ -7,4 +7,3 @@ export declare class PackageJsonReader implements OptionsReader {
     name: string;
     read(container: Options, logger: Logger, cwd: string): void;
 }
-//# sourceMappingURL=package-json.d.ts.map

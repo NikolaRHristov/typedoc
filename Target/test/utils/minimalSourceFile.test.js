@@ -27,4 +27,3 @@ describe("MinimalSourceFile", () => {
         (0, assert_1.deepStrictEqual)(sf.getLineAndCharacterOfPosition(3), { line: 2, character: 0 }); // b
     });
 });
-//# sourceMappingURL=minimalSourceFile.test.js.map

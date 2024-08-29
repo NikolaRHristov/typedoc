@@ -216,4 +216,3 @@ export declare class Renderer extends ChildableComponent<Application, RendererCo
     private prepareOutputDirectory;
 }
 import "./plugins";
-//# sourceMappingURL=renderer.d.ts.map

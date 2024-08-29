@@ -19,4 +19,3 @@ var SourcePlugin_1 = require("./SourcePlugin");
 Object.defineProperty(exports, "SourcePlugin", { enumerable: true, get: function () { return SourcePlugin_1.SourcePlugin; } });
 var TypePlugin_1 = require("./TypePlugin");
 Object.defineProperty(exports, "TypePlugin", { enumerable: true, get: function () { return TypePlugin_1.TypePlugin; } });
-//# sourceMappingURL=index.js.map

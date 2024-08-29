@@ -8,7 +8,8 @@ function renderingTypeDeclarationIsUseful(declaration) {
         return true;
     if (declaration.children?.some(renderingTypeDeclarationIsUseful))
         return true;
-    if (declaration.type?.type === "reflection" && renderingTypeDeclarationIsUseful(declaration.type.declaration)) {
+    if (declaration.type?.type === "reflection" &&
+        renderingTypeDeclarationIsUseful(declaration.type.declaration)) {
         return true;
     }
     return declaration.getAllSignatures().some((sig) => {
@@ -39,7 +40,8 @@ function memberDeclaration(context, props) {
                     " = ",
                     props.defaultValue)))),
         context.commentSummary(props),
-        (0, lib_1.hasTypeParameters)(props) && context.typeParameters(props.typeParameters),
+        (0, lib_1.hasTypeParameters)(props) &&
+            context.typeParameters(props.typeParameters),
         props.type?.visit({
             reflection: renderTypeDeclaration,
             array: (arr) => arr.elementType.visit(visitor),
@@ -63,4 +65,3 @@ function memberDeclaration(context, props) {
         context.commentTags(props),
         context.memberSources(props)));
 }
-//# sourceMappingURL=member.declaration.js.map

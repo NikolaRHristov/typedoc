@@ -49,4 +49,3 @@ function getLinks(refl) {
 function equalKind(refl, kind) {
     (0, strict_1.equal)(refl.kind, kind, `Expected ${__1.ReflectionKind[kind]} but got ${__1.ReflectionKind[refl.kind]}`);
 }
-//# sourceMappingURL=utils.js.map

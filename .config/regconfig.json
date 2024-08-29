@@ -1,7 +1,7 @@
 {
 	"core": {
-		"workingDir": "dist/tmp/.reg",
-		"actualDir": "dist/tmp/__screenshots__",
+		"workingDir": "Target/tmp/.reg",
+		"actualDir": "Target/tmp/__screenshots__",
 		"thresholdRate": 0.001,
 		"addIgnore": true,
 		"ximgdiff": {

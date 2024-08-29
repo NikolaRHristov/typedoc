@@ -59,7 +59,7 @@ const pathSymbol = Symbol.for("typedoc_paths");
 const g = globalThis;
 g[loadSymbol] = (g[loadSymbol] || 0) + 1;
 g[pathSymbol] ||= [];
-// transform /abs/path/to/typedoc/dist/lib/utils/general -> /abs/path/to/typedoc
+// transform /abs/path/to/typedoc/Target/lib/utils/general -> /abs/path/to/typedoc
 g[pathSymbol].push((0, path_1.dirname)((0, path_1.dirname)((0, path_1.dirname)(__dirname))));
 function hasBeenLoadedMultipleTimes() {
     return g[loadSymbol] !== 1;
@@ -67,4 +67,3 @@ function hasBeenLoadedMultipleTimes() {
 function getLoadedPaths() {
     return g[pathSymbol] || [];
 }
-//# sourceMappingURL=general.js.map

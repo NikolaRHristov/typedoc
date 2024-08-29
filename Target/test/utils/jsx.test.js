@@ -56,4 +56,3 @@ describe("JSX", () => {
         (0, assert_1.deepStrictEqual)((0, utils_1.renderElement)(utils_1.JSX.createElement("div", { "data-foo": quot })), `<div data-foo="test&quot;quote"></div>`);
     });
 });
-//# sourceMappingURL=jsx.test.js.map

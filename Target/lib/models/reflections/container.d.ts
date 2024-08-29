@@ -53,4 +53,3 @@ export declare abstract class ContainerReflection extends Reflection {
     toObject(serializer: Serializer): JSONOutput.ContainerReflection;
     fromObject(de: Deserializer, obj: JSONOutput.ContainerReflection): void;
 }
-//# sourceMappingURL=container.d.ts.map

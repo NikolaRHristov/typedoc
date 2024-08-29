@@ -163,4 +163,3 @@ var ReflectionKind;
 function getKindString(kind) {
     return ReflectionKind[kind].replace(/(.)([A-Z])/g, (_m, a, b) => a + " " + b.toLowerCase());
 }
-//# sourceMappingURL=kind.js.map

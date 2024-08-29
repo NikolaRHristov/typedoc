@@ -65,4 +65,3 @@ function readTsConfig(path, logger) {
     tsConfigCache[path] = parsed;
     return parsed;
 }
-//# sourceMappingURL=tsconfig.js.map

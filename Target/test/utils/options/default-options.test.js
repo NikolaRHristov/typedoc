@@ -100,4 +100,3 @@ describe("Default Options", () => {
         });
     });
 });
-//# sourceMappingURL=default-options.test.js.map

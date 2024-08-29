@@ -51,4 +51,3 @@ class DocumentReflection extends abstract_1.Reflection {
     }
 }
 exports.DocumentReflection = DocumentReflection;
-//# sourceMappingURL=document.js.map

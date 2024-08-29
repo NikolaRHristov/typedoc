@@ -3,4 +3,3 @@ export declare const ApplicationEvents: {
     readonly REVIVE: "reviveProject";
     readonly VALIDATE_PROJECT: "validateProject";
 };
-//# sourceMappingURL=application-events.d.ts.map

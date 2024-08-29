@@ -6,7 +6,7 @@
  * to add custom properties to the exported interfaces.
  * For example, if your custom serializer adds a property to all {@link Reflection} objects:
  * ```ts
- * declare module 'typedoc/dist/lib/serialization/schema' {
+ * declare module 'typedoc/Target/lib/serialization/schema' {
  *     export interface AbstractReflection {
  *         myCustomProp: boolean
  *     }
@@ -17,7 +17,7 @@
  * the resulting type will not be included in the return type of {@link Serializer.toObject}.
  * To fix this, use declaration merging to augment the {@link Serializer} class.
  * ```ts
- * declare module 'typedoc/dist/lib/serialization/serializer' {
+ * declare module 'typedoc/Target/lib/serialization/serializer' {
  *     export interface Serializer {
  *         toObject(value: CustomModel, obj?: Partial<CustomModel>): CustomOutput
  *     }
@@ -268,4 +268,3 @@ export interface FileRegistry {
     reflections: Record<number, number>;
 }
 export {};
-//# sourceMappingURL=schema.d.ts.map

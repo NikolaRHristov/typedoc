@@ -80,4 +80,3 @@ function createRegex(s) {
         "$",
     ].join(""));
 }
-//# sourceMappingURL=TestLogger.js.map

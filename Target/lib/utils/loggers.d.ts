@@ -111,4 +111,3 @@ export declare class ConsoleLogger extends Logger {
     log(message: string, level: Exclude<LogLevel, LogLevel.None>): void;
     protected addContext(message: string, level: Exclude<LogLevel, LogLevel.None>, ...args: [ts.Node?] | [number, MinimalSourceFile]): string;
 }
-//# sourceMappingURL=loggers.d.ts.map

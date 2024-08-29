@@ -36,4 +36,3 @@ export declare class ReflectionSymbolId {
     };
 }
 export declare function addInferredDeclarationMapPaths(opts: ts.CompilerOptions, files: readonly string[]): void;
-//# sourceMappingURL=ReflectionSymbolId.d.ts.map

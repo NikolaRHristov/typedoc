@@ -1,14 +1,14 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const assert_1 = require("assert");
+const fs_1 = require("fs");
+const path_1 = require("path");
+const comments_1 = require("../lib/converter/comments");
 const models_1 = require("../lib/models");
 const utils_1 = require("../lib/utils");
 const declaration_1 = require("../lib/utils/options/declaration");
-const TestLogger_1 = require("./TestLogger");
 const programs_1 = require("./programs");
-const path_1 = require("path");
-const fs_1 = require("fs");
-const comments_1 = require("../lib/converter/comments");
+const TestLogger_1 = require("./TestLogger");
 const utils_2 = require("./utils");
 function buildNameTree(refl, tree = {}) {
     for (const child of refl.children || []) {
@@ -768,4 +768,3 @@ describe("Behavior Tests", () => {
         logger.expectMessage("warn: The modifier tag @alpha is mutually exclusive with @beta in the comment for mutuallyExclusive");
     });
 });
-//# sourceMappingURL=behavior.c2.test.js.map

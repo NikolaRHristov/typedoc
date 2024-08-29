@@ -46,4 +46,3 @@ function members(context, props) {
             utils_1.JSX.createElement("section", null, children.map((item) => context.member(item)))));
     })));
 }
-//# sourceMappingURL=members.js.map

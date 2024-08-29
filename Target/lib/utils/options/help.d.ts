@@ -6,4 +6,3 @@ export interface ParameterHelp {
     margin: number;
 }
 export declare function getOptionsHelp(options: Options, i18n: TranslationProxy): string;
-//# sourceMappingURL=help.d.ts.map

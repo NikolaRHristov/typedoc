@@ -9,4 +9,3 @@ export declare const ConverterEvents: {
     readonly RESOLVE: "resolveReflection";
     readonly RESOLVE_END: "resolveEnd";
 };
-//# sourceMappingURL=converter-events.d.ts.map

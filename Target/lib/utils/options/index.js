@@ -16,4 +16,3 @@ Object.defineProperty(exports, "ParameterType", { enumerable: true, get: functio
 Object.defineProperty(exports, "ParameterHint", { enumerable: true, get: function () { return declaration_1.ParameterHint; } });
 var defaults_1 = require("./defaults");
 Object.defineProperty(exports, "OptionDefaults", { enumerable: true, get: function () { return defaults_1.OptionDefaults; } });
-//# sourceMappingURL=index.js.map

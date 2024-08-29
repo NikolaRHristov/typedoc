@@ -455,4 +455,3 @@ function extractLabelTag(comment) {
         comment.label = comment.summary.splice(index, 1)[0].text;
     }
 }
-//# sourceMappingURL=comment.js.map

@@ -6,4 +6,3 @@ exports.ApplicationEvents = {
     REVIVE: "reviveProject",
     VALIDATE_PROJECT: "validateProject",
 };
-//# sourceMappingURL=application-events.js.map

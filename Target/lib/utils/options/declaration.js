@@ -327,4 +327,3 @@ function valueIsWithinBounds(value, minValue, maxValue) {
         return true;
     }
 }
-//# sourceMappingURL=declaration.js.map

@@ -65,4 +65,3 @@ describe("EventDispatcher", () => {
         (0, assert_1.deepStrictEqual)(calls, [1, 2, 3]);
     });
 });
-//# sourceMappingURL=events.test.js.map

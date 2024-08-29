@@ -17,10 +17,12 @@ function fullHierarchy(context, root, seen = new Set()) {
             root.name),
         utils_1.JSX.createElement("ul", null,
             root.implementedBy?.map((child) => {
-                return child.reflection && fullHierarchy(context, child.reflection, seen);
+                return (child.reflection &&
+                    fullHierarchy(context, child.reflection, seen));
             }),
             root.extendedBy?.map((child) => {
-                return child.reflection && fullHierarchy(context, child.reflection, seen);
+                return (child.reflection &&
+                    fullHierarchy(context, child.reflection, seen));
             }))));
 }
 function hierarchyTemplate(context, props) {
@@ -28,4 +30,3 @@ function hierarchyTemplate(context, props) {
         utils_1.JSX.createElement("h2", null, context.i18n.theme_class_hierarchy_title()),
         (0, lib_1.getHierarchyRoots)(props.project).map((root) => (utils_1.JSX.createElement("ul", { class: "tsd-full-hierarchy" }, fullHierarchy(context, root))))));
 }
-//# sourceMappingURL=hierarchy.js.map

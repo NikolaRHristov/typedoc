@@ -94,4 +94,3 @@ class EventHooks {
     }
 }
 exports.EventHooks = EventHooks;
-//# sourceMappingURL=hooks.js.map

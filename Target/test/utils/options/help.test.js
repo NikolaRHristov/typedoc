@@ -28,4 +28,3 @@ describe("Options - help", () => {
         (0, assert_1.ok)(!help.includes("not displayed"));
     });
 });
-//# sourceMappingURL=help.test.js.map

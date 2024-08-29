@@ -44,4 +44,3 @@ export declare function NonEnumerable(_cls: unknown, context: ClassFieldDecorato
 export declare function hasBeenLoadedMultipleTimes(): boolean;
 export declare function getLoadedPaths(): string[];
 export {};
-//# sourceMappingURL=general.d.ts.map

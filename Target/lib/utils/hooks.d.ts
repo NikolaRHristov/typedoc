@@ -49,4 +49,3 @@ export declare class EventHooks<T extends Record<keyof T, unknown[]>, R> {
     restoreMomento(momento: EventHooksMomento<T, R>): void;
 }
 export {};
-//# sourceMappingURL=hooks.d.ts.map

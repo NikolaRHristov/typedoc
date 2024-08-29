@@ -57,4 +57,3 @@ const memberSources = (context, props) => {
     return utils_1.JSX.createElement("aside", { class: "tsd-sources" }, sources);
 };
 exports.memberSources = memberSources;
-//# sourceMappingURL=member.sources.js.map

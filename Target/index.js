@@ -92,4 +92,3 @@ Object.defineProperty(exports, "Serializer", { enumerable: true, get: function (
 Object.defineProperty(exports, "Deserializer", { enumerable: true, get: function () { return serialization_1.Deserializer; } });
 Object.defineProperty(exports, "SerializeEvent", { enumerable: true, get: function () { return serialization_1.SerializeEvent; } });
 exports.Internationalization = __importStar(require("./lib/internationalization/index"));
-//# sourceMappingURL=index.js.map

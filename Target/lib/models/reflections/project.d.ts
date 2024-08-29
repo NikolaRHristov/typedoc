@@ -113,4 +113,3 @@ export declare class ProjectReflection extends ContainerReflection {
     toObject(serializer: Serializer): JSONOutput.ProjectReflection;
     fromObject(de: Deserializer, obj: JSONOutput.ProjectReflection): void;
 }
-//# sourceMappingURL=project.d.ts.map

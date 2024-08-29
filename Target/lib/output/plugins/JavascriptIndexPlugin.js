@@ -228,4 +228,3 @@ let JavascriptIndexPlugin = (() => {
     return JavascriptIndexPlugin = _classThis;
 })();
 exports.JavascriptIndexPlugin = JavascriptIndexPlugin;
-//# sourceMappingURL=JavascriptIndexPlugin.js.map

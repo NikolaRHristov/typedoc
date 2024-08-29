@@ -1,5 +1,4 @@
 "use strict";
-/* eslint-disable no-console */
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
     var desc = Object.getOwnPropertyDescriptor(m, k);
@@ -24,6 +23,8 @@ var __importStar = (this && this.__importStar) || function (mod) {
     return result;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+const td = __importStar(require("typedoc"));
+/* eslint-disable no-console */
 const ExitCodes = {
     Ok: 0,
     OptionError: 1,
@@ -33,7 +34,6 @@ const ExitCodes = {
     ExceptionThrown: 6,
     Watching: 7,
 };
-const td = __importStar(require("typedoc"));
 void main();
 async function main() {
     let app;
@@ -144,4 +144,3 @@ function logRunSummary(logger) {
         logger.warn(logger.i18n.found_0_errors_and_1_warnings(errorCount.toString(), warningCount.toString()));
     }
 }
-//# sourceMappingURL=cli.js.map

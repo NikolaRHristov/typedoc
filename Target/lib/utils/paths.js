@@ -48,4 +48,3 @@ function normalizePath(path) {
     }
     return path;
 }
-//# sourceMappingURL=paths.js.map

@@ -28,7 +28,7 @@ const defaultLayout = (context, template, props) => (utils_1.JSX.createElement("
             utils_1.JSX.createElement(utils_1.Raw, { html: 'document.body.style.display="none";' }),
             utils_1.JSX.createElement(utils_1.Raw, { html: 'setTimeout(() => app?app.showPage():document.body.style.removeProperty("display"),500)' })),
         context.toolbar(props),
-        utils_1.JSX.createElement("div", { class: "container container-main" },
+        utils_1.JSX.createElement("div", { class: "container-main container" },
             utils_1.JSX.createElement("div", { class: "col-content" },
                 context.hook("content.begin", context),
                 context.header(props),
@@ -47,4 +47,3 @@ const defaultLayout = (context, template, props) => (utils_1.JSX.createElement("
         utils_1.JSX.createElement("div", { class: "overlay" }),
         context.hook("body.end", context))));
 exports.defaultLayout = defaultLayout;
-//# sourceMappingURL=default.js.map

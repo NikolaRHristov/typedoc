@@ -4,4 +4,3 @@ export declare class NavigationPlugin extends RendererComponent {
     private onRendererBegin;
     private buildNavigationIndex;
 }
-//# sourceMappingURL=NavigationPlugin.d.ts.map

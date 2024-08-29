@@ -23,4 +23,3 @@ export declare class AssetsPlugin extends RendererComponent {
      */
     private onRenderEnd;
 }
-//# sourceMappingURL=AssetsPlugin.d.ts.map

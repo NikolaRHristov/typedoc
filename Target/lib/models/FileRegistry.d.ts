@@ -29,4 +29,3 @@ export declare class ValidatingFileRegistry extends FileRegistry {
     register(sourcePath: string, relativePath: string): number | undefined;
     fromObject(de: Deserializer, obj: JSONFileRegistry): void;
 }
-//# sourceMappingURL=FileRegistry.d.ts.map

@@ -14,8 +14,8 @@ const toolbar = (context, props) => (utils_1.JSX.createElement("header", { class
             utils_1.JSX.createElement("ul", { class: "results" },
                 utils_1.JSX.createElement("li", { class: "state loading" }, context.i18n.theme_preparing_search_index()),
                 utils_1.JSX.createElement("li", { class: "state failure" }, context.i18n.theme_search_index_not_available())),
-            utils_1.JSX.createElement("a", { href: context.options.getValue("titleLink") || context.relativeURL("index.html"), class: "title" }, (0, lib_1.getDisplayName)(props.project))),
+            utils_1.JSX.createElement("a", { href: context.options.getValue("titleLink") ||
+                    context.relativeURL("index.html"), class: "title" }, (0, lib_1.getDisplayName)(props.project))),
         utils_1.JSX.createElement("div", { class: "table-cell", id: "tsd-widgets" },
             utils_1.JSX.createElement("a", { href: "#", class: "tsd-widget tsd-toolbar-icon menu no-caption", "data-toggle": "menu", "aria-label": context.i18n.theme_menu() }, context.icons.menu())))));
 exports.toolbar = toolbar;
-//# sourceMappingURL=toolbar.js.map

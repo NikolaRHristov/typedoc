@@ -70,4 +70,3 @@ process.on("exit", () => {
     }
     console.log("=".repeat(width + 35));
 });
-//# sourceMappingURL=perf.js.map

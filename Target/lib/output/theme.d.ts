@@ -34,4 +34,3 @@ export declare abstract class Theme extends RendererComponent {
      */
     abstract render(page: PageEvent<Reflection>, template: RenderTemplate<PageEvent<Reflection>>): string;
 }
-//# sourceMappingURL=theme.d.ts.map

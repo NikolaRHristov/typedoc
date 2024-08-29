@@ -26,4 +26,3 @@ const memberGetterSetter = (context, props) => (utils_1.JSX.createElement(utils_
                 })),
             utils_1.JSX.createElement("li", { class: "tsd-description" }, context.memberSignatureBody(props.setSignature)))))));
 exports.memberGetterSetter = memberGetterSetter;
-//# sourceMappingURL=member.getterSetter.js.map

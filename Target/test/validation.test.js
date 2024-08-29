@@ -138,4 +138,3 @@ describe("validateDocumentation", () => {
         logger.expectNoOtherMessages();
     });
 });
-//# sourceMappingURL=validation.test.js.map

@@ -85,4 +85,3 @@ function expandPackages(logger, packageJsonDir, workspaces, exclude) {
         });
     });
 }
-//# sourceMappingURL=package-manifest.js.map

@@ -21,4 +21,3 @@ export { Fragment, Raw, renderElement } from "./jsx";
 export * as Validation from "./validation";
 export * from "./tsutils";
 export { MinimalSourceFile } from "./minimalSourceFile";
-//# sourceMappingURL=index.d.ts.map

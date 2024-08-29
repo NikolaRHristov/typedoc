@@ -11,4 +11,3 @@ var TokenSyntaxKind;
     TokenSyntaxKind["Code"] = "code";
     TokenSyntaxKind["TypeAnnotation"] = "type";
 })(TokenSyntaxKind || (exports.TokenSyntaxKind = TokenSyntaxKind = {}));
-//# sourceMappingURL=lexer.js.map

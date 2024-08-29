@@ -151,4 +151,3 @@ export declare class Application extends ChildableComponent<Application, Abstrac
     private _convertPackages;
     private _merge;
 }
-//# sourceMappingURL=application.d.ts.map

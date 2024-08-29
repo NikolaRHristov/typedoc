@@ -47,4 +47,3 @@ export declare class SignatureReflection extends Reflection {
     toObject(serializer: Serializer): JSONOutput.SignatureReflection;
     fromObject(de: Deserializer, obj: JSONOutput.SignatureReflection): void;
 }
-//# sourceMappingURL=signature.d.ts.map

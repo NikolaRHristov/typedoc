@@ -148,4 +148,3 @@ function getSortFunction(opts) {
         });
     };
 }
-//# sourceMappingURL=sort.js.map

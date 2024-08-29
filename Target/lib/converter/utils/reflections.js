@@ -18,4 +18,3 @@ function removeUndefined(type) {
     }
     return type;
 }
-//# sourceMappingURL=reflections.js.map

@@ -3,7 +3,7 @@
 		"strict": true,
 		"module": "Node16",
 		"checkJs": true,
-		"outDir": "dist",
+		"outDir": "Target",
 		"target": "ESNext",
 
 		"noImplicitAny": false,

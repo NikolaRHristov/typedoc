@@ -256,4 +256,3 @@ describe("Sort", () => {
         (0, assert_1.deepStrictEqual)(arr2.map((r) => r.name), ["c", "a", "b"]);
     });
 });
-//# sourceMappingURL=sort.test.js.map

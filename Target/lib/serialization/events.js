@@ -15,4 +15,3 @@ class SerializeEvent {
     }
 }
 exports.SerializeEvent = SerializeEvent;
-//# sourceMappingURL=events.js.map

@@ -60,4 +60,3 @@ export declare class CategoryPlugin extends ConverterComponent {
     private static sortCatCallback;
     static getCategories(reflection: DeclarationReflection | DocumentReflection): Set<string>;
 }
-//# sourceMappingURL=CategoryPlugin.d.ts.map

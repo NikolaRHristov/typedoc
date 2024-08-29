@@ -27,4 +27,3 @@ export declare class PackagePlugin extends ConverterComponent {
     private onBeginResolve;
     private addEntries;
 }
-//# sourceMappingURL=PackagePlugin.d.ts.map

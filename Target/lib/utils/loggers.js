@@ -223,4 +223,3 @@ class ConsoleLogger extends Logger {
     }
 }
 exports.ConsoleLogger = ConsoleLogger;
-//# sourceMappingURL=loggers.js.map

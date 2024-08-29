@@ -87,4 +87,3 @@ class ReferenceReflection extends declaration_1.DeclarationReflection {
     }
 }
 exports.ReferenceReflection = ReferenceReflection;
-//# sourceMappingURL=reference.js.map

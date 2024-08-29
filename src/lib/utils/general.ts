@@ -91,7 +91,7 @@ const g = globalThis as TypeDocGlobals;
 
 g[loadSymbol] = (g[loadSymbol] || 0) + 1;
 g[pathSymbol] ||= [];
-// transform /abs/path/to/typedoc/dist/lib/utils/general -> /abs/path/to/typedoc
+// transform /abs/path/to/typedoc/Target/lib/utils/general -> /abs/path/to/typedoc
 g[pathSymbol].push(dirname(dirname(dirname(__dirname))));
 
 export function hasBeenLoadedMultipleTimes() {

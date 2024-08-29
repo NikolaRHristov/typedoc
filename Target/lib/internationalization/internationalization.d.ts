@@ -1,7 +1,7 @@
 import type { Application } from "../application";
-import { translatable, type BuiltinTranslatableStringArgs } from "./translatable";
-import { ReflectionKind } from "../models/reflections/kind";
 import { ReflectionFlag } from "../models";
+import { ReflectionKind } from "../models/reflections/kind";
+import { translatable, type BuiltinTranslatableStringArgs } from "./translatable";
 /**
  * ### What is translatable?
  * TypeDoc includes a lot of literal strings. By convention, messages which are displayed
@@ -93,4 +93,3 @@ export declare class Internationalization {
     getSupportedLanguages(): string[];
 }
 export {};
-//# sourceMappingURL=internationalization.d.ts.map

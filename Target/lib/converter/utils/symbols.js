@@ -16,4 +16,3 @@ function resolveAliasedSymbol(symbol, checker) {
     }
     return symbol;
 }
-//# sourceMappingURL=symbols.js.map

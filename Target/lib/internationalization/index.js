@@ -9,4 +9,3 @@ exports.Internationalization = void 0;
  */
 var internationalization_1 = require("./internationalization");
 Object.defineProperty(exports, "Internationalization", { enumerable: true, get: function () { return internationalization_1.Internationalization; } });
-//# sourceMappingURL=index.js.map

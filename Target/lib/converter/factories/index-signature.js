@@ -30,4 +30,3 @@ function convertIndexSignatures(context, symbol) {
         context.converter.trigger(converter_events_1.ConverterEvents.CREATE_SIGNATURE, context, index, indexDeclaration);
     }
 }
-//# sourceMappingURL=index-signature.js.map

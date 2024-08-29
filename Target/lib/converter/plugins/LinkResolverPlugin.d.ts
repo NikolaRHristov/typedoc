@@ -12,4 +12,3 @@ export declare class LinkResolverPlugin extends ConverterComponent {
     resolveLinks(project: ProjectReflection): void;
     private resolveCategoryLinks;
 }
-//# sourceMappingURL=LinkResolverPlugin.d.ts.map

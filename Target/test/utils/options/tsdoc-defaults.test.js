@@ -68,4 +68,3 @@ describe("tsdoc-defaults.ts", () => {
         (0, strict_1.deepEqual)(tsdocTags, typedocTags);
     });
 });
-//# sourceMappingURL=tsdoc-defaults.test.js.map

@@ -13,4 +13,3 @@ export declare class JavascriptIndexPlugin extends RendererComponent {
     private getCommentSearchText;
     private getDocumentSearchText;
 }
-//# sourceMappingURL=JavascriptIndexPlugin.d.ts.map

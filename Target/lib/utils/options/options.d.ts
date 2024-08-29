@@ -204,4 +204,3 @@ export declare function Option<K extends keyof TypeDocOptionMap>(name: K): (_: u
     }): TypeDocOptionValues[K];
     set(_value: never): never;
 };
-//# sourceMappingURL=options.d.ts.map

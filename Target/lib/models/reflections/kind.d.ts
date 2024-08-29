@@ -88,4 +88,3 @@ export declare namespace ReflectionKind {
     function pluralString(kind: ReflectionKind): string;
     function classString(kind: ReflectionKind): string;
 }
-//# sourceMappingURL=kind.d.ts.map

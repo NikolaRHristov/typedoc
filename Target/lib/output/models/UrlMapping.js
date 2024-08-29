@@ -9,4 +9,3 @@ class UrlMapping {
     }
 }
 exports.UrlMapping = UrlMapping;
-//# sourceMappingURL=UrlMapping.js.map

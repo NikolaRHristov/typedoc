@@ -341,4 +341,3 @@ function parseDeclarationReference(source, pos, end) {
         pos,
     ];
 }
-//# sourceMappingURL=declarationReference.js.map

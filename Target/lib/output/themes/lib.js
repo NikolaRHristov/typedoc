@@ -154,4 +154,3 @@ function getHierarchyRoots(project) {
     });
     return roots.sort((a, b) => a.name.localeCompare(b.name));
 }
-//# sourceMappingURL=lib.js.map

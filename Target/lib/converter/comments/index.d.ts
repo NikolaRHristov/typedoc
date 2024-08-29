@@ -1,8 +1,8 @@
 import ts from "typescript";
 import { Comment, ReflectionKind } from "../../models";
+import type { FileRegistry } from "../../models/FileRegistry";
 import { type Logger } from "../../utils";
 import type { CommentStyle, JsDocCompatibility } from "../../utils/options/declaration";
-import type { FileRegistry } from "../../models/FileRegistry";
 export interface CommentParserConfig {
     blockTags: Set<string>;
     inlineTags: Set<string>;
@@ -18,4 +18,3 @@ export declare function getNodeComment(node: ts.Node, moduleComment: boolean, co
 export declare function getFileComment(file: ts.SourceFile, config: CommentParserConfig, logger: Logger, checker: ts.TypeChecker | undefined, files: FileRegistry): Comment | undefined;
 export declare function getSignatureComment(declaration: ts.SignatureDeclaration | ts.JSDocSignature, config: CommentParserConfig, logger: Logger, checker: ts.TypeChecker, files: FileRegistry): Comment | undefined;
 export declare function getJsDocComment(declaration: ts.JSDocPropertyLikeTag | ts.JSDocCallbackTag | ts.JSDocTypedefTag | ts.JSDocTemplateTag | ts.JSDocEnumTag, config: CommentParserConfig, logger: Logger, checker: ts.TypeChecker | undefined, files: FileRegistry): Comment | undefined;
-//# sourceMappingURL=index.d.ts.map

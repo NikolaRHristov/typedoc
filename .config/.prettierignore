@@ -1,6 +1,6 @@
 ../.nyc_output
 ../coverage
-../dist
+../Target
 ../docs
 **/package-lock.json
 ../src/test/**/specs*.json

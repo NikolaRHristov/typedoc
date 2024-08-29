@@ -711,4 +711,3 @@ function setModifiers(symbol, declaration, reflection) {
     // ReflectionFlag.Static happens when constructing the reflection.
     // We don't have sufficient information here to determine if it ought to be static.
 }
-//# sourceMappingURL=symbols.js.map

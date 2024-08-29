@@ -7,4 +7,3 @@ export declare function getEnumKeys(Enum: object): string[];
 export type EnumKeys<E extends object> = {
     [K in keyof E]: number extends E[K] ? K : never;
 }[keyof E] & {};
-//# sourceMappingURL=enum.d.ts.map

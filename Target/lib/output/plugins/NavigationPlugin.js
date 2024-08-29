@@ -104,4 +104,3 @@ let NavigationPlugin = (() => {
     return NavigationPlugin = _classThis;
 })();
 exports.NavigationPlugin = NavigationPlugin;
-//# sourceMappingURL=NavigationPlugin.js.map

@@ -12,4 +12,3 @@ export declare class TSConfigReader implements OptionsReader {
     private addTagsFromTsdocJson;
     private readTsDoc;
 }
-//# sourceMappingURL=tsconfig.d.ts.map

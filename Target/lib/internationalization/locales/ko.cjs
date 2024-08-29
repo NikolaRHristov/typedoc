@@ -231,4 +231,3 @@ module.exports = (0, translatable_1.buildIncompleteTranslation)({
     theme_menu: "메뉴",
     theme_permalink: "링크",
 });
-//# sourceMappingURL=ko.cjs.map

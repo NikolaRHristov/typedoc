@@ -6,4 +6,3 @@ import { type Token } from "./lexer";
  * as starting a block!
  */
 export declare function lexCommentString(file: string): Generator<Token, undefined, undefined>;
-//# sourceMappingURL=rawLexer.d.ts.map

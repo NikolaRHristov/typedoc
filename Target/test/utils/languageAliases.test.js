@@ -59,4 +59,3 @@ describe("Language aliases", () => {
         });
     });
 });
-//# sourceMappingURL=languageAliases.test.js.map

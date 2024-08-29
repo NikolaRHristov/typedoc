@@ -10,4 +10,3 @@ describe("Enum utils", () => {
         (0, assert_1.ok)(!keys.includes("SignatureContainer"));
     });
 });
-//# sourceMappingURL=enum.test.js.map

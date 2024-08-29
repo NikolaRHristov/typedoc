@@ -31,4 +31,3 @@ class SourceReference {
     }
 }
 exports.SourceReference = SourceReference;
-//# sourceMappingURL=file.js.map

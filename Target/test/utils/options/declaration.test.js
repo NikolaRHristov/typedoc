@@ -327,4 +327,3 @@ describe("Options - default values", () => {
         (0, assert_1.deepStrictEqual)((0, declaration_1.getDefaultValue)(getDeclaration(declaration_1.ParameterType.GlobArray, ["#!a"])), ["#!" + (0, path_1.resolve)("a")]);
     });
 });
-//# sourceMappingURL=declaration.test.js.map

@@ -344,4 +344,3 @@ let CategoryPlugin = (() => {
     return CategoryPlugin = _classThis;
 })();
 exports.CategoryPlugin = CategoryPlugin;
-//# sourceMappingURL=CategoryPlugin.js.map

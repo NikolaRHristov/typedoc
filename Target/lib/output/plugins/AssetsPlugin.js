@@ -145,4 +145,3 @@ let AssetsPlugin = (() => {
     return AssetsPlugin = _classThis;
 })();
 exports.AssetsPlugin = AssetsPlugin;
-//# sourceMappingURL=AssetsPlugin.js.map

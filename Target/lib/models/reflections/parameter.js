@@ -39,4 +39,3 @@ class ParameterReflection extends abstract_1.Reflection {
     }
 }
 exports.ParameterReflection = ParameterReflection;
-//# sourceMappingURL=parameter.js.map

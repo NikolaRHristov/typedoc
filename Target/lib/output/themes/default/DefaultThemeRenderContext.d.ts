@@ -79,4 +79,3 @@ export declare class DefaultThemeRenderContext {
     typeAndParent: (props: import("../../../models").Type) => import("../../../utils/jsx.elements").JsxElement;
     typeParameters: (typeParameters: import("../../../models").TypeParameterReflection[]) => import("../../../utils/jsx.elements").JsxElement;
 }
-//# sourceMappingURL=DefaultThemeRenderContext.d.ts.map

@@ -125,4 +125,3 @@ export declare class CommentPlugin extends ConverterComponent {
     private excludedByCategory;
     private validateParamTags;
 }
-//# sourceMappingURL=CommentPlugin.d.ts.map

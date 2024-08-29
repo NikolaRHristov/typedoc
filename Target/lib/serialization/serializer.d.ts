@@ -43,4 +43,3 @@ export declare class Serializer extends EventDispatcher<SerializerEvents> {
      */
     projectToObject(value: ProjectReflection, projectRoot: string): ModelToObject<ProjectReflection>;
 }
-//# sourceMappingURL=serializer.d.ts.map

@@ -7,4 +7,3 @@ import ts from "typescript";
  */
 export declare function convertDefaultValue(node: ts.Declaration | undefined): string | undefined;
 export declare function convertExpression(expression: ts.Expression): string;
-//# sourceMappingURL=convert-expression.d.ts.map

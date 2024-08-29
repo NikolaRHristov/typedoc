@@ -33,4 +33,3 @@ describe("Options - PackageJsonReader", () => {
     testLogs("Errors if setting any option errors", `{ "name": "x", "typedocOptions": { "someOptionThatDoesNotExist": true } }`, (l) => l.expectMessage("error: Unknown option 'someOptionThatDoesNotExist' You may have meant:*"));
     testLogs("Warns if the legacy-packages 'typedoc' key is present", `{ "name": "x", "typedoc": {} }`, (l) => l.expectMessage("warn: The 'typedoc' key in */package.json was used by the legacy-packages entryPointStrategy and will be ignored"));
 });
-//# sourceMappingURL=package-json.test.js.map

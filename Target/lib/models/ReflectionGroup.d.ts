@@ -40,4 +40,3 @@ export declare class ReflectionGroup {
     toObject(serializer: Serializer): JSONOutput.ReflectionGroup;
     fromObject(de: Deserializer, obj: JSONOutput.ReflectionGroup): void;
 }
-//# sourceMappingURL=ReflectionGroup.d.ts.map

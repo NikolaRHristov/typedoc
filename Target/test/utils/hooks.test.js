@@ -90,4 +90,3 @@ describe("EventHooks", () => {
         (0, assert_1.deepStrictEqual)(emitter.emit("a"), [1]);
     });
 });
-//# sourceMappingURL=hooks.test.js.map

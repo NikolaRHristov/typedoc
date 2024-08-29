@@ -21,4 +21,3 @@ __exportStar(require("./sources/index"), exports);
 __exportStar(require("./ReflectionGroup"), exports);
 __exportStar(require("./ReflectionCategory"), exports);
 __exportStar(require("./FileRegistry"), exports);
-//# sourceMappingURL=index.js.map

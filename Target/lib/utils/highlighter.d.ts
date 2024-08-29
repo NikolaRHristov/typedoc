@@ -8,4 +8,3 @@ export declare function getSupportedThemes(): string[];
 export declare function isLoadedLanguage(lang: string): boolean;
 export declare function highlight(code: string, lang: string): string;
 export declare function getStyles(): string;
-//# sourceMappingURL=highlighter.d.ts.map

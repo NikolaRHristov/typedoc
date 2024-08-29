@@ -246,4 +246,3 @@ export declare class Comment {
     toObject(serializer: Serializer): JSONOutput.Comment;
     fromObject(de: Deserializer, obj: JSONOutput.Comment): void;
 }
-//# sourceMappingURL=comment.d.ts.map

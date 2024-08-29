@@ -5,9 +5,16 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.TextParserReentryState = void 0;
 exports.textContent = textContent;
+/**
+ * Parser to handle plain text markdown.
+ *
+ * Responsible for recognizing relative paths within the text and turning
+ * them into references.
+ * @module
+ */
+const markdown_it_1 = __importDefault(require("markdown-it"));
 const html_1 = require("../../utils/html");
 const lexer_1 = require("./lexer");
-const markdown_it_1 = __importDefault(require("markdown-it"));
 const MdHelpers = new markdown_it_1.default().helpers;
 /**
  * This is incredibly unfortunate. The comment lexer owns the responsibility
@@ -241,4 +248,3 @@ function findLabelEnd(text, pos) {
     }
     return -1;
 }
-//# sourceMappingURL=textParser.js.map

@@ -171,4 +171,3 @@ exports.IndexEvent = IndexEvent;
  * @event
  */
 IndexEvent.PREPARE_INDEX = "prepareIndex";
-//# sourceMappingURL=events.js.map

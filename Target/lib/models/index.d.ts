@@ -5,4 +5,3 @@ export * from "./sources/index";
 export * from "./ReflectionGroup";
 export * from "./ReflectionCategory";
 export * from "./FileRegistry";
-//# sourceMappingURL=index.d.ts.map

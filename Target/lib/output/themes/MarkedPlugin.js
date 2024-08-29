@@ -349,4 +349,3 @@ function getTokenTextContent(token) {
     }
     return token.content;
 }
-//# sourceMappingURL=MarkedPlugin.js.map

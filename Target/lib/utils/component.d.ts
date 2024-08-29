@@ -78,4 +78,3 @@ export declare abstract class ChildableComponent<O extends ComponentHost, C exte
     getComponents(): C[];
     addComponent<T extends C>(name: string, componentClass: T | ComponentClass<T, O>): T;
 }
-//# sourceMappingURL=component.d.ts.map

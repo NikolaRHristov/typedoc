@@ -198,4 +198,3 @@ export declare class Converter extends ChildableComponent<Application, Converter
     private addDocument;
     private _buildCommentParserConfig;
 }
-//# sourceMappingURL=converter.d.ts.map

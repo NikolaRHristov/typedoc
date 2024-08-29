@@ -13,4 +13,3 @@ export declare class TestLogger extends Logger {
     diagnostic(diagnostic: ts.Diagnostic): void;
     log(message: string, level: LogLevel): void;
 }
-//# sourceMappingURL=TestLogger.d.ts.map

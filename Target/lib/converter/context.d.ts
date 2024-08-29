@@ -1,7 +1,7 @@
 import ts from "typescript";
-import { type Reflection, type ProjectReflection, DeclarationReflection, type DocumentReflection, ReflectionKind } from "../models/index";
-import type { Converter } from "./converter";
 import type { TranslationProxy } from "../internationalization/internationalization";
+import { DeclarationReflection, ReflectionKind, type DocumentReflection, type ProjectReflection, type Reflection } from "../models/index";
+import type { Converter } from "./converter";
 /**
  * The context describes the current state the converter is in.
  */
@@ -80,4 +80,3 @@ export declare class Context {
     getSignatureComment(declaration: ts.SignatureDeclaration | ts.JSDocSignature): import("../models/index").Comment | undefined;
     withScope(scope: Reflection): Context;
 }
-//# sourceMappingURL=context.d.ts.map

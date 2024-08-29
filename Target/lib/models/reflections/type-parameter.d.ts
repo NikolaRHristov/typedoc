@@ -27,4 +27,3 @@ export declare class TypeParameterReflection extends Reflection {
     fromObject(de: Deserializer, obj: JSONOutput.TypeParameterReflection): void;
     traverse(_callback: TraverseCallback): void;
 }
-//# sourceMappingURL=type-parameter.d.ts.map

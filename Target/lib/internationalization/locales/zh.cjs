@@ -320,4 +320,3 @@ module.exports = (0, translatable_1.buildIncompleteTranslation)({
     theme_class_hierarchy_title: "类继承图表",
     theme_loading: "加载中……",
 });
-//# sourceMappingURL=zh.cjs.map

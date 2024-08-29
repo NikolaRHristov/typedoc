@@ -59,4 +59,3 @@ export declare class MarkedPlugin extends ContextAwareRendererComponent {
      */
     onParseMarkdown(event: MarkdownEvent): void;
 }
-//# sourceMappingURL=MarkedPlugin.d.ts.map

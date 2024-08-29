@@ -179,4 +179,3 @@ exports.TypeDocReader = TypeDocReader;
 function getStringArray(arg) {
     return Array.isArray(arg) ? arg.map(String) : [String(arg)];
 }
-//# sourceMappingURL=typedoc.js.map

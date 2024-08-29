@@ -94,4 +94,3 @@ export declare class RepositoryManager {
     private getRepositoryFolder;
 }
 export declare function guessSourceUrlTemplate(remotes: string[]): string | undefined;
-//# sourceMappingURL=repository.d.ts.map

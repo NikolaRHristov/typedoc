@@ -41,4 +41,3 @@ export declare class ImplementsPlugin extends ConverterComponent {
      */
     private copyComment;
 }
-//# sourceMappingURL=ImplementsPlugin.d.ts.map

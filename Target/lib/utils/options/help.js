@@ -64,4 +64,3 @@ function getOptionsHelp(options, i18n) {
     output.push("", "Supported highlighting themes:", ...toEvenColumns((0, highlighter_1.getSupportedThemes)(), 80));
     return output.join("\n");
 }
-//# sourceMappingURL=help.js.map

@@ -58,4 +58,3 @@ export declare class Deserializer {
      */
     defer(cb: (project: ProjectReflection) => void): void;
 }
-//# sourceMappingURL=deserializer.d.ts.map

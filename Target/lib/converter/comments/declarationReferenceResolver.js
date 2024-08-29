@@ -205,4 +205,3 @@ function resolveSymbolReferencePart(refl, path) {
     }
     return { high, low };
 }
-//# sourceMappingURL=declarationReferenceResolver.js.map

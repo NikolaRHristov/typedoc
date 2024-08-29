@@ -38,10 +38,10 @@ exports.RepositoryManager = exports.GitRepository = exports.AssumedRepository = 
 exports.gitIsInstalled = gitIsInstalled;
 exports.guessSourceUrlTemplate = guessSourceUrlTemplate;
 const child_process_1 = require("child_process");
+const fs_1 = require("fs");
+const path_1 = require("path");
 const utils_1 = require("../../utils");
 const general_1 = require("../../utils/general");
-const path_1 = require("path");
-const fs_1 = require("fs");
 const TEN_MEGABYTES = 1024 * 10000;
 function git(...args) {
     return (0, child_process_1.spawnSync)("git", args, {
@@ -284,4 +284,3 @@ function guessSourceUrlTemplate(remotes) {
     }
     return `https://${hostname}/${user}/${project}/${sourcePath}/{gitRevision}/{path}#${anchorPrefix}{line}`;
 }
-//# sourceMappingURL=repository.js.map

@@ -141,4 +141,3 @@ function stringifyXml(xml, indent = 0) {
     parts.push("</", xml.tag, ">");
     return parts.join("");
 }
-//# sourceMappingURL=SitemapPlugin.js.map

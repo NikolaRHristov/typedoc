@@ -337,4 +337,3 @@ type TranslationConstraint = [
     BuildConstraint<0 | 1 | 2>
 ];
 export {};
-//# sourceMappingURL=translatable.d.ts.map

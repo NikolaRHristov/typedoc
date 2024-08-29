@@ -28,4 +28,3 @@ const memberReference = ({ urlTo, i18n, commentSummary, commentTags }, props) =>
         commentTags(props)));
 };
 exports.memberReference = memberReference;
-//# sourceMappingURL=member.reference.js.map

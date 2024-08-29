@@ -50,4 +50,3 @@ function getPluginDisplayName(plugin) {
     }
     return plugin;
 }
-//# sourceMappingURL=plugins.js.map

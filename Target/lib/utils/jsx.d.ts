@@ -44,4 +44,3 @@ export declare function setRenderSettings(options: {
     pretty: boolean;
 }): void;
 export declare const renderElement: (element: JsxElement | null | undefined) => string;
-//# sourceMappingURL=jsx.d.ts.map

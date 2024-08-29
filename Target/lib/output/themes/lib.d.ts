@@ -25,4 +25,3 @@ export declare function renderTypeParametersSignature(context: DefaultThemeRende
  */
 export declare function renderName(refl: Reflection): JSX.Element | (string | JSX.Element)[];
 export declare function getHierarchyRoots(project: ProjectReflection): DeclarationReflection[];
-//# sourceMappingURL=lib.d.ts.map

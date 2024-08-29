@@ -4,4 +4,3 @@ export { IconsPlugin } from "./IconsPlugin";
 export { JavascriptIndexPlugin } from "./JavascriptIndexPlugin";
 export { NavigationPlugin } from "./NavigationPlugin";
 export { SitemapPlugin } from "./SitemapPlugin";
-//# sourceMappingURL=index.d.ts.map

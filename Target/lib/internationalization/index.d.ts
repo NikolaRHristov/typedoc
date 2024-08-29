@@ -5,4 +5,3 @@
  * @document ../../../internal-docs/internationalization.md
  */
 export { type TranslatableStrings, Internationalization, type TranslatedString, type TranslationProxy, } from "./internationalization";
-//# sourceMappingURL=index.d.ts.map

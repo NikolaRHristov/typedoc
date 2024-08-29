@@ -42,4 +42,3 @@ class MinimalSourceFile {
     }
 }
 exports.MinimalSourceFile = MinimalSourceFile;
-//# sourceMappingURL=minimalSourceFile.js.map

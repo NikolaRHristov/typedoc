@@ -249,4 +249,3 @@ function extractInheritDocTagReference(reflection) {
         return inlineTag.text;
     }
 }
-//# sourceMappingURL=InheritDocPlugin.js.map

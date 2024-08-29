@@ -26,4 +26,3 @@ export type { OptionsReader, TypeDocOptions, TypeDocOptionMap, ValidationOptions
 export { JSONOutput, Serializer, type SerializerEvents, Deserializer, type Deserializable, type DeserializerComponent, type SerializerComponent, SerializeEvent, } from "./lib/serialization";
 export * as Internationalization from "./lib/internationalization/index";
 export { TypeScript };
-//# sourceMappingURL=index.d.ts.map

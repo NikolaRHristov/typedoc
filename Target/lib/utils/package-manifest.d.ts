@@ -9,4 +9,3 @@ export declare function loadPackageManifest(logger: Logger, packageJsonPath: str
  * return all the actual package folders found.
  */
 export declare function expandPackages(logger: Logger, packageJsonDir: string, workspaces: string[], exclude: Minimatch[]): string[];
-//# sourceMappingURL=package-manifest.d.ts.map

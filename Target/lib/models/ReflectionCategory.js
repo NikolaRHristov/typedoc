@@ -56,4 +56,3 @@ class ReflectionCategory {
     }
 }
 exports.ReflectionCategory = ReflectionCategory;
-//# sourceMappingURL=ReflectionCategory.js.map

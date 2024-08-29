@@ -9,13 +9,13 @@ exports.convertParameterNodes = convertParameterNodes;
 exports.convertTypeParameterNodes = convertTypeParameterNodes;
 exports.createTypeParamReflection = createTypeParamReflection;
 exports.convertTemplateParameterNodes = convertTemplateParameterNodes;
-const typescript_1 = __importDefault(require("typescript"));
 const assert_1 = __importDefault(require("assert"));
+const typescript_1 = __importDefault(require("typescript"));
 const models_1 = require("../../models");
-const converter_events_1 = require("../converter-events");
-const convert_expression_1 = require("../convert-expression");
-const reflections_1 = require("../utils/reflections");
 const ReflectionSymbolId_1 = require("../../models/reflections/ReflectionSymbolId");
+const convert_expression_1 = require("../convert-expression");
+const converter_events_1 = require("../converter-events");
+const reflections_1 = require("../utils/reflections");
 function createSignature(context, kind, signature, symbol, declaration) {
     (0, assert_1.default)(context.scope instanceof models_1.DeclarationReflection);
     declaration ||= signature.getDeclaration();
@@ -311,4 +311,3 @@ function convertPredicate(predicate, context) {
         ? context.converter.convertType(context, predicate.type)
         : void 0);
 }
-//# sourceMappingURL=signature.js.map

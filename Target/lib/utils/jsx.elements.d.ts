@@ -909,4 +909,3 @@ export interface JsxUseElementProps extends JsxSvgCoreProps, JsxSvgStyleProps, J
     width?: string | number;
     height?: string | number;
 }
-//# sourceMappingURL=jsx.elements.d.ts.map

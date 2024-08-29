@@ -1229,4 +1229,3 @@ describe("extractTagName", () => {
         (0, assert_1.deepStrictEqual)((0, tagName_1.extractTagName)("[Ta"), { name: "Ta", newText: "" });
     });
 });
-//# sourceMappingURL=comments.test.js.map

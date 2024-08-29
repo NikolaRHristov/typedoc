@@ -108,4 +108,3 @@ let IconsPlugin = (() => {
     return IconsPlugin = _classThis;
 })();
 exports.IconsPlugin = IconsPlugin;
-//# sourceMappingURL=IconsPlugin.js.map

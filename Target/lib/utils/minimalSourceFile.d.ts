@@ -5,4 +5,3 @@ export declare class MinimalSourceFile implements SourceFileLike {
     constructor(text: string, fileName: string);
     getLineAndCharacterOfPosition(pos: number): LineAndCharacter;
 }
-//# sourceMappingURL=minimalSourceFile.d.ts.map

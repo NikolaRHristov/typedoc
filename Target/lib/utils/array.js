@@ -142,4 +142,3 @@ function firstDefined(array, callback) {
 function filter(array, predicate) {
     return array ? array.filter(predicate) : exports.emptyArray;
 }
-//# sourceMappingURL=array.js.map
