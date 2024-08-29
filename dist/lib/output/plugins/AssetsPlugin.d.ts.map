@@ -1,0 +1,1 @@
+{"version":3,"file":"AssetsPlugin.d.ts","sourceRoot":"","sources":["../../../../src/lib/output/plugins/AssetsPlugin.ts"],"names":[],"mappings":"AAAA,OAAO,EAAa,iBAAiB,EAAE,MAAM,eAAe,CAAC;AAS7D;;;GAGG;AACH,qBACa,YAAa,SAAQ,iBAAiB;IAC/C,gBAAgB;IAEhB,QAAQ,CAAC,SAAS,EAAG,MAAM,CAAC;IAE5B,oBAAoB;;;;;IAQpB;;OAEG;IACM,UAAU;IAKnB,OAAO,CAAC,aAAa;IAgBrB;;;;OAIG;IACH,OAAO,CAAC,WAAW;CAyBtB"}

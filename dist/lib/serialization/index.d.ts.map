@@ -1,0 +1,1 @@
+{"version":3,"file":"index.d.ts","sourceRoot":"","sources":["../../../src/lib/serialization/index.ts"],"names":[],"mappings":"AAAA,YAAY,EAAE,mBAAmB,EAAE,MAAM,cAAc,CAAC;AACxD,OAAO,EACH,YAAY,EACZ,KAAK,cAAc,EACnB,KAAK,qBAAqB,GAC7B,MAAM,gBAAgB,CAAC;AACxB,OAAO,EAAE,cAAc,EAAE,MAAM,UAAU,CAAC;AAC1C,OAAO,KAAK,UAAU,MAAM,UAAU,CAAC;AACvC,OAAO,EAAE,UAAU,EAAE,KAAK,gBAAgB,EAAE,MAAM,cAAc,CAAC"}

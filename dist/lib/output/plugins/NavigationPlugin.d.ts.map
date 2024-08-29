@@ -1,0 +1,1 @@
+{"version":3,"file":"NavigationPlugin.d.ts","sourceRoot":"","sources":["../../../../src/lib/output/plugins/NavigationPlugin.ts"],"names":[],"mappings":"AACA,OAAO,EAAa,iBAAiB,EAAE,MAAM,eAAe,CAAC;AAS7D,qBACa,gBAAiB,SAAQ,iBAAiB;IAC1C,UAAU;IAInB,OAAO,CAAC,eAAe;YAST,oBAAoB;CAmBrC"}
